@@ -1,2346 +1,2345 @@
-$6000  4c aa 60  JMP $60aa
-$6003  4c b9 64  JMP $64b9
-$6006  4c e0 65  JMP $65e0
-$6009  4c 3f 61  JMP $613f
-$600c  4c 34 66  JMP $6634
-$600f  4c 5e 61  JMP $615e
-$6012  4c 44 63  JMP $6344
-$6015  4c a0 63  JMP $63a0
-$6018  4c 72 64  JMP $6472
-$601b  60        RTS
-$601c  00        BRK
-$601d  00        BRK
-$601e  4c 8c 66  JMP $668c
-$6021  60        RTS
-$6022  00        BRK
-$6023  00        BRK
-$6024  4c de 6d  JMP $6dde
-$6027  4c d6 6d  JMP $6dd6
-$602a  60        RTS
-$602b  00        BRK
-$602c  00        BRK
-$602d  4c b8 6e  JMP $6eb8
-$6030  4c b2 6f  JMP $6fb2
-$6033  4c 25 70  JMP $7025
-$6036  4c c6 6f  JMP $6fc6
-$6039  4c 70 70  JMP $7070
-$603c  4c dd 70  JMP $70dd
-$603f  4c 9d 71  JMP $719d
-$6042  4c e4 70  JMP $70e4
-$6045  4c d7 70  JMP $70d7
-$6048  4c 92 72  JMP $7292
-$604b  4c e7 6f  JMP $6fe7
-$604e  60        RTS
-$604f  cf        ???
-$6050  72        ???
-$6051  4c 36 6d  JMP $6d36
-$6054  4c 84 71  JMP $7184
-$6057  aa        TAX
-$6058  aa        TAX
-$6059  aa        TAX
-$605a  aa        TAX
-$605b  aa        TAX
-$605c  aa        TAX
-$605d  aa        TAX
-$605e  aa        TAX
-$605f  aa        TAX
-$6060  aa        TAX
-$6061  aa        TAX
-$6062  aa        TAX
-$6063  aa        TAX
-$6064  aa        TAX
-$6065  aa        TAX
-$6066  aa        TAX
-$6067  aa        TAX
-$6068  aa        TAX
-$6069  aa        TAX
-$606a  aa        TAX
-$606b  aa        TAX
-$606c  00        BRK
-$606d  00        BRK
-$606e  00        BRK
-$606f  0c        ???
-$6070  05 80     ORA $80
-$6072  00        BRK
-$6073  00        BRK
-$6074  0d e0 00  ORA $00e0
-$6077  14        ???
-$6078  00        BRK
-$6079  00        BRK
-$607a  00        BRK
-$607b  00        BRK
-$607c  00        BRK
-$607d  00        BRK
-$607e  00        BRK
-$607f  08        PHP
-$6080  a6 33     LDX $33
-$6082  15 34     ORA $34,X
-$6084  9a        TXS
-$6085  4d 14 23  EOR $2314
-$6088  83        ???
-$6089  23        ???
-$608a  bd 34 96  LDA $9634,X
-$608d  0c        ???
-$608e  05 0d     ORA $0d
-$6090  02        ???
-$6091  13        ???
-$6092  14        ???
-$6093  06 83     ASL $83
-$6095  06 3e     ASL $3e
-$6097  09 d2     ORA #$d2
-$6099  02        ???
-$609a  41 03     EOR ($03,X)
-$609c  5c        ???
-$609d  04        ???
-$609e  32        ???
-$609f  01 a1     ORA ($a1,X)
-$60a1  01 eb     ORA ($eb,X)
-$60a3  01 61     ORA ($61,X)
-$60a5  00        BRK
-$60a6  d0 00     BNE $60a8
-$60a8  b3        ???
-$60a9  00        BRK
-$60aa  ad 53 7c  LDA $7c53
-$60ad  a2 00     LDX #$00
-$60af  bd 6c 60  LDA $606c,X
-$60b2  9d 38 7c  STA $7c38,X
-$60b5  e8        INX
-$60b6  e0 14     CPX #$14
-$60b8  d0 f5     BNE $60af
-$60ba  a9 00     LDA #$00
-$60bc  aa        TAX
-$60bd  9d 4d 7c  STA $7c4d,X
-$60c0  e8        INX
-$60c1  e0 3a     CPX #$3a
-$60c3  d0 f8     BNE $60bd
-$60c5  ee 53 7c  INC $7c53
-$60c8  78        SEI
-$60c9  a5 90     LDA $90
-$60cb  8d 51 7c  STA $7c51
-$60ce  a5 91     LDA $91
-$60d0  8d 52 7c  STA $7c52
-$60d3  a9 ce     LDA #$ce
-$60d5  85 90     STA $90
-$60d7  a9 61     LDA #$61
-$60d9  85 91     STA $91
-$60db  a9 62     LDA #$62
-$60dd  8d 4e e8  STA $e84e
-$60e0  8d 4d e8  STA $e84d
-$60e3  ad 4c e8  LDA $e84c
-$60e6  09 01     ORA #$01
-$60e8  8d 4c e8  STA $e84c
-$60eb  a9 82     LDA #$82
-$60ed  8d 4e e8  STA $e84e
-$60f0  a9 e7     LDA #$e7
-$60f2  2d 4f e8  AND $e84f
-$60f5  8d 4f e8  STA $e84f
-$60f8  a9 10     LDA #$10
-$60fa  0d 43 e8  ORA $e843
-$60fd  29 f7     AND #$f7
-$60ff  8d 43 e8  STA $e843
-$6102  ad 4b e8  LDA $e84b
-$6105  29 df     AND #$df
-$6107  8d 4b e8  STA $e84b
-$610a  a9 00     LDA #$00
-$610c  85 34     STA $34
-$610e  a9 60     LDA #$60
-$6110  85 35     STA $35
-$6112  58        CLI
-$6113  ad 00 c0  LDA $c000
-$6116  c9 4c     CMP #$4c
-$6118  d0 05     BNE $611f
-$611a  a9 40     LDA #$40
-$611c  8d 3e 7c  STA $7c3e
-$611f  a9 43     LDA #$43
-$6121  20 82 65  JSR $6582
-$6124  b0 15     BCS $613b
-$6126  ad 62 7c  LDA $7c62
-$6129  d0 10     BNE $613b
-$612b  a0 00     LDY #$00
-$612d  b9 58 6e  LDA $6e58,Y
-$6130  99 88 7d  STA $7d88,Y
-$6133  c8        INY
-$6134  c0 40     CPY #$40
-$6136  d0 f5     BNE $612d
-$6138  20 35 65  JSR $6535
-$613b  20 f0 66  JSR $66f0
-$613e  60        RTS
-$613f  ad 53 7c  LDA $7c53
-$6142  f0 19     BEQ $615d
-$6144  78        SEI
-$6145  ad 51 7c  LDA $7c51
-$6148  85 90     STA $90
-$614a  ad 52 7c  LDA $7c52
-$614d  85 91     STA $91
-$614f  a9 62     LDA #$62
-$6151  8d 4e e8  STA $e84e
-$6154  8d 4d e8  STA $e84d
-$6157  58        CLI
-$6158  a9 00     LDA #$00
-$615a  8d 53 7c  STA $7c53
-$615d  60        RTS
-$615e  ad 5d 7c  LDA $7c5d
-$6161  8d 5c 7c  STA $7c5c
-$6164  60        RTS
-$6165  2c 44 e8  BIT $e844
-$6168  2c 58 7c  BIT $7c58
-$616b  50 0c     BVC $6179
-$616d  18        CLC
-$616e  20 22 63  JSR $6322
-$6171  a9 00     LDA #$00
-$6173  8d 58 7c  STA $7c58
-$6176  4c c3 61  JMP $61c3
-$6179  ce 57 7c  DEC $7c57
-$617c  30 0e     BMI $618c
-$617e  4e 56 7c  LSR $7c56
-$6181  90 03     BCC $6186
-$6183  ee 58 7c  INC $7c58
-$6186  20 22 63  JSR $6322
-$6189  4c c3 61  JMP $61c3
-$618c  ad 57 7c  LDA $7c57
-$618f  c9 ff     CMP #$ff
-$6191  d0 1b     BNE $61ae
-$6193  ad 38 7c  LDA $7c38
-$6196  29 02     AND #$02
-$6198  38        SEC
-$6199  f0 0d     BEQ $61a8
-$619b  ad 38 7c  LDA $7c38
-$619e  4d 58 7c  EOR $7c58
-$61a1  4a        LSR A
-$61a2  20 22 63  JSR $6322
-$61a5  4c c3 61  JMP $61c3
-$61a8  ce 57 7c  DEC $7c57
-$61ab  ad 57 7c  LDA $7c57
-$61ae  c9 fc     CMP #$fc
-$61b0  f0 07     BEQ $61b9
-$61b2  38        SEC
-$61b3  20 22 63  JSR $6322
-$61b6  4c c3 61  JMP $61c3
-$61b9  a9 40     LDA #$40
-$61bb  8d 4e e8  STA $e84e
-$61be  a9 ff     LDA #$ff
-$61c0  8d 58 7c  STA $7c58
-$61c3  ad 4d e8  LDA $e84d
-$61c6  30 06     BMI $61ce
-$61c8  68        PLA
-$61c9  a8        TAY
-$61ca  68        PLA
-$61cb  aa        TAX
-$61cc  68        PLA
-$61cd  40        RTI
-$61ce  ad 4d e8  LDA $e84d
-$61d1  2d 4e e8  AND $e84e
-$61d4  2a        ROL A
-$61d5  30 8e     BMI $6165
-$61d7  2a        ROL A
-$61d8  10 03     BPL $61dd
-$61da  4c 86 62  JMP $6286
-$61dd  29 08     AND #$08
-$61df  d0 6a     BNE $624b
-$61e1  2c 13 e8  BIT $e813
-$61e4  30 03     BMI $61e9
-$61e6  4c f6 62  JMP $62f6
-$61e9  ad 12 e8  LDA $e812
-$61ec  ad 38 7c  LDA $7c38
-$61ef  29 10     AND #$10
-$61f1  d0 17     BNE $620a
-$61f3  ba        TSX
-$61f4  a9 66     LDA #$66
-$61f6  9d 00 01  STA $0100,X
-$61f9  ca        DEX
-$61fa  a9 d8     LDA #$d8
-$61fc  9d 00 01  STA $0100,X
-$61ff  ca        DEX
-$6200  a9 00     LDA #$00
-$6202  9d 00 01  STA $0100,X
-$6205  ca        DEX
-$6206  ca        DEX
-$6207  ca        DEX
-$6208  ca        DEX
-$6209  9a        TXS
-$620a  58        CLI
-$620b  ce 6a 7c  DEC $7c6a
-$620e  10 33     BPL $6243
-$6210  ad 43 7c  LDA $7c43
-$6213  8d 6a 7c  STA $7c6a
-$6216  ad 69 7c  LDA $7c69
-$6219  49 80     EOR #$80
-$621b  8d 69 7c  STA $7c69
-$621e  2c 68 7c  BIT $7c68
-$6221  10 20     BPL $6243
-$6223  4d 67 7c  EOR $7c67
-$6226  a6 20     LDX $20
-$6228  8e 6b 7c  STX $7c6b
-$622b  a6 1f     LDX $1f
-$622d  ac 64 7c  LDY $7c64
-$6230  84 1f     STY $1f
-$6232  ac 65 7c  LDY $7c65
-$6235  84 20     STY $20
-$6237  ac 66 7c  LDY $7c66
-$623a  91 1f     STA ($1f),Y
-$623c  86 1f     STX $1f
-$623e  ae 6b 7c  LDX $7c6b
-$6241  86 20     STX $20
-$6243  a5 9e     LDA $9e
-$6245  8d 7f 7c  STA $7c7f
-$6248  6c 51 7c  JMP ($7c51)
-$624b  ae 3b 7c  LDX $7c3b
-$624e  e8        INX
-$624f  e8        INX
-$6250  e8        INX
-$6251  e8        INX
-$6252  bd 80 60  LDA $6080,X
-$6255  8d 48 e8  STA $e848
-$6258  e8        INX
-$6259  bd 80 60  LDA $6080,X
-$625c  8d 49 e8  STA $e849
-$625f  a9 02     LDA #$02
-$6261  8d 4e e8  STA $e84e
-$6264  a9 22     LDA #$22
-$6266  8d 4d e8  STA $e84d
-$6269  a9 a0     LDA #$a0
-$626b  8d 4e e8  STA $e84e
-$626e  a9 08     LDA #$08
-$6270  8d 55 7c  STA $7c55
-$6273  a9 00     LDA #$00
-$6275  8d 54 7c  STA $7c54
-$6278  ad 4d e8  LDA $e84d
-$627b  10 03     BPL $6280
-$627d  4c ce 61  JMP $61ce
-$6280  68        PLA
-$6281  a8        TAY
-$6282  68        PLA
-$6283  aa        TAX
-$6284  68        PLA
-$6285  40        RTI
-$6286  ad 4f e8  LDA $e84f
-$6289  29 08     AND #$08
-$628b  18        CLC
-$628c  69 ff     ADC #$ff
-$628e  4d 4f e8  EOR $e84f
-$6291  29 08     AND #$08
-$6293  f0 f1     BEQ $6286
-$6295  ce 55 7c  DEC $7c55
-$6298  30 1d     BMI $62b7
-$629a  f0 16     BEQ $62b2
-$629c  6e 54 7c  ROR $7c54
-$629f  ae 3b 7c  LDX $7c3b
-$62a2  bd 80 60  LDA $6080,X
-$62a5  8d 48 e8  STA $e848
-$62a8  e8        INX
-$62a9  bd 80 60  LDA $6080,X
-$62ac  8d 49 e8  STA $e849
-$62af  4c e5 62  JMP $62e5
-$62b2  6e 54 7c  ROR $7c54
-$62b5  30 e8     BMI $629f
-$62b7  a9 20     LDA #$20
-$62b9  8d 4e e8  STA $e84e
-$62bc  a9 22     LDA #$22
-$62be  8d 4d e8  STA $e84d
-$62c1  a9 82     LDA #$82
-$62c3  8d 4e e8  STA $e84e
-$62c6  ac 5e 7c  LDY $7c5e
-$62c9  c8        INY
-$62ca  cc 5c 7c  CPY $7c5c
-$62cd  d0 0a     BNE $62d9
-$62cf  88        DEY
-$62d0  88        DEY
-$62d1  a9 a6     LDA #$a6
-$62d3  99 87 7c  STA $7c87,Y
-$62d6  4c e5 62  JMP $62e5
-$62d9  88        DEY
-$62da  ad 54 7c  LDA $7c54
-$62dd  49 ff     EOR #$ff
-$62df  99 87 7c  STA $7c87,Y
-$62e2  ee 5e 7c  INC $7c5e
-$62e5  ad 4d e8  LDA $e84d
-$62e8  30 8e     BMI $6278
-$62ea  68        PLA
-$62eb  a8        TAY
-$62ec  68        PLA
-$62ed  aa        TAX
-$62ee  68        PLA
-$62ef  40        RTI
-$62f0  49 2b     EOR #$2b
-$62f2  17        ???
-$62f3  c5 9a     CMP $9a
-$62f5  7f        ???
-$62f6  2c 10 e8  BIT $e810
-$62f9  ad 11 e8  LDA $e811
-$62fc  29 fe     AND #$fe
-$62fe  8d 11 e8  STA $e811
-$6301  2c 20 e8  BIT $e820
-$6304  ad 21 e8  LDA $e821
-$6307  29 fe     AND #$fe
-$6309  8d 21 e8  STA $e821
-$630c  2c 22 e8  BIT $e822
-$630f  ad 23 e8  LDA $e823
-$6312  29 fe     AND #$fe
-$6314  8d 23 e8  STA $e823
-$6317  a9 1d     LDA #$1d
-$6319  8d 4d e8  STA $e84d
-$631c  8d 4e e8  STA $e84e
-$631f  4c e6 66  JMP $66e6
-$6322  48        PHA
-$6323  2c 3e 7c  BIT $7c3e
-$6326  30 1a     BMI $6342
-$6328  b0 0d     BCS $6337
-$632a  a9 10     LDA #$10
-$632c  08        PHP
-$632d  78        SEI
-$632e  0d 4f e8  ORA $e84f
-$6331  8d 4f e8  STA $e84f
-$6334  28        PLP
-$6335  d0 0b     BNE $6342
-$6337  a9 ef     LDA #$ef
-$6339  08        PHP
-$633a  78        SEI
-$633b  2d 4f e8  AND $e84f
-$633e  8d 4f e8  STA $e84f
-$6341  28        PLP
-$6342  68        PLA
-$6343  60        RTS
-$6344  a9 43     LDA #$43
-$6346  20 82 65  JSR $6582
-$6349  b0 53     BCS $639e
-$634b  ac 62 7c  LDY $7c62
-$634e  c0 02     CPY #$02
-$6350  90 4c     BCC $639e
-$6352  a0 00     LDY #$00
-$6354  b1 1f     LDA ($1f),Y
-$6356  8d 4f 7c  STA $7c4f
-$6359  c8        INY
-$635a  b1 1f     LDA ($1f),Y
-$635c  8d 4e 7c  STA $7c4e
-$635f  c8        INY
-$6360  cc 62 7c  CPY $7c62
-$6363  f0 2a     BEQ $638f
-$6365  b1 1f     LDA ($1f),Y
-$6367  8d 4d 7c  STA $7c4d
-$636a  c8        INY
-$636b  a2 08     LDX #$08
-$636d  2e 4d 7c  ROL $7c4d
-$6370  2e 4e 7c  ROL $7c4e
-$6373  2e 4f 7c  ROL $7c4f
-$6376  90 12     BCC $638a
-$6378  ad 4e 7c  LDA $7c4e
-$637b  4d 3c 7c  EOR $7c3c
-$637e  8d 4e 7c  STA $7c4e
-$6381  ad 4f 7c  LDA $7c4f
-$6384  4d 3d 7c  EOR $7c3d
-$6387  8d 4f 7c  STA $7c4f
-$638a  ca        DEX
-$638b  d0 e0     BNE $636d
-$638d  f0 d1     BEQ $6360
-$638f  ac 62 7c  LDY $7c62
-$6392  88        DEY
-$6393  ad 4e 7c  LDA $7c4e
-$6396  91 1f     STA ($1f),Y
-$6398  88        DEY
-$6399  ad 4f 7c  LDA $7c4f
-$639c  91 1f     STA ($1f),Y
-$639e  60        RTS
-$639f  60        RTS
-$63a0  2c 38 7c  BIT $7c38
-$63a3  70 fa     BVS $639f
-$63a5  a9 54     LDA #$54
-$63a7  20 82 65  JSR $6582
-$63aa  b0 f3     BCS $639f
-$63ac  ac 62 7c  LDY $7c62
-$63af  f0 ee     BEQ $639f
-$63b1  88        DEY
-$63b2  a2 fe     LDX #$fe
-$63b4  b1 1f     LDA ($1f),Y
-$63b6  29 7f     AND #$7f
-$63b8  c9 7f     CMP #$7f
-$63ba  f0 67     BEQ $6423
-$63bc  c9 5f     CMP #$5f
-$63be  d0 04     BNE $63c4
-$63c0  a9 a4     LDA #$a4
-$63c2  d0 58     BNE $641c
-$63c4  c9 20     CMP #$20
-$63c6  90 14     BCC $63dc
-$63c8  c9 41     CMP #$41
-$63ca  90 50     BCC $641c
-$63cc  c9 60     CMP #$60
-$63ce  90 04     BCC $63d4
-$63d0  e9 20     SBC #$20
-$63d2  d0 48     BNE $641c
-$63d4  c9 5b     CMP #$5b
-$63d6  b0 44     BCS $641c
-$63d8  69 80     ADC #$80
-$63da  d0 40     BNE $641c
-$63dc  c9 0d     CMP #$0d
-$63de  d0 17     BNE $63f7
-$63e0  88        DEY
-$63e1  b1 1f     LDA ($1f),Y
-$63e3  c8        INY
-$63e4  f0 0d     BEQ $63f3
-$63e6  c9 0d     CMP #$0d
-$63e8  f0 39     BEQ $6423
-$63ea  c9 0a     CMP #$0a
-$63ec  d0 05     BNE $63f3
-$63ee  88        DEY
-$63ef  a9 0d     LDA #$0d
-$63f1  d0 29     BNE $641c
-$63f3  a9 8d     LDA #$8d
-$63f5  d0 25     BNE $641c
-$63f7  c9 0a     CMP #$0a
-$63f9  d0 0f     BNE $640a
-$63fb  88        DEY
-$63fc  b1 1f     LDA ($1f),Y
-$63fe  c8        INY
-$63ff  f0 05     BEQ $6406
-$6401  c9 0d     CMP #$0d
-$6403  d0 01     BNE $6406
-$6405  88        DEY
-$6406  a9 0d     LDA #$0d
-$6408  d0 12     BNE $641c
-$640a  c9 08     CMP #$08
-$640c  d0 08     BNE $6416
-$640e  88        DEY
-$640f  c8        INY
-$6410  f0 11     BEQ $6423
-$6412  88        DEY
-$6413  4c 23 64  JMP $6423
-$6416  c9 0c     CMP #$0c
-$6418  d0 09     BNE $6423
-$641a  f0 00     BEQ $641c
-$641c  9d 88 7d  STA $7d88,X
-$641f  8a        TXA
-$6420  f0 08     BEQ $642a
-$6422  ca        DEX
-$6423  98        TYA
-$6424  f0 0e     BEQ $6434
-$6426  88        DEY
-$6427  4c b4 63  JMP $63b4
-$642a  98        TYA
-$642b  f0 08     BEQ $6435
-$642d  a9 ff     LDA #$ff
-$642f  9d 88 7d  STA $7d88,X
-$6432  d0 01     BNE $6435
-$6434  e8        INX
-$6435  a0 00     LDY #$00
-$6437  e0 ff     CPX #$ff
-$6439  f0 33     BEQ $646e
-$643b  a9 40     LDA #$40
-$643d  8d 5a 7c  STA $7c5a
-$6440  bd 88 7d  LDA $7d88,X
-$6443  99 88 7d  STA $7d88,Y
-$6446  c9 a4     CMP #$a4
-$6448  f0 0f     BEQ $6459
-$644a  c9 20     CMP #$20
-$644c  f0 13     BEQ $6461
-$644e  c9 0d     CMP #$0d
-$6450  f0 0f     BEQ $6461
-$6452  a9 80     LDA #$80
-$6454  8d 5a 7c  STA $7c5a
-$6457  f0 08     BEQ $6461
-$6459  ad 5a 7c  LDA $7c5a
-$645c  29 bf     AND #$bf
-$645e  8d 5a 7c  STA $7c5a
-$6461  c8        INY
-$6462  e8        INX
-$6463  e0 ff     CPX #$ff
-$6465  d0 d9     BNE $6440
-$6467  ad 5a 7c  LDA $7c5a
-$646a  99 88 7d  STA $7d88,Y
-$646d  c8        INY
-$646e  20 35 65  JSR $6535
-$6471  60        RTS
-$6472  2c 38 7c  BIT $7c38
-$6475  70 40     BVS $64b7
-$6477  a9 53     LDA #$53
-$6479  20 82 65  JSR $6582
-$647c  b0 39     BCS $64b7
-$647e  ad 62 7c  LDA $7c62
-$6481  f0 34     BEQ $64b7
-$6483  a0 00     LDY #$00
-$6485  b1 1f     LDA ($1f),Y
-$6487  c9 11     CMP #$11
-$6489  d0 04     BNE $648f
-$648b  a9 0a     LDA #$0a
-$648d  d0 1e     BNE $64ad
-$648f  c9 14     CMP #$14
-$6491  d0 04     BNE $6497
-$6493  a9 7f     LDA #$7f
-$6495  d0 16     BNE $64ad
-$6497  c9 9d     CMP #$9d
-$6499  d0 04     BNE $649f
-$649b  a9 08     LDA #$08
-$649d  d0 0e     BNE $64ad
-$649f  c9 5e     CMP #$5e
-$64a1  f0 0a     BEQ $64ad
-$64a3  c9 41     CMP #$41
-$64a5  90 06     BCC $64ad
-$64a7  c9 5b     CMP #$5b
-$64a9  b0 02     BCS $64ad
-$64ab  09 20     ORA #$20
-$64ad  29 7f     AND #$7f
-$64af  91 1f     STA ($1f),Y
-$64b1  c8        INY
-$64b2  cc 62 7c  CPY $7c62
-$64b5  d0 ce     BNE $6485
-$64b7  60        RTS
-$64b8  60        RTS
-$64b9  a9 52     LDA #$52
-$64bb  20 82 65  JSR $6582
-$64be  b0 f8     BCS $64b8
-$64c0  ad 38 7c  LDA $7c38
-$64c3  29 08     AND #$08
-$64c5  18        CLC
-$64c6  69 7f     ADC #$7f
-$64c8  09 7f     ORA #$7f
-$64ca  8d 50 7c  STA $7c50
-$64cd  a0 00     LDY #$00
-$64cf  8c 3a 7c  STY $7c3a
-$64d2  ae 5c 7c  LDX $7c5c
-$64d5  ec 5e 7c  CPX $7c5e
-$64d8  f0 3b     BEQ $6515
-$64da  bd 87 7c  LDA $7c87,X
-$64dd  2d 50 7c  AND $7c50
-$64e0  2c 38 7c  BIT $7c38
-$64e3  30 0c     BMI $64f1
-$64e5  c9 0d     CMP #$0d
-$64e7  d0 08     BNE $64f1
-$64e9  99 88 7d  STA $7d88,Y
-$64ec  c8        INY
-$64ed  e8        INX
-$64ee  4c 15 65  JMP $6515
-$64f1  99 88 7d  STA $7d88,Y
-$64f4  c8        INY
-$64f5  e8        INX
-$64f6  c0 ff     CPY #$ff
-$64f8  b0 1b     BCS $6515
-$64fa  ec 5e 7c  CPX $7c5e
-$64fd  f0 16     BEQ $6515
-$64ff  ad 38 7c  LDA $7c38
-$6502  2a        ROL A
-$6503  2a        ROL A
-$6504  2a        ROL A
-$6505  bd 87 7c  LDA $7c87,X
-$6508  2d 50 7c  AND $7c50
-$650b  90 d3     BCC $64e0
-$650d  cd 39 7c  CMP $7c39
-$6510  d0 ce     BNE $64e0
-$6512  ce 3a 7c  DEC $7c3a
-$6515  8e 5d 7c  STX $7c5d
-$6518  ad 38 7c  LDA $7c38
-$651b  2a        ROL A
-$651c  2a        ROL A
-$651d  2a        ROL A
-$651e  90 0e     BCC $652e
-$6520  ae 5c 7c  LDX $7c5c
-$6523  bd 87 7c  LDA $7c87,X
-$6526  2d 50 7c  AND $7c50
-$6529  cd 39 7c  CMP $7c39
-$652c  f0 03     BEQ $6531
-$652e  20 5e 61  JSR $615e
-$6531  20 35 65  JSR $6535
-$6534  60        RTS
-$6535  98        TYA
-$6536  ac 63 7c  LDY $7c63
-$6539  91 2a     STA ($2a),Y
-$653b  aa        TAX
-$653c  f0 02     BEQ $6540
-$653e  a9 88     LDA #$88
-$6540  c8        INY
-$6541  91 2a     STA ($2a),Y
-$6543  aa        TAX
-$6544  f0 02     BEQ $6548
-$6546  a9 7d     LDA #$7d
-$6548  c8        INY
-$6549  91 2a     STA ($2a),Y
-$654b  2c 3e 7c  BIT $7c3e
-$654e  70 01     BVS $6551
-$6550  60        RTS
-$6551  ac 62 7c  LDY $7c62
-$6554  f0 fa     BEQ $6550
-$6556  a5 1f     LDA $1f
-$6558  38        SEC
-$6559  e5 30     SBC $30
-$655b  a5 20     LDA $20
-$655d  e5 31     SBC $31
-$655f  90 ef     BCC $6550
-$6561  a5 1f     LDA $1f
-$6563  38        SEC
-$6564  e5 34     SBC $34
-$6566  a5 20     LDA $20
-$6568  e5 35     SBC $35
-$656a  b0 e4     BCS $6550
-$656c  98        TYA
-$656d  91 1f     STA ($1f),Y
-$656f  e6 1f     INC $1f
-$6571  d0 02     BNE $6575
-$6573  e6 20     INC $20
-$6575  a9 ff     LDA #$ff
-$6577  91 1f     STA ($1f),Y
-$6579  a5 1f     LDA $1f
-$657b  d0 02     BNE $657f
-$657d  c6 20     DEC $20
-$657f  c6 1f     DEC $1f
-$6581  60        RTS
-$6582  a0 00     LDY #$00
-$6584  8d 5b 7c  STA $7c5b
-$6587  b1 2a     LDA ($2a),Y
-$6589  c9 51     CMP #$51
-$658b  f0 0d     BEQ $659a
-$658d  98        TYA
-$658e  18        CLC
-$658f  69 0e     ADC #$0e
-$6591  b0 2a     BCS $65bd
-$6593  38        SEC
-$6594  e9 07     SBC #$07
-$6596  a8        TAY
-$6597  4c 87 65  JMP $6587
-$659a  c8        INY
-$659b  b1 2a     LDA ($2a),Y
-$659d  4d 5b 7c  EOR $7c5b
-$65a0  88        DEY
-$65a1  c9 80     CMP #$80
-$65a3  d0 e8     BNE $658d
-$65a5  c8        INY
-$65a6  c8        INY
-$65a7  b1 2a     LDA ($2a),Y
-$65a9  8d 62 7c  STA $7c62
-$65ac  c8        INY
-$65ad  b1 2a     LDA ($2a),Y
-$65af  85 1f     STA $1f
-$65b1  c8        INY
-$65b2  b1 2a     LDA ($2a),Y
-$65b4  85 20     STA $20
-$65b6  88        DEY
-$65b7  88        DEY
-$65b8  18        CLC
-$65b9  8c 63 7c  STY $7c63
-$65bc  60        RTS
-$65bd  38        SEC
-$65be  60        RTS
-$65bf  78        SEI
-$65c0  ad 4b e8  LDA $e84b
-$65c3  8d 59 7c  STA $7c59
-$65c6  09 40     ORA #$40
-$65c8  29 7f     AND #$7f
-$65ca  8d 4b e8  STA $e84b
-$65cd  58        CLI
-$65ce  60        RTS
-$65cf  78        SEI
-$65d0  ad 59 7c  LDA $7c59
-$65d3  4d 4b e8  EOR $e84b
-$65d6  29 c0     AND #$c0
-$65d8  4d 4b e8  EOR $e84b
-$65db  8d 4b e8  STA $e84b
-$65de  58        CLI
-$65df  60        RTS
-$65e0  a9 53     LDA #$53
-$65e2  20 82 65  JSR $6582
-$65e5  b0 18     BCS $65ff
-$65e7  ad 62 7c  LDA $7c62
-$65ea  f0 13     BEQ $65ff
-$65ec  20 bf 65  JSR $65bf
-$65ef  a0 00     LDY #$00
-$65f1  b1 1f     LDA ($1f),Y
-$65f3  20 00 66  JSR $6600
-$65f6  c8        INY
-$65f7  cc 62 7c  CPY $7c62
-$65fa  d0 f5     BNE $65f1
-$65fc  20 cf 65  JSR $65cf
-$65ff  60        RTS
-$6600  8d 56 7c  STA $7c56
-$6603  a9 40     LDA #$40
-$6605  8d 58 7c  STA $7c58
-$6608  ad 38 7c  LDA $7c38
-$660b  4a        LSR A
-$660c  4a        LSR A
-$660d  4a        LSR A
-$660e  a9 00     LDA #$00
-$6610  69 07     ADC #$07
-$6612  8d 57 7c  STA $7c57
-$6615  ae 3b 7c  LDX $7c3b
-$6618  e8        INX
-$6619  e8        INX
-$661a  bd 80 60  LDA $6080,X
-$661d  78        SEI
-$661e  8d 44 e8  STA $e844
-$6621  e8        INX
-$6622  bd 80 60  LDA $6080,X
-$6625  8d 45 e8  STA $e845
-$6628  a9 c0     LDA #$c0
-$662a  8d 4e e8  STA $e84e
-$662d  58        CLI
-$662e  2c 58 7c  BIT $7c58
-$6631  10 fb     BPL $662e
-$6633  60        RTS
-$6634  48        PHA
-$6635  a9 10     LDA #$10
-$6637  78        SEI
-$6638  4d 4f e8  EOR $e84f
-$663b  8d 4f e8  STA $e84f
-$663e  58        CLI
-$663f  68        PLA
-$6640  60        RTS
-$6641  a9 34     LDA #$34
-$6643  8d 21 e8  STA $e821
-$6646  ad 40 e8  LDA $e840
-$6649  09 02     ORA #$02
-$664b  8d 40 e8  STA $e840
-$664e  a9 ff     LDA #$ff
-$6650  8d 45 e8  STA $e845
-$6653  2c 4d e8  BIT $e84d
-$6656  70 2b     BVS $6683
-$6658  ad 40 e8  LDA $e840
-$665b  30 f6     BMI $6653
-$665d  29 fd     AND #$fd
-$665f  8d 40 e8  STA $e840
-$6662  2c 10 e8  BIT $e810
-$6665  70 06     BVS $666d
-$6667  a5 96     LDA $96
-$6669  09 40     ORA #$40
-$666b  85 96     STA $96
-$666d  ae 20 e8  LDX $e820
-$6670  a9 3c     LDA #$3c
-$6672  8d 21 e8  STA $e821
-$6675  2c 40 e8  BIT $e840
-$6678  10 fb     BPL $6675
-$667a  a9 34     LDA #$34
-$667c  8d 21 e8  STA $e821
-$667f  8a        TXA
-$6680  49 ff     EOR #$ff
-$6682  60        RTS
-$6683  a9 02     LDA #$02
-$6685  05 96     ORA $96
-$6687  85 96     STA $96
-$6689  a9 0d     LDA #$0d
-$668b  60        RTS
-$668c  a9 53     LDA #$53
-$668e  20 82 65  JSR $6582
-$6691  b0 44     BCS $66d7
-$6693  a9 05     LDA #$05
-$6695  8d 5a 7c  STA $7c5a
-$6698  20 cc ff  JSR $ffcc
-$669b  ad 3f 7c  LDA $7c3f
-$669e  29 7f     AND #$7f
-$66a0  aa        TAX
-$66a1  20 c6 ff  JSR $ffc6
-$66a4  a5 96     LDA $96
-$66a6  f0 07     BEQ $66af
-$66a8  ce 5a 7c  DEC $7c5a
-$66ab  d0 eb     BNE $6698
-$66ad  f0 28     BEQ $66d7
-$66af  a0 00     LDY #$00
-$66b1  20 41 66  JSR $6641
-$66b4  99 88 7d  STA $7d88,Y
-$66b7  c8        INY
-$66b8  2c 3f 7c  BIT $7c3f
-$66bb  10 0b     BPL $66c8
-$66bd  cd 40 7c  CMP $7c40
-$66c0  d0 06     BNE $66c8
-$66c2  a5 96     LDA $96
-$66c4  09 04     ORA #$04
-$66c6  85 96     STA $96
-$66c8  a5 96     LDA $96
-$66ca  d0 05     BNE $66d1
-$66cc  cc 41 7c  CPY $7c41
-$66cf  d0 e0     BNE $66b1
-$66d1  20 35 65  JSR $6535
-$66d4  20 cc ff  JSR $ffcc
-$66d7  60        RTS
-$66d8  a5 9b     LDA $9b
-$66da  c9 ef     CMP #$ef
-$66dc  d0 04     BNE $66e2
-$66de  a9 ff     LDA #$ff
-$66e0  85 9b     STA $9b
-$66e2  58        CLI
-$66e3  20 47 67  JSR $6747
-$66e6  68        PLA
-$66e7  a8        TAY
-$66e8  68        PLA
-$66e9  aa        TAX
-$66ea  68        PLA
-$66eb  40        RTI
-$66ec  ee 10 e8  INC $e810
-$66ef  d0 a9     BNE $669a
-$66f1  00        BRK
-$66f2  85 1f     STA $1f
-$66f4  a9 e4     LDA #$e4
-$66f6  85 20     STA $20
-$66f8  a0 00     LDY #$00
-$66fa  b1 1f     LDA ($1f),Y
-$66fc  d9 ec 66  CMP $66ec,Y
-$66ff  d0 07     BNE $6708
-$6701  c8        INY
-$6702  c0 04     CPY #$04
-$6704  d0 f4     BNE $66fa
-$6706  f0 0d     BEQ $6715
-$6708  e6 1f     INC $1f
-$670a  d0 ec     BNE $66f8
-$670c  e6 20     INC $20
-$670e  a5 20     LDA $20
-$6710  c9 e7     CMP #$e7
-$6712  d0 e4     BNE $66f8
-$6714  60        RTS
-$6715  a5 1f     LDA $1f
-$6717  38        SEC
-$6718  e9 32     SBC #$32
-$671a  85 1f     STA $1f
-$671c  a5 20     LDA $20
-$671e  e9 00     SBC #$00
-$6720  85 20     STA $20
-$6722  a0 00     LDY #$00
-$6724  b1 1f     LDA ($1f),Y
-$6726  c9 bd     CMP #$bd
-$6728  f0 06     BEQ $6730
-$672a  c8        INY
-$672b  c0 32     CPY #$32
-$672d  d0 f5     BNE $6724
-$672f  60        RTS
-$6730  c8        INY
-$6731  c8        INY
-$6732  b1 1f     LDA ($1f),Y
-$6734  09 01     ORA #$01
-$6736  88        DEY
-$6737  c9 e7     CMP #$e7
-$6739  d0 e9     BNE $6724
-$673b  b1 1f     LDA ($1f),Y
-$673d  8d 6c 67  STA $676c
-$6740  c8        INY
-$6741  b1 1f     LDA ($1f),Y
-$6743  8d 6d 67  STA $676d
-$6746  60        RTS
-$6747  a9 ff     LDA #$ff
-$6749  8d 82 7c  STA $7c82
-$674c  8d 83 7c  STA $7c83
-$674f  ad 10 e8  LDA $e810
-$6752  29 f0     AND #$f0
-$6754  8d 10 e8  STA $e810
-$6757  a2 50     LDX #$50
-$6759  ad 12 e8  LDA $e812
-$675c  cd 12 e8  CMP $e812
-$675f  d0 f8     BNE $6759
-$6761  c9 ff     CMP #$ff
-$6763  f0 25     BEQ $678a
-$6765  a0 08     LDY #$08
-$6767  4a        LSR A
-$6768  b0 1a     BCS $6784
-$676a  48        PHA
-$676b  bd 00 e0  LDA $e000,X
-$676e  f0 13     BEQ $6783
-$6770  c9 10     CMP #$10
-$6772  f0 0f     BEQ $6783
-$6774  c9 12     CMP #$12
-$6776  d0 08     BNE $6780
-$6778  a9 00     LDA #$00
-$677a  8d 83 7c  STA $7c83
-$677d  4c 83 67  JMP $6783
-$6780  8d 82 7c  STA $7c82
-$6783  68        PLA
-$6784  ca        DEX
-$6785  88        DEY
-$6786  d0 df     BNE $6767
-$6788  f0 05     BEQ $678f
-$678a  8a        TXA
-$678b  38        SEC
-$678c  e9 08     SBC #$08
-$678e  aa        TAX
-$678f  ee 10 e8  INC $e810
-$6792  8a        TXA
-$6793  d0 c4     BNE $6759
-$6795  ad 82 7c  LDA $7c82
-$6798  c9 ff     CMP #$ff
-$679a  f0 17     BEQ $67b3
-$679c  29 7f     AND #$7f
-$679e  c9 40     CMP #$40
-$67a0  b0 0d     BCS $67af
-$67a2  c9 20     CMP #$20
-$67a4  b0 05     BCS $67ab
-$67a6  ad 82 7c  LDA $7c82
-$67a9  90 08     BCC $67b3
-$67ab  09 e0     ORA #$e0
-$67ad  d0 04     BNE $67b3
-$67af  29 1f     AND #$1f
-$67b1  09 60     ORA #$60
-$67b3  8d 82 7c  STA $7c82
-$67b6  a5 a6     LDA $a6
-$67b8  c9 ff     CMP #$ff
-$67ba  d0 03     BNE $67bf
-$67bc  8d 80 7c  STA $7c80
-$67bf  a6 9e     LDX $9e
-$67c1  ec 7f 7c  CPX $7c7f
-$67c4  f0 10     BEQ $67d6
-$67c6  ca        DEX
-$67c7  bd 6f 02  LDA $026f,X
-$67ca  8d 80 7c  STA $7c80
-$67cd  c9 12     CMP #$12
-$67cf  f0 0a     BEQ $67db
-$67d1  cd 81 7c  CMP $7c81
-$67d4  f0 05     BEQ $67db
-$67d6  ad 83 7c  LDA $7c83
-$67d9  d0 17     BNE $67f2
-$67db  ad 7f 7c  LDA $7c7f
-$67de  85 9e     STA $9e
-$67e0  ad 82 7c  LDA $7c82
-$67e3  c9 ff     CMP #$ff
-$67e5  f0 0b     BEQ $67f2
-$67e7  cd 84 7c  CMP $7c84
-$67ea  f0 06     BEQ $67f2
-$67ec  ad 82 7c  LDA $7c82
-$67ef  20 2e 68  JSR $682e
-$67f2  ad 7f 7c  LDA $7c7f
-$67f5  c5 9e     CMP $9e
-$67f7  f0 0e     BEQ $6807
-$67f9  a6 9e     LDX $9e
-$67fb  ca        DEX
-$67fc  bd 6f 02  LDA $026f,X
-$67ff  8d 86 7c  STA $7c86
-$6802  a9 1e     LDA #$1e
-$6804  8d 85 7c  STA $7c85
-$6807  ce 85 7c  DEC $7c85
-$680a  d0 15     BNE $6821
-$680c  ad 86 7c  LDA $7c86
-$680f  cd 82 7c  CMP $7c82
-$6812  f0 05     BEQ $6819
-$6814  cd 80 7c  CMP $7c80
-$6817  d0 08     BNE $6821
-$6819  20 2e 68  JSR $682e
-$681c  a9 07     LDA #$07
-$681e  8d 85 7c  STA $7c85
-$6821  ad 82 7c  LDA $7c82
-$6824  8d 84 7c  STA $7c84
-$6827  ad 80 7c  LDA $7c80
-$682a  8d 81 7c  STA $7c81
-$682d  60        RTS
-$682e  a6 9e     LDX $9e
-$6830  e0 0a     CPX #$0a
-$6832  f0 05     BEQ $6839
-$6834  9d 6f 02  STA $026f,X
-$6837  e6 9e     INC $9e
-$6839  60        RTS
-$683a  60        RTS
-$683b  61 62     ADC ($62,X)
-$683d  5e 64 65  LSR $6564,X
-$6840  40        RTI
-$6841  67        ???
-$6842  68        PLA
-$6843  69 6a     ADC #$6a
-$6845  5c        ???
-$6846  6c 6d 6e  JMP ($6e6d)
-$6849  6f        ???
-$684a  70 71     BVS $68bd
-$684c  72        ???
-$684d  5b        ???
-$684e  74        ???
-$684f  75 76     ADC $76,X
-$6851  77        ???
-$6852  78        SEI
-$6853  79 7a 7b  ADC $7b7a,Y
-$6856  7c        ???
-$6857  7d 7e 7f  ADC $7f7e,X
-$685a  20 21 22  JSR $2221
-$685d  23        ???
-$685e  24 25     BIT $25
-$6860  26 27     ROL $27
-$6862  28        PLP
-$6863  29 2a     AND #$2a
-$6865  2b        ???
-$6866  2c 2d 2e  BIT $2e2d
-$6869  2f        ???
-$686a  30 31     BMI $689d
-$686c  32        ???
-$686d  33        ???
-$686e  34        ???
-$686f  35 36     AND $36,X
-$6871  37        ???
-$6872  38        SEC
-$6873  39 3a 3b  AND $3b3a,Y
-$6876  3c        ???
-$6877  3d 3e 3f  AND $3f3e,X
-$687a  00        BRK
-$687b  41 42     EOR ($42,X)
-$687d  43        ???
-$687e  44        ???
-$687f  45 46     EOR $46
-$6881  47        ???
-$6882  48        PHA
-$6883  49 4a     EOR #$4a
-$6885  4b        ???
-$6886  4c 4d 4e  JMP $4e4d
-$6889  4f        ???
-$688a  50 51     BVC $68dd
-$688c  52        ???
-$688d  53        ???
-$688e  54        ???
-$688f  55 56     EOR $56,X
-$6891  57        ???
-$6892  58        CLI
-$6893  59 5a 1b  EOR $1b5a,Y
-$6896  1c        ???
-$6897  1d 1e 1f  ORA $1f1e,X
-$689a  66 01     ROR $01
-$689c  02        ???
-$689d  03        ???
-$689e  04        ???
-$689f  05 06     ORA $06
-$68a1  07        ???
-$68a2  08        PHP
-$68a3  09 0a     ORA #$0a
-$68a5  0b        ???
-$68a6  0c        ???
-$68a7  0d 0e 0f  ORA $0f0e
-$68aa  10 11     BPL $68bd
-$68ac  12        ???
-$68ad  13        ???
-$68ae  14        ???
-$68af  15 16     ORA $16,X
-$68b1  17        ???
-$68b2  18        CLC
-$68b3  19 1a 73  ORA $731a,Y
-$68b6  5d 6b 63  EOR $636b,X
-$68b9  5f        ???
-$68ba  50 80     BVC $683c
-$68bc  18        CLC
-$68bd  50 02     BVC $68c1
-$68bf  04        ???
-$68c0  60        RTS
-$68c1  80        ???
-$68c2  80        ???
-$68c3  80        ???
-$68c4  00        BRK
-$68c5  07        ???
-$68c6  01 0d     ORA ($0d,X)
-$68c8  02        ???
-$68c9  0a        ASL A
-$68ca  03        ???
-$68cb  1b        ???
-$68cc  04        ???
-$68cd  7e 04 08  ROR $0804,X
-$68d0  05 10     ORA $10
-$68d2  06 80     ASL $80
-$68d4  07        ???
-$68d5  81 08     STA ($08,X)
-$68d7  ff        ???
-$68d8  ff        ???
-$68d9  12        ???
-$68da  0b        ???
-$68db  0f        ???
-$68dc  0c        ???
-$68dd  0c        ???
-$68de  0d 0b 0e  ORA $0e0b
-$68e1  13        ???
-$68e2  0f        ???
-$68e3  1a        ???
-$68e4  10 11     BPL $68f7
-$68e6  11 1c     ORA ($1c),Y
-$68e8  12        ???
-$68e9  18        CLC
-$68ea  13        ???
-$68eb  17        ???
-$68ec  14        ???
-$68ed  1d 15 19  ORA $1915,X
-$68f0  16 1f     ASL $1f,X
-$68f2  17        ???
-$68f3  ff        ???
-$68f4  ff        ???
-$68f5  aa        TAX
-$68f6  aa        TAX
-$68f7  aa        TAX
-$68f8  aa        TAX
-$68f9  aa        TAX
-$68fa  aa        TAX
-$68fb  aa        TAX
-$68fc  aa        TAX
-$68fd  aa        TAX
-$68fe  aa        TAX
-$68ff  64        ???
-$6900  69 2e     ADC #$2e
-$6902  69 3d     ADC #$3d
-$6904  6b        ???
-$6905  75 6b     ADC $6b,X
-$6907  0a        ASL A
-$6908  6d b1 6a  ADC $6ab1
-$690b  8d 6a e7  STA $e76a
-$690e  6a        ROR A
-$690f  03        ???
-$6910  6b        ???
-$6911  83        ???
-$6912  69 ae     ADC #$ae
-$6914  6c 19 6b  JMP ($6b19)
-$6917  2d 6b 03  AND $036b
-$691a  6b        ???
-$691b  e7        ???
-$691c  6a        ROR A
-$691d  91 6b     STA ($6b),Y
-$691f  35 6c     AND $6c,X
-$6921  1f        ???
-$6922  6a        ROR A
-$6923  98        TYA
-$6924  69 73     ADC #$73
-$6926  69 7a     ADC #$7a
-$6928  69 dc     ADC #$dc
-$692a  69 65     ADC #$65
-$692c  69 6c     ADC #$6c
-$692e  69 38     ADC #$38
-$6930  a0 d2     LDY #$d2
-$6932  78        SEI
-$6933  ad 4c e8  LDA $e84c
-$6936  09 e0     ORA #$e0
-$6938  49 20     EOR #$20
-$693a  8d 4c e8  STA $e84c
-$693d  58        CLI
-$693e  a2 20     LDX #$20
-$6940  ca        DEX
-$6941  d0 fd     BNE $6940
-$6943  78        SEI
-$6944  ad 4c e8  LDA $e84c
-$6947  09 e0     ORA #$e0
-$6949  8d 4c e8  STA $e84c
-$694c  58        CLI
-$694d  a2 20     LDX #$20
-$694f  ca        DEX
-$6950  d0 fd     BNE $694f
-$6952  88        DEY
-$6953  d0 dd     BNE $6932
-$6955  78        SEI
-$6956  ad 4c e8  LDA $e84c
-$6959  29 1f     AND #$1f
-$695b  8d 4c e8  STA $e84c
-$695e  58        CLI
-$695f  90 03     BCC $6964
-$6961  18        CLC
-$6962  90 cc     BCC $6930
-$6964  60        RTS
-$6965  60        RTS
-$6966  a9 80     LDA #$80
-$6968  8d c2 68  STA $68c2
-$696b  18        CLC
-$696c  60        RTS
-$696d  a9 00     LDA #$00
-$696f  8d c2 68  STA $68c2
-$6972  18        CLC
-$6973  60        RTS
-$6974  ad c0 68  LDA $68c0
-$6977  20 9f 69  JSR $699f
-$697a  60        RTS
-$697b  a9 a0     LDA #$a0
-$697d  4d c1 68  EOR $68c1
-$6980  20 9f 69  JSR $699f
-$6983  60        RTS
-$6984  ad 66 7c  LDA $7c66
-$6987  29 f8     AND #$f8
-$6989  18        CLC
-$698a  69 08     ADC #$08
-$698c  cd bd 68  CMP $68bd
-$698f  b0 04     BCS $6995
-$6991  8d 66 7c  STA $7c66
-$6994  60        RTS
-$6995  20 73 6b  JSR $6b73
-$6998  60        RTS
-$6999  20 1a 6b  JSR $6b1a
-$699c  ad c0 68  LDA $68c0
-$699f  8d 5a 7c  STA $7c5a
-$69a2  ad bc 68  LDA $68bc
-$69a5  f0 34     BEQ $69db
-$69a7  38        SEC
-$69a8  ed 6c 7c  SBC $7c6c
-$69ab  aa        TAX
-$69ac  ad bd 68  LDA $68bd
-$69af  f0 2a     BEQ $69db
-$69b1  a5 21     LDA $21
-$69b3  85 32     STA $32
-$69b5  a5 22     LDA $22
-$69b7  85 33     STA $33
-$69b9  ac 66 7c  LDY $7c66
-$69bc  4c c1 69  JMP $69c1
-$69bf  a0 00     LDY #$00
-$69c1  ad 5a 7c  LDA $7c5a
-$69c4  91 32     STA ($32),Y
-$69c6  c8        INY
-$69c7  cc bd 68  CPY $68bd
-$69ca  d0 f8     BNE $69c4
-$69cc  18        CLC
-$69cd  ad bd 68  LDA $68bd
-$69d0  65 32     ADC $32
-$69d2  85 32     STA $32
-$69d4  90 02     BCC $69d8
-$69d6  e6 33     INC $33
-$69d8  ca        DEX
-$69d9  d0 e4     BNE $69bf
-$69db  18        CLC
-$69dc  60        RTS
-$69dd  20 1a 6b  JSR $6b1a
-$69e0  ad c0 68  LDA $68c0
-$69e3  8d 5a 7c  STA $7c5a
-$69e6  ae bc 68  LDX $68bc
-$69e9  f0 32     BEQ $6a1d
-$69eb  ad bd 68  LDA $68bd
-$69ee  f0 2d     BEQ $6a1d
-$69f0  ad ba 68  LDA $68ba
-$69f3  85 32     STA $32
-$69f5  ad bb 68  LDA $68bb
-$69f8  85 33     STA $33
-$69fa  a0 00     LDY #$00
-$69fc  b1 32     LDA ($32),Y
-$69fe  4d c1 68  EOR $68c1
-$6a01  30 05     BMI $6a08
-$6a03  ad 5a 7c  LDA $7c5a
-$6a06  91 32     STA ($32),Y
-$6a08  c8        INY
-$6a09  cc bd 68  CPY $68bd
-$6a0c  d0 ee     BNE $69fc
-$6a0e  18        CLC
-$6a0f  ad bd 68  LDA $68bd
-$6a12  65 32     ADC $32
-$6a14  85 32     STA $32
-$6a16  90 02     BCC $6a1a
-$6a18  e6 33     INC $33
-$6a1a  ca        DEX
-$6a1b  d0 dd     BNE $69fa
-$6a1d  18        CLC
-$6a1e  60        RTS
-$6a1f  60        RTS
-$6a20  20 c4 6c  JSR $6cc4
-$6a23  b0 fa     BCS $6a1f
-$6a25  cd bd 68  CMP $68bd
-$6a28  90 0a     BCC $6a34
-$6a2a  38        SEC
-$6a2b  e9 60     SBC #$60
-$6a2d  b0 f6     BCS $6a25
-$6a2f  ae bd 68  LDX $68bd
-$6a32  ca        DEX
-$6a33  8a        TXA
-$6a34  8d 66 7c  STA $7c66
-$6a37  20 c4 6c  JSR $6cc4
-$6a3a  b0 e3     BCS $6a1f
-$6a3c  29 1f     AND #$1f
-$6a3e  cd bc 68  CMP $68bc
-$6a41  90 05     BCC $6a48
-$6a43  ae bc 68  LDX $68bc
-$6a46  ca        DEX
-$6a47  8a        TXA
-$6a48  8d 6c 7c  STA $7c6c
-$6a4b  20 50 6a  JSR $6a50
-$6a4e  18        CLC
-$6a4f  60        RTS
-$6a50  85 21     STA $21
-$6a52  a9 00     LDA #$00
-$6a54  85 22     STA $22
-$6a56  a2 04     LDX #$04
-$6a58  ad bd 68  LDA $68bd
-$6a5b  c9 50     CMP #$50
-$6a5d  f0 01     BEQ $6a60
-$6a5f  ca        DEX
-$6a60  06 21     ASL $21
-$6a62  26 22     ROL $22
-$6a64  ca        DEX
-$6a65  d0 f9     BNE $6a60
-$6a67  a6 21     LDX $21
-$6a69  a4 22     LDY $22
-$6a6b  06 21     ASL $21
-$6a6d  26 22     ROL $22
-$6a6f  06 21     ASL $21
-$6a71  26 22     ROL $22
-$6a73  18        CLC
-$6a74  8a        TXA
-$6a75  65 21     ADC $21
-$6a77  85 21     STA $21
-$6a79  98        TYA
-$6a7a  65 22     ADC $22
-$6a7c  85 22     STA $22
-$6a7e  18        CLC
-$6a7f  a5 21     LDA $21
-$6a81  6d ba 68  ADC $68ba
-$6a84  85 21     STA $21
-$6a86  a5 22     LDA $22
-$6a88  6d bb 68  ADC $68bb
-$6a8b  85 22     STA $22
-$6a8d  60        RTS
-$6a8e  ad bd 68  LDA $68bd
-$6a91  18        CLC
-$6a92  ed 66 7c  SBC $7c66
-$6a95  90 07     BCC $6a9e
-$6a97  f0 05     BEQ $6a9e
-$6a99  ee 66 7c  INC $7c66
-$6a9c  18        CLC
-$6a9d  60        RTS
-$6a9e  ad bc 68  LDA $68bc
-$6aa1  18        CLC
-$6aa2  ed 6c 7c  SBC $7c6c
-$6aa5  f0 f5     BEQ $6a9c
-$6aa7  90 f3     BCC $6a9c
-$6aa9  a9 00     LDA #$00
-$6aab  8d 66 7c  STA $7c66
-$6aae  20 e8 6a  JSR $6ae8
-$6ab1  60        RTS
-$6ab2  ad 66 7c  LDA $7c66
-$6ab5  f0 05     BEQ $6abc
-$6ab7  ce 66 7c  DEC $7c66
-$6aba  18        CLC
-$6abb  60        RTS
-$6abc  ad 6c 7c  LDA $7c6c
-$6abf  f0 f9     BEQ $6aba
-$6ac1  ae bd 68  LDX $68bd
-$6ac4  f0 f4     BEQ $6aba
-$6ac6  ca        DEX
-$6ac7  8e 66 7c  STX $7c66
-$6aca  20 04 6b  JSR $6b04
-$6acd  60        RTS
-$6ace  ad bd 68  LDA $68bd
-$6ad1  18        CLC
-$6ad2  ed 66 7c  SBC $7c66
-$6ad5  90 05     BCC $6adc
-$6ad7  f0 03     BEQ $6adc
-$6ad9  ee 66 7c  INC $7c66
-$6adc  18        CLC
-$6add  60        RTS
-$6ade  ad 66 7c  LDA $7c66
-$6ae1  f0 03     BEQ $6ae6
-$6ae3  ce 66 7c  DEC $7c66
-$6ae6  18        CLC
-$6ae7  60        RTS
-$6ae8  ad bc 68  LDA $68bc
-$6aeb  18        CLC
-$6aec  ed 6c 7c  SBC $7c6c
-$6aef  90 11     BCC $6b02
-$6af1  f0 0f     BEQ $6b02
-$6af3  ee 6c 7c  INC $7c6c
-$6af6  a5 21     LDA $21
-$6af8  18        CLC
-$6af9  6d bd 68  ADC $68bd
-$6afc  85 21     STA $21
-$6afe  90 02     BCC $6b02
-$6b00  e6 22     INC $22
-$6b02  18        CLC
-$6b03  60        RTS
-$6b04  ad 6c 7c  LDA $7c6c
-$6b07  f0 0f     BEQ $6b18
-$6b09  ce 6c 7c  DEC $7c6c
-$6b0c  a5 21     LDA $21
-$6b0e  38        SEC
-$6b0f  ed bd 68  SBC $68bd
-$6b12  85 21     STA $21
-$6b14  b0 02     BCS $6b18
-$6b16  c6 22     DEC $22
-$6b18  18        CLC
-$6b19  60        RTS
-$6b1a  ad ba 68  LDA $68ba
-$6b1d  85 21     STA $21
-$6b1f  ad bb 68  LDA $68bb
-$6b22  85 22     STA $22
-$6b24  a9 00     LDA #$00
-$6b26  8d 66 7c  STA $7c66
-$6b29  8d 6c 7c  STA $7c6c
-$6b2c  18        CLC
-$6b2d  60        RTS
-$6b2e  ad c0 68  LDA $68c0
-$6b31  ac 66 7c  LDY $7c66
-$6b34  91 21     STA ($21),Y
-$6b36  c8        INY
-$6b37  cc bd 68  CPY $68bd
-$6b3a  90 f8     BCC $6b34
-$6b3c  18        CLC
-$6b3d  60        RTS
-$6b3e  a9 00     LDA #$00
-$6b40  8d 66 7c  STA $7c66
-$6b43  18        CLC
-$6b44  60        RTS
-$6b45  ad bd 68  LDA $68bd
-$6b48  18        CLC
-$6b49  ed 66 7c  SBC $7c66
-$6b4c  90 07     BCC $6b55
-$6b4e  f0 05     BEQ $6b55
-$6b50  ee 66 7c  INC $7c66
-$6b53  18        CLC
-$6b54  60        RTS
-$6b55  ad bc 68  LDA $68bc
-$6b58  18        CLC
-$6b59  ed 6c 7c  SBC $7c6c
-$6b5c  f0 02     BEQ $6b60
-$6b5e  b0 13     BCS $6b73
-$6b60  4c 1a 6b  JMP $6b1a
-$6b63  ad bd 68  LDA $68bd
-$6b66  18        CLC
-$6b67  ed 66 7c  SBC $7c66
-$6b6a  90 07     BCC $6b73
-$6b6c  f0 05     BEQ $6b73
-$6b6e  ee 66 7c  INC $7c66
-$6b71  18        CLC
-$6b72  60        RTS
-$6b73  20 3e 6b  JSR $6b3e
-$6b76  ad bc 68  LDA $68bc
-$6b79  18        CLC
-$6b7a  ed 6c 7c  SBC $7c6c
-$6b7d  90 39     BCC $6bb8
-$6b7f  f0 37     BEQ $6bb8
-$6b81  ee 6c 7c  INC $7c6c
-$6b84  18        CLC
-$6b85  ad bd 68  LDA $68bd
-$6b88  65 21     ADC $21
-$6b8a  85 21     STA $21
-$6b8c  90 02     BCC $6b90
-$6b8e  e6 22     INC $22
-$6b90  18        CLC
-$6b91  60        RTS
-$6b92  20 3e 6b  JSR $6b3e
-$6b95  a5 21     LDA $21
-$6b97  8d 64 7c  STA $7c64
-$6b9a  a5 22     LDA $22
-$6b9c  8d 65 7c  STA $7c65
-$6b9f  a5 21     LDA $21
-$6ba1  18        CLC
-$6ba2  6d bd 68  ADC $68bd
-$6ba5  85 32     STA $32
-$6ba7  a5 22     LDA $22
-$6ba9  69 00     ADC #$00
-$6bab  85 33     STA $33
-$6bad  ad bc 68  LDA $68bc
-$6bb0  38        SEC
-$6bb1  ed 6c 7c  SBC $7c6c
-$6bb4  aa        TAX
-$6bb5  4c d9 6b  JMP $6bd9
-$6bb8  a5 21     LDA $21
-$6bba  8d 64 7c  STA $7c64
-$6bbd  a5 22     LDA $22
-$6bbf  8d 65 7c  STA $7c65
-$6bc2  ad ba 68  LDA $68ba
-$6bc5  85 21     STA $21
-$6bc7  18        CLC
-$6bc8  6d bd 68  ADC $68bd
-$6bcb  85 32     STA $32
-$6bcd  ad bb 68  LDA $68bb
-$6bd0  85 22     STA $22
-$6bd2  69 00     ADC #$00
-$6bd4  85 33     STA $33
-$6bd6  ae bc 68  LDX $68bc
-$6bd9  f0 36     BEQ $6c11
-$6bdb  ad bd 68  LDA $68bd
-$6bde  f0 31     BEQ $6c11
-$6be0  ca        DEX
-$6be1  f0 21     BEQ $6c04
-$6be3  a0 00     LDY #$00
-$6be5  b1 32     LDA ($32),Y
-$6be7  91 21     STA ($21),Y
-$6be9  c8        INY
-$6bea  cc bd 68  CPY $68bd
-$6bed  d0 f6     BNE $6be5
-$6bef  a5 32     LDA $32
-$6bf1  85 21     STA $21
-$6bf3  18        CLC
-$6bf4  6d bd 68  ADC $68bd
-$6bf7  85 32     STA $32
-$6bf9  a5 33     LDA $33
-$6bfb  85 22     STA $22
-$6bfd  69 00     ADC #$00
-$6bff  85 33     STA $33
-$6c01  ca        DEX
-$6c02  d0 df     BNE $6be3
-$6c04  a0 00     LDY #$00
-$6c06  ad c0 68  LDA $68c0
-$6c09  91 21     STA ($21),Y
-$6c0b  c8        INY
-$6c0c  cc bd 68  CPY $68bd
-$6c0f  d0 f8     BNE $6c09
-$6c11  ad 64 7c  LDA $7c64
-$6c14  85 21     STA $21
-$6c16  ad 65 7c  LDA $7c65
-$6c19  85 22     STA $22
-$6c1b  18        CLC
-$6c1c  60        RTS
-$6c1d  ad bc 68  LDA $68bc
-$6c20  ad 6c 7c  LDA $7c6c
-$6c23  f0 1e     BEQ $6c43
-$6c25  ce 6c 7c  DEC $7c6c
-$6c28  38        SEC
-$6c29  a5 21     LDA $21
-$6c2b  ed bd 68  SBC $68bd
-$6c2e  85 21     STA $21
-$6c30  b0 02     BCS $6c34
-$6c32  c6 22     DEC $22
-$6c34  18        CLC
-$6c35  60        RTS
-$6c36  20 3e 6b  JSR $6b3e
-$6c39  ad bc 68  LDA $68bc
-$6c3c  38        SEC
-$6c3d  ed 6c 7c  SBC $7c6c
-$6c40  4c 46 6c  JMP $6c46
-$6c43  ad bc 68  LDA $68bc
-$6c46  a6 21     LDX $21
-$6c48  8e 64 7c  STX $7c64
-$6c4b  a6 22     LDX $22
-$6c4d  8e 65 7c  STX $7c65
-$6c50  ae bc 68  LDX $68bc
-$6c53  f0 4e     BEQ $6ca3
-$6c55  ca        DEX
-$6c56  48        PHA
-$6c57  8a        TXA
-$6c58  20 50 6a  JSR $6a50
-$6c5b  a5 21     LDA $21
-$6c5d  38        SEC
-$6c5e  ed bd 68  SBC $68bd
-$6c61  85 32     STA $32
-$6c63  a5 22     LDA $22
-$6c65  e9 00     SBC #$00
-$6c67  85 33     STA $33
-$6c69  68        PLA
-$6c6a  f0 37     BEQ $6ca3
-$6c6c  ae bd 68  LDX $68bd
-$6c6f  f0 32     BEQ $6ca3
-$6c71  aa        TAX
-$6c72  ca        DEX
-$6c73  f0 21     BEQ $6c96
-$6c75  a0 00     LDY #$00
-$6c77  b1 32     LDA ($32),Y
-$6c79  91 21     STA ($21),Y
-$6c7b  c8        INY
-$6c7c  cc bd 68  CPY $68bd
-$6c7f  d0 f6     BNE $6c77
-$6c81  a5 32     LDA $32
-$6c83  85 21     STA $21
-$6c85  38        SEC
-$6c86  ed bd 68  SBC $68bd
-$6c89  85 32     STA $32
-$6c8b  a5 33     LDA $33
-$6c8d  85 22     STA $22
-$6c8f  e9 00     SBC #$00
-$6c91  85 33     STA $33
-$6c93  ca        DEX
-$6c94  d0 df     BNE $6c75
-$6c96  a0 00     LDY #$00
-$6c98  ad c0 68  LDA $68c0
-$6c9b  91 21     STA ($21),Y
-$6c9d  c8        INY
-$6c9e  cc bd 68  CPY $68bd
-$6ca1  d0 f8     BNE $6c9b
-$6ca3  ad 64 7c  LDA $7c64
-$6ca6  85 21     STA $21
-$6ca8  ad 65 7c  LDA $7c65
-$6cab  85 22     STA $22
-$6cad  18        CLC
-$6cae  60        RTS
-$6caf  29 7f     AND #$7f
-$6cb1  aa        TAX
-$6cb2  ad c2 68  LDA $68c2
-$6cb5  4d c1 68  EOR $68c1
-$6cb8  5d 3a 68  EOR $683a,X
-$6cbb  ac 66 7c  LDY $7c66
-$6cbe  91 21     STA ($21),Y
-$6cc0  20 63 6b  JSR $6b63
-$6cc3  60        RTS
-$6cc4  ac 72 7c  LDY $7c72
-$6cc7  f0 05     BEQ $6cce
-$6cc9  cc 71 7c  CPY $7c71
-$6ccc  d0 0f     BNE $6cdd
-$6cce  ac 60 7c  LDY $7c60
-$6cd1  cc 62 7c  CPY $7c62
-$6cd4  f0 06     BEQ $6cdc
-$6cd6  b1 1f     LDA ($1f),Y
-$6cd8  ee 60 7c  INC $7c60
-$6cdb  18        CLC
-$6cdc  60        RTS
-$6cdd  ac 71 7c  LDY $7c71
-$6ce0  ee 71 7c  INC $7c71
-$6ce3  b9 6d 7c  LDA $7c6d,Y
-$6ce6  18        CLC
-$6ce7  60        RTS
-$6ce8  a0 00     LDY #$00
-$6cea  d9 c5 68  CMP $68c5,Y
-$6ced  f0 09     BEQ $6cf8
-$6cef  c8        INY
-$6cf0  c8        INY
-$6cf1  cc be 68  CPY $68be
-$6cf4  d0 f4     BNE $6cea
-$6cf6  18        CLC
-$6cf7  60        RTS
-$6cf8  aa        TAX
-$6cf9  c8        INY
-$6cfa  b9 c5 68  LDA $68c5,Y
-$6cfd  0a        ASL A
-$6cfe  a8        TAY
-$6cff  c8        INY
-$6d00  b9 ff 68  LDA $68ff,Y
-$6d03  48        PHA
-$6d04  88        DEY
-$6d05  b9 ff 68  LDA $68ff,Y
-$6d08  48        PHA
-$6d09  8a        TXA
-$6d0a  60        RTS
-$6d0b  20 c4 6c  JSR $6cc4
-$6d0e  b0 12     BCS $6d22
-$6d10  ac be 68  LDY $68be
-$6d13  c8        INY
-$6d14  c8        INY
-$6d15  d9 c5 68  CMP $68c5,Y
-$6d18  f0 09     BEQ $6d23
-$6d1a  c8        INY
-$6d1b  c8        INY
-$6d1c  cc bf 68  CPY $68bf
-$6d1f  d0 f4     BNE $6d15
-$6d21  18        CLC
-$6d22  60        RTS
-$6d23  aa        TAX
-$6d24  c8        INY
-$6d25  b9 c5 68  LDA $68c5,Y
-$6d28  0a        ASL A
-$6d29  a8        TAY
-$6d2a  c8        INY
-$6d2b  b9 ff 68  LDA $68ff,Y
-$6d2e  48        PHA
-$6d2f  88        DEY
-$6d30  b9 ff 68  LDA $68ff,Y
-$6d33  48        PHA
-$6d34  8a        TXA
-$6d35  60        RTS
-$6d36  a0 00     LDY #$00
-$6d38  b9 c5 68  LDA $68c5,Y
-$6d3b  c9 ff     CMP #$ff
-$6d3d  f0 05     BEQ $6d44
-$6d3f  c8        INY
-$6d40  c8        INY
-$6d41  d0 f5     BNE $6d38
-$6d43  60        RTS
-$6d44  8c be 68  STY $68be
-$6d47  f0 07     BEQ $6d50
-$6d49  b9 c5 68  LDA $68c5,Y
-$6d4c  c9 ff     CMP #$ff
-$6d4e  f0 05     BEQ $6d55
-$6d50  c8        INY
-$6d51  c8        INY
-$6d52  d0 f5     BNE $6d49
-$6d54  60        RTS
-$6d55  8c bf 68  STY $68bf
-$6d58  60        RTS
-$6d59  a0 00     LDY #$00
-$6d5b  8c 68 7c  STY $7c68
-$6d5e  ad 64 7c  LDA $7c64
-$6d61  85 21     STA $21
-$6d63  ad 65 7c  LDA $7c65
-$6d66  85 22     STA $22
-$6d68  0d 64 7c  ORA $7c64
-$6d6b  d0 37     BNE $6da4
-$6d6d  a9 50     LDA #$50
-$6d6f  8d ba 68  STA $68ba
-$6d72  a9 80     LDA #$80
-$6d74  8d bb 68  STA $68bb
-$6d77  a9 50     LDA #$50
-$6d79  8d bd 68  STA $68bd
-$6d7c  a9 20     LDA #$20
-$6d7e  8d 50 80  STA $8050
-$6d81  a9 60     LDA #$60
-$6d83  8d 50 84  STA $8450
-$6d86  cd 50 80  CMP $8050
-$6d89  d0 0d     BNE $6d98
-$6d8b  4e bd 68  LSR $68bd
-$6d8e  a9 28     LDA #$28
-$6d90  8d ba 68  STA $68ba
-$6d93  a9 80     LDA #$80
-$6d95  8d bb 68  STA $68bb
-$6d98  a9 80     LDA #$80
-$6d9a  8d c2 68  STA $68c2
-$6d9d  20 36 6d  JSR $6d36
-$6da0  20 99 69  JSR $6999
-$6da3  60        RTS
-$6da4  ad 64 7c  LDA $7c64
-$6da7  85 21     STA $21
-$6da9  ad 65 7c  LDA $7c65
-$6dac  85 22     STA $22
-$6dae  ac 66 7c  LDY $7c66
-$6db1  ad 67 7c  LDA $7c67
-$6db4  91 21     STA ($21),Y
-$6db6  60        RTS
-$6db7  a5 21     LDA $21
-$6db9  8d 64 7c  STA $7c64
-$6dbc  a5 22     LDA $22
-$6dbe  8d 65 7c  STA $7c65
-$6dc1  ac 66 7c  LDY $7c66
-$6dc4  b1 21     LDA ($21),Y
-$6dc6  8d 67 7c  STA $7c67
-$6dc9  a2 80     LDX #$80
-$6dcb  78        SEI
-$6dcc  4d 69 7c  EOR $7c69
-$6dcf  91 21     STA ($21),Y
-$6dd1  8e 68 7c  STX $7c68
-$6dd4  58        CLI
-$6dd5  60        RTS
-$6dd6  a9 00     LDA #$00
-$6dd8  8d 68 7c  STA $7c68
-$6ddb  4c a4 6d  JMP $6da4
-$6dde  a9 50     LDA #$50
-$6de0  20 82 65  JSR $6582
-$6de3  f0 1f     BEQ $6e04
-$6de5  a9 02     LDA #$02
-$6de7  2c 3e 7c  BIT $7c3e
-$6dea  d0 02     BNE $6dee
-$6dec  49 80     EOR #$80
-$6dee  29 80     AND #$80
-$6df0  8d c1 68  STA $68c1
-$6df3  20 59 6d  JSR $6d59
-$6df6  a0 00     LDY #$00
-$6df8  8c 71 7c  STY $7c71
-$6dfb  8c 60 7c  STY $7c60
-$6dfe  8c 61 7c  STY $7c61
-$6e01  ad 62 7c  LDA $7c62
-$6e04  f0 4e     BEQ $6e54
-$6e06  20 c4 6c  JSR $6cc4
-$6e09  b0 28     BCS $6e33
-$6e0b  c9 7e     CMP #$7e
-$6e0d  f0 0c     BEQ $6e1b
-$6e0f  c9 7f     CMP #$7f
-$6e11  f0 12     BEQ $6e25
-$6e13  c9 80     CMP #$80
-$6e15  b0 04     BCS $6e1b
-$6e17  c9 20     CMP #$20
-$6e19  b0 07     BCS $6e22
-$6e1b  20 e8 6c  JSR $6ce8
-$6e1e  90 05     BCC $6e25
-$6e20  b0 11     BCS $6e33
-$6e22  20 af 6c  JSR $6caf
-$6e25  ac 60 7c  LDY $7c60
-$6e28  8c 61 7c  STY $7c61
-$6e2b  a9 00     LDA #$00
-$6e2d  8d 72 7c  STA $7c72
-$6e30  4c 06 6e  JMP $6e06
-$6e33  ad 60 7c  LDA $7c60
-$6e36  cd 61 7c  CMP $7c61
-$6e39  f0 19     BEQ $6e54
-$6e3b  ae 72 7c  LDX $7c72
-$6e3e  ac 61 7c  LDY $7c61
-$6e41  e0 04     CPX #$04
-$6e43  b0 0f     BCS $6e54
-$6e45  b1 1f     LDA ($1f),Y
-$6e47  9d 6d 7c  STA $7c6d,X
-$6e4a  c8        INY
-$6e4b  e8        INX
-$6e4c  cc 60 7c  CPY $7c60
-$6e4f  90 f0     BCC $6e41
-$6e51  8e 72 7c  STX $7c72
-$6e54  20 b7 6d  JSR $6db7
-$6e57  60        RTS
-$6e58  30 2e     BMI $6e88
-$6e5a  37        ???
-$6e5b  33        ???
-$6e5c  20 54 45  JSR $4554
-$6e5f  52        ???
-$6e60  4d 49 4e  EOR $4e49
-$6e63  41 4c     EOR ($4c,X)
-$6e65  20 46 4f  JSR $4f46
-$6e68  52        ???
-$6e69  20 43 50  JSR $5043
-$6e6c  2f        ???
-$6e6d  4d 20 42  EOR $4220
-$6e70  59 20 50  EOR $5020,Y
-$6e73  41 55     EOR ($55,X)
-$6e75  4c 20 53  JMP $5320
-$6e78  43        ???
-$6e79  48        PHA
-$6e7a  49 43     EOR #$43
-$6e7c  4b        ???
-$6e7d  2c 20 28  BIT $2820
-$6e80  43        ???
-$6e81  29 20     AND #$20
-$6e83  31 39     AND ($39),Y
-$6e85  38        SEC
-$6e86  32        ???
-$6e87  20 4d 41  JSR $414d
-$6e8a  44        ???
-$6e8b  49 53     EOR #$53
-$6e8d  4f        ???
-$6e8e  4e 20 43  LSR $4320
-$6e91  4f        ???
-$6e92  4d 50 55  EOR $5550
-$6e95  54        ???
-$6e96  45 52     EOR $52
-$6e98  a6 ae     LDX $ae
+*=$6000
 
-
-$6e9a  ca        DEX
-$6e9b  30 08     BMI $6ea5
-$6e9d  dd 51 02  CMP $0251,X
-$6ea0  f0 05     BEQ $6ea7
-$6ea2  ca        DEX
-$6ea3  10 f8     BPL $6e9d
-$6ea5  38        SEC
-$6ea6  60        RTS
-$6ea7  bd 51 02  LDA $0251,X
-$6eaa  85 d2     STA $d2
-$6eac  bd 5b 02  LDA $025b,X
-$6eaf  85 d4     STA $d4
-$6eb1  bd 65 02  LDA $0265,X
-$6eb4  85 d3     STA $d3
-$6eb6  18        CLC
-$6eb7  60        RTS
-$6eb8  a9 80     LDA #$80
-$6eba  8d 77 7c  STA $7c77
-$6ebd  8d 78 7c  STA $7c78
-$6ec0  2c f3 ff  BIT $fff3
-$6ec3  30 17     BMI $6edc
-$6ec5  ee 77 7c  INC $7c77
-$6ec8  d0 f6     BNE $6ec0
-$6eca  ee 78 7c  INC $7c78
-$6ecd  d0 f1     BNE $6ec0
-$6ecf  a9 54     LDA #$54
-$6ed1  20 82 65  JSR $6582
-$6ed4  b0 05     BCS $6edb
-$6ed6  a0 00     LDY #$00
-$6ed8  20 35 65  JSR $6535
-$6edb  60        RTS
-$6edc  ad f2 ff  LDA $fff2
-$6edf  c9 80     CMP #$80
-$6ee1  b0 17     BCS $6efa
-$6ee3  a0 00     LDY #$00
-$6ee5  99 88 7d  STA $7d88,Y
-$6ee8  c8        INY
-$6ee9  8c 62 7c  STY $7c62
-$6eec  a9 88     LDA #$88
-$6eee  85 1f     STA $1f
-$6ef0  a9 7d     LDA #$7d
-$6ef2  85 20     STA $20
-$6ef4  20 f3 6d  JSR $6df3
-$6ef7  4c b8 6e  JMP $6eb8
-$6efa  c9 82     CMP #$82
-$6efc  d0 15     BNE $6f13
-$6efe  a6 9e     LDX $9e
-$6f00  f0 03     BEQ $6f05
-$6f02  4c 5f 6f  JMP $6f5f
-$6f05  20 40 70  JSR $7040
-$6f08  a9 00     LDA #$00
-$6f0a  20 a6 6f  JSR $6fa6
-$6f0d  20 55 70  JSR $7055
-$6f10  4c ca 6e  JMP $6eca
-$6f13  c9 83     CMP #$83
-$6f15  d0 0e     BNE $6f25
-$6f17  ae 3f 7c  LDX $7c3f
-$6f1a  ec 4a 7c  CPX $7c4a
-$6f1d  f0 40     BEQ $6f5f
-$6f1f  20 dd 70  JSR $70dd
-$6f22  4c b8 6e  JMP $6eb8
-$6f25  c9 90     CMP #$90
-$6f27  d0 09     BNE $6f32
-$6f29  20 9d 6f  JSR $6f9d
-$6f2c  20 91 6f  JSR $6f91
-$6f2f  4c b8 6e  JMP $6eb8
-$6f32  c9 92     CMP #$92
-$6f34  d0 0f     BNE $6f45
-$6f36  20 40 70  JSR $7040
-$6f39  20 72 6f  JSR $6f72
-$6f3c  20 a6 6f  JSR $6fa6
-$6f3f  20 55 70  JSR $7055
-$6f42  4c b8 6e  JMP $6eb8
-$6f45  c9 91     CMP #$91
-$6f47  d0 16     BNE $6f5f
-$6f49  20 40 70  JSR $7040
-$6f4c  ad 5c 7c  LDA $7c5c
-$6f4f  4d 5e 7c  EOR $7c5e
-$6f52  f0 02     BEQ $6f56
-$6f54  a9 ff     LDA #$ff
-$6f56  20 a6 6f  JSR $6fa6
-$6f59  20 55 70  JSR $7055
-$6f5c  4c b8 6e  JMP $6eb8
-$6f5f  48        PHA
-$6f60  a9 54     LDA #$54
-$6f62  20 82 65  JSR $6582
-$6f65  68        PLA
-$6f66  b0 09     BCS $6f71
-$6f68  a0 00     LDY #$00
-$6f6a  99 88 7d  STA $7d88,Y
-$6f6d  c8        INY
-$6f6e  20 35 65  JSR $6535
-$6f71  60        RTS
-$6f72  ad 38 7c  LDA $7c38
-$6f75  29 08     AND #$08
-$6f77  18        CLC
-$6f78  69 7f     ADC #$7f
-$6f7a  09 7f     ORA #$7f
-$6f7c  8d 50 7c  STA $7c50
-$6f7f  ae 5c 7c  LDX $7c5c
-$6f82  ec 5e 7c  CPX $7c5e
-$6f85  f0 f8     BEQ $6f7f
-$6f87  bd 87 7c  LDA $7c87,X
-$6f8a  ee 5c 7c  INC $7c5c
-$6f8d  2d 50 7c  AND $7c50
-$6f90  60        RTS
-$6f91  48        PHA
-$6f92  20 bf 65  JSR $65bf
-$6f95  68        PLA
-$6f96  20 00 66  JSR $6600
-$6f99  20 cf 65  JSR $65cf
-$6f9c  60        RTS
-$6f9d  2c f3 ff  BIT $fff3
-$6fa0  10 fb     BPL $6f9d
-$6fa2  ad f2 ff  LDA $fff2
-$6fa5  60        RTS
-$6fa6  8d f2 ff  STA $fff2
-$6fa9  2c f2 ff  BIT $fff2
-$6fac  2c f3 ff  BIT $fff3
-$6faf  10 fb     BPL $6fac
-$6fb1  60        RTS
-$6fb2  a9 54     LDA #$54
-$6fb4  20 82 65  JSR $6582
-$6fb7  b0 0c     BCS $6fc5
-$6fb9  a0 00     LDY #$00
-$6fbb  20 9d 6f  JSR $6f9d
-$6fbe  99 88 7d  STA $7d88,Y
-$6fc1  c8        INY
-$6fc2  20 35 65  JSR $6535
-$6fc5  60        RTS
-$6fc6  a9 54     LDA #$54
-$6fc8  20 82 65  JSR $6582
-$6fcb  b0 19     BCS $6fe6
-$6fcd  ad 62 7c  LDA $7c62
-$6fd0  f0 14     BEQ $6fe6
-$6fd2  8d 5a 7c  STA $7c5a
-$6fd5  a0 00     LDY #$00
-$6fd7  20 9d 6f  JSR $6f9d
-$6fda  99 88 7d  STA $7d88,Y
-$6fdd  c8        INY
-$6fde  cc 5a 7c  CPY $7c5a
-$6fe1  d0 f4     BNE $6fd7
-$6fe3  20 35 65  JSR $6535
-$6fe6  60        RTS
-$6fe7  20 9d 6f  JSR $6f9d
-$6fea  85 1f     STA $1f
-$6fec  20 9d 6f  JSR $6f9d
-$6fef  85 20     STA $20
-$6ff1  20 9d 6f  JSR $6f9d
-$6ff4  09 00     ORA #$00
-$6ff6  f0 13     BEQ $700b
-$6ff8  8d 5a 7c  STA $7c5a
-$6ffb  a0 00     LDY #$00
-$6ffd  20 9d 6f  JSR $6f9d
-$7000  91 1f     STA ($1f),Y
-$7002  c8        INY
-$7003  cc 5a 7c  CPY $7c5a
-$7006  d0 f5     BNE $6ffd
-$7008  4c e7 6f  JMP $6fe7
-$700b  20 9d 6f  JSR $6f9d
-$700e  aa        TAX
-$700f  f0 06     BEQ $7017
-$7011  ca        DEX
-$7012  f0 0d     BEQ $7021
-$7014  ca        DEX
-$7015  f0 01     BEQ $7018
-$7017  60        RTS
-$7018  a5 1f     LDA $1f
-$701a  85 77     STA $77
-$701c  a5 20     LDA $20
-$701e  85 78     STA $78
-$7020  60        RTS
-$7021  6c 1f 00  JMP ($001f)
-$7024  60        RTS
-$7025  a9 54     LDA #$54
-$7027  20 82 65  JSR $6582
-$702a  b0 13     BCS $703f
-$702c  20 40 70  JSR $7040
-$702f  a0 00     LDY #$00
-$7031  b1 1f     LDA ($1f),Y
-$7033  20 a6 6f  JSR $6fa6
-$7036  c8        INY
-$7037  cc 62 7c  CPY $7c62
-$703a  d0 f5     BNE $7031
-$703c  20 55 70  JSR $7055
-$703f  60        RTS
-$7040  2c f3 ff  BIT $fff3
-$7043  10 fb     BPL $7040
-$7045  a9 2a     LDA #$2a
-$7047  8d f3 ff  STA $fff3
-$704a  a9 ff     LDA #$ff
-$704c  8d f2 ff  STA $fff2
-$704f  a9 2e     LDA #$2e
-$7051  8d f3 ff  STA $fff3
-$7054  60        RTS
-$7055  a9 2a     LDA #$2a
-$7057  8d f3 ff  STA $fff3
-$705a  a9 00     LDA #$00
-$705c  8d f2 ff  STA $fff2
-$705f  a9 2e     LDA #$2e
-$7061  8d f3 ff  STA $fff3
-$7064  2c f2 ff  BIT $fff2
-$7067  2c f3 ff  BIT $fff3
-$706a  10 fb     BPL $7067
-$706c  2c f2 ff  BIT $fff2
-$706f  60        RTS
-$7070  a9 05     LDA #$05
-$7072  8d 5a 7c  STA $7c5a
-$7075  20 cc ff  JSR $ffcc
-$7078  ad 3f 7c  LDA $7c3f
-$707b  29 7f     AND #$7f
-$707d  aa        TAX
-$707e  20 c6 ff  JSR $ffc6
-$7081  a5 96     LDA $96
-$7083  f0 05     BEQ $708a
-$7085  ce 5a 7c  DEC $7c5a
-$7088  d0 eb     BNE $7075
-$708a  20 40 70  JSR $7040
-$708d  a0 80     LDY #$80
-$708f  a5 96     LDA $96
-$7091  d0 0d     BNE $70a0
-$7093  20 41 66  JSR $6641
-$7096  a6 96     LDX $96
-$7098  e0 40     CPX #$40
-$709a  d0 04     BNE $70a0
-$709c  c9 ff     CMP #$ff
-$709e  f0 2b     BEQ $70cb
-$70a0  8d f2 ff  STA $fff2
-$70a3  2c f2 ff  BIT $fff2
-$70a6  a5 96     LDA $96
-$70a8  d0 03     BNE $70ad
-$70aa  20 41 66  JSR $6641
-$70ad  2c f3 ff  BIT $fff3
-$70b0  10 fb     BPL $70ad
-$70b2  88        DEY
-$70b3  d0 eb     BNE $70a0
-$70b5  a5 96     LDA $96
-$70b7  49 40     EOR #$40
-$70b9  8d f2 ff  STA $fff2
-$70bc  2c f2 ff  BIT $fff2
-$70bf  2c f3 ff  BIT $fff3
-$70c2  10 fb     BPL $70bf
-$70c4  20 cc ff  JSR $ffcc
-$70c7  20 55 70  JSR $7055
-$70ca  60        RTS
-$70cb  a9 e5     LDA #$e5
-$70cd  20 a6 6f  JSR $6fa6
-$70d0  88        DEY
-$70d1  d0 fa     BNE $70cd
-$70d3  a9 00     LDA #$00
-$70d5  f0 e2     BEQ $70b9
-$70d7  a9 ff     LDA #$ff
-$70d9  8d 73 7c  STA $7c73
-$70dc  60        RTS
-$70dd  20 e4 70  JSR $70e4
-$70e0  20 70 70  JSR $7070
-$70e3  60        RTS
-$70e4  a9 00     LDA #$00
-$70e6  85 32     STA $32
-$70e8  85 33     STA $33
-$70ea  85 22     STA $22
-$70ec  20 9d 6f  JSR $6f9d
-$70ef  85 21     STA $21
-$70f1  ad 4c 7c  LDA $7c4c
-$70f4  d0 05     BNE $70fb
-$70f6  a9 80     LDA #$80
-$70f8  18        CLC
-$70f9  d0 01     BNE $70fc
-$70fb  4a        LSR A
-$70fc  48        PHA
-$70fd  90 0d     BCC $710c
-$70ff  18        CLC
-$7100  a5 21     LDA $21
-$7102  65 32     ADC $32
-$7104  85 32     STA $32
-$7106  a5 22     LDA $22
-$7108  65 33     ADC $33
-$710a  85 33     STA $33
-$710c  06 21     ASL $21
-$710e  26 22     ROL $22
-$7110  68        PLA
-$7111  d0 e8     BNE $70fb
-$7113  20 9d 6f  JSR $6f9d
-$7116  18        CLC
-$7117  65 32     ADC $32
-$7119  85 32     STA $32
-$711b  90 02     BCC $711f
-$711d  e6 33     INC $33
-$711f  38        SEC
-$7120  a9 08     LDA #$08
-$7122  65 32     ADC $32
-$7124  85 32     STA $32
-$7126  90 02     BCC $712a
-$7128  e6 33     INC $33
-$712a  ad 3f 7c  LDA $7c3f
-$712d  cd 73 7c  CMP $7c73
-$7130  d0 16     BNE $7148
-$7132  ee 74 7c  INC $7c74
-$7135  d0 03     BNE $713a
-$7137  ee 75 7c  INC $7c75
-$713a  ad 74 7c  LDA $7c74
-$713d  c5 32     CMP $32
-$713f  d0 07     BNE $7148
-$7141  ad 75 7c  LDA $7c75
-$7144  c5 33     CMP $33
-$7146  f0 3b     BEQ $7183
-$7148  ad 3f 7c  LDA $7c3f
-$714b  8d 73 7c  STA $7c73
-$714e  20 98 6e  JSR $6e98
-$7151  a5 d3     LDA $d3
-$7153  48        PHA
-$7154  20 cc ff  JSR $ffcc
-$7157  ad 4b 7c  LDA $7c4b
-$715a  aa        TAX
-$715b  20 c9 ff  JSR $ffc9
-$715e  a9 50     LDA #$50
-$7160  20 d2 ff  JSR $ffd2
-$7163  68        PLA
-$7164  29 0f     AND #$0f
-$7166  09 60     ORA #$60
-$7168  20 d2 ff  JSR $ffd2
-$716b  a5 32     LDA $32
-$716d  8d 74 7c  STA $7c74
-$7170  20 d2 ff  JSR $ffd2
-$7173  a5 33     LDA $33
-$7175  8d 75 7c  STA $7c75
-$7178  20 d2 ff  JSR $ffd2
-$717b  a9 01     LDA #$01
-$717d  20 d2 ff  JSR $ffd2
-$7180  20 cc ff  JSR $ffcc
-$7183  60        RTS
-$7184  20 d7 70  JSR $70d7
-$7187  a9 54     LDA #$54
-$7189  20 82 65  JSR $6582
-$718c  b0 0e     BCS $719c
-$718e  a0 00     LDY #$00
-$7190  b1 1f     LDA ($1f),Y
-$7192  85 32     STA $32
-$7194  c8        INY
-$7195  b1 1f     LDA ($1f),Y
-$7197  85 33     STA $33
-$7199  20 48 71  JSR $7148
-$719c  60        RTS
-$719d  ad 46 7c  LDA $7c46
-$71a0  38        SEC
-$71a1  ed 44 7c  SBC $7c44
-$71a4  aa        TAX
-$71a5  ad 47 7c  LDA $7c47
-$71a8  ed 45 7c  SBC $7c45
-$71ab  85 33     STA $33
-$71ad  e8        INX
-$71ae  86 32     STX $32
-$71b0  d0 02     BNE $71b4
-$71b2  e6 33     INC $33
-$71b4  ad 48 7c  LDA $7c48
-$71b7  85 21     STA $21
-$71b9  ad 49 7c  LDA $7c49
-$71bc  85 22     STA $22
-$71be  ad 44 7c  LDA $7c44
-$71c1  85 1f     STA $1f
-$71c3  ad 45 7c  LDA $7c45
-$71c6  85 20     STA $20
-$71c8  a4 32     LDY $32
-$71ca  a5 33     LDA $33
-$71cc  f0 02     BEQ $71d0
-$71ce  a0 00     LDY #$00
-$71d0  8c 5a 7c  STY $7c5a
-$71d3  a0 00     LDY #$00
-$71d5  b1 1f     LDA ($1f),Y
-$71d7  91 21     STA ($21),Y
-$71d9  c8        INY
-$71da  cc 5a 7c  CPY $7c5a
-$71dd  d0 f6     BNE $71d5
-$71df  a5 33     LDA $33
-$71e1  f0 09     BEQ $71ec
-$71e3  c6 33     DEC $33
-$71e5  e6 22     INC $22
-$71e7  e6 20     INC $20
-$71e9  4c c8 71  JMP $71c8
-$71ec  60        RTS
-$71ed  8d 5a 7c  STA $7c5a
-$71f0  a0 00     LDY #$00
-$71f2  b1 2a     LDA ($2a),Y
-$71f4  c9 51     CMP #$51
-$71f6  f0 0d     BEQ $7205
-$71f8  98        TYA
-$71f9  18        CLC
-$71fa  69 0e     ADC #$0e
-$71fc  b0 13     BCS $7211
-$71fe  38        SEC
-$71ff  e9 07     SBC #$07
-$7201  a8        TAY
-$7202  4c f2 71  JMP $71f2
-$7205  c8        INY
-$7206  b1 2a     LDA ($2a),Y
-$7208  88        DEY
-$7209  cd 5a 7c  CMP $7c5a
-$720c  d0 ea     BNE $71f8
-$720e  c8        INY
-$720f  c8        INY
-$7210  18        CLC
-$7211  60        RTS
-$7212  a9 e0     LDA #$e0
-$7214  85 22     STA $22
-$7216  a0 00     LDY #$00
-$7218  84 21     STY $21
-$721a  8c 7d 7c  STY $7c7d
-$721d  98        TYA
-$721e  99 32 00  STA $0032,Y
-$7221  c8        INY
-$7222  c0 02     CPY #$02
-$7224  d0 f8     BNE $721e
-$7226  a0 00     LDY #$00
-$7228  99 79 7c  STA $7c79,Y
-$722b  c8        INY
-$722c  c0 04     CPY #$04
-$722e  d0 f8     BNE $7228
-$7230  a0 00     LDY #$00
-$7232  8c 5a 7c  STY $7c5a
-$7235  38        SEC
-$7236  b1 21     LDA ($21),Y
-$7238  f1 1f     SBC ($1f),Y
-$723a  90 06     BCC $7242
-$723c  c9 05     CMP #$05
-$723e  b0 09     BCS $7249
-$7240  90 04     BCC $7246
-$7242  c9 fb     CMP #$fb
-$7244  90 03     BCC $7249
-$7246  ee 5a 7c  INC $7c5a
-$7249  c8        INY
-$724a  cc 62 7c  CPY $7c62
-$724d  d0 e6     BNE $7235
-$724f  ac 7d 7c  LDY $7c7d
-$7252  b9 32 00  LDA $0032,Y
-$7255  cd 5a 7c  CMP $7c5a
-$7258  b0 2b     BCS $7285
-$725a  ad 5a 7c  LDA $7c5a
-$725d  99 32 00  STA $0032,Y
-$7260  98        TYA
-$7261  0a        ASL A
-$7262  a8        TAY
-$7263  a5 21     LDA $21
-$7265  99 79 7c  STA $7c79,Y
-$7268  c8        INY
-$7269  a5 22     LDA $22
-$726b  99 79 7c  STA $7c79,Y
-$726e  a0 ff     LDY #$ff
-$7270  8c 7d 7c  STY $7c7d
-$7273  a5 32     LDA $32
-$7275  d9 32 00  CMP $0032,Y
-$7278  f0 06     BEQ $7280
-$727a  8c 7d 7c  STY $7c7d
-$727d  b9 32 00  LDA $0032,Y
-$7280  c8        INY
-$7281  c0 02     CPY #$02
-$7283  d0 f0     BNE $7275
-$7285  e6 21     INC $21
-$7287  d0 a7     BNE $7230
-$7289  e6 22     INC $22
-$728b  a5 22     LDA $22
-$728d  c9 e8     CMP #$e8
-$728f  d0 9f     BNE $7230
-$7291  60        RTS
-$7292  a9 43     LDA #$43
-$7294  20 82 65  JSR $6582
-$7297  b0 35     BCS $72ce
-$7299  20 12 72  JSR $7212
-$729c  ad 79 7c  LDA $7c79
-$729f  85 21     STA $21
-$72a1  cd 7b 7c  CMP $7c7b
-$72a4  ad 7a 7c  LDA $7c7a
-$72a7  85 22     STA $22
-$72a9  ed 7c 7c  SBC $7c7c
-$72ac  90 0a     BCC $72b8
-$72ae  ad 7b 7c  LDA $7c7b
-$72b1  85 21     STA $21
-$72b3  ad 7c 7c  LDA $7c7c
-$72b6  85 22     STA $22
-$72b8  a9 43     LDA #$43
-$72ba  20 82 65  JSR $6582
-$72bd  b0 0f     BCS $72ce
-$72bf  a0 00     LDY #$00
-$72c1  b1 21     LDA ($21),Y
-$72c3  99 88 7d  STA $7d88,Y
-$72c6  c8        INY
-$72c7  c0 24     CPY #$24
-$72c9  d0 f6     BNE $72c1
-$72cb  20 35 65  JSR $6535
-$72ce  60        RTS
-$72cf  c5 68     CMP $68
-$72d1  3a        ???
-$72d2  30 00     BMI $72d4
-$72d4  00        BRK
-$72d5  00        BRK
+$6000: 4C AA 60  JMP $60AA
+$6003: 4C B9 64  JMP $64B9
+$6006: 4C E0 65  JMP $65E0
+$6009: 4C 3F 61  JMP $613F
+$600C: 4C 34 66  JMP $6634
+$600F: 4C 5E 61  JMP $615E
+$6012: 4C 44 63  JMP $6344
+$6015: 4C A0 63  JMP $63A0
+$6018: 4C 72 64  JMP $6472
+$601B: 60        RTS
+$601C: 00        BRK
+$601D: 00        BRK
+$601E: 4C 8C 66  JMP $668C
+$6021: 60        RTS
+$6022: 00        BRK
+$6023: 00        BRK
+$6024: 4C DE 6D  JMP $6DDE
+$6027: 4C D6 6D  JMP $6DD6
+$602A: 60        RTS
+$602B: 00        BRK
+$602C: 00        BRK
+$602D: 4C B8 6E  JMP $6EB8
+$6030: 4C B2 6F  JMP $6FB2
+$6033: 4C 25 70  JMP $7025
+$6036: 4C C6 6F  JMP $6FC6
+$6039: 4C 70 70  JMP $7070
+$603C: 4C DD 70  JMP $70DD
+$603F: 4C 9D 71  JMP $719D
+$6042: 4C E4 70  JMP $70E4
+$6045: 4C D7 70  JMP $70D7
+$6048: 4C 92 72  JMP $7292
+$604B: 4C E7 6F  JMP $6FE7
+$604E: 60        RTS
+$604F: CF        .BYT CF
+$6050: 72        .BYT 72
+$6051: 4C 36 6D  JMP $6D36
+$6054: 4C 84 71  JMP $7184
+$6057: AA        TAX
+$6058: AA        TAX
+$6059: AA        TAX
+$605A: AA        TAX
+$605B: AA        TAX
+$605C: AA        TAX
+$605D: AA        TAX
+$605E: AA        TAX
+$605F: AA        TAX
+$6060: AA        TAX
+$6061: AA        TAX
+$6062: AA        TAX
+$6063: AA        TAX
+$6064: AA        TAX
+$6065: AA        TAX
+$6066: AA        TAX
+$6067: AA        TAX
+$6068: AA        TAX
+$6069: AA        TAX
+$606A: AA        TAX
+$606B: AA        TAX
+$606C: 00        BRK
+$606D: 00        BRK
+$606E: 00        BRK
+$606F: 0C        .BYT 0C
+$6070: 05 80     ORA $80
+$6072: 00        BRK
+$6073: 00        BRK
+$6074: 0D E0 00  ORA $00E0
+$6077: 14        .BYT 14
+$6078: 00        BRK
+$6079: 00        BRK
+$607A: 00        BRK
+$607B: 00        BRK
+$607C: 00        BRK
+$607D: 00        BRK
+$607E: 00        BRK
+$607F: 08        PHP
+$6080: A6 33     LDX $33
+$6082: 15 34     ORA $34,X
+$6084: 9A        TXS
+$6085: 4D 14 23  EOR $2314
+$6088: 83        .BYT 83
+$6089: 23        .BYT 23
+$608A: BD 34 96  LDA $9634,X
+$608D: 0C        .BYT 0C
+$608E: 05 0D     ORA $0D
+$6090: 02        .BYT 02
+$6091: 13        .BYT 13
+$6092: 14        .BYT 14
+$6093: 06 83     ASL $83
+$6095: 06 3E     ASL $3E
+$6097: 09 D2     ORA #$D2
+$6099: 02        .BYT 02
+$609A: 41 03     EOR ($03,X)
+$609C: 5C        .BYT 5C
+$609D: 04        .BYT 04
+$609E: 32        .BYT 32
+$609F: 01 A1     ORA ($A1,X)
+$60A1: 01 EB     ORA ($EB,X)
+$60A3: 01 61     ORA ($61,X)
+$60A5: 00        BRK
+$60A6: D0 00     BNE $60A8
+$60A8: B3        .BYT B3
+$60A9: 00        BRK
+$60AA: AD 53 7C  LDA $7C53
+$60AD: A2 00     LDX #$00
+$60AF: BD 6C 60  LDA $606C,X
+$60B2: 9D 38 7C  STA $7C38,X
+$60B5: E8        INX
+$60B6: E0 14     CPX #$14
+$60B8: D0 F5     BNE $60AF
+$60BA: A9 00     LDA #$00
+$60BC: AA        TAX
+$60BD: 9D 4D 7C  STA $7C4D,X
+$60C0: E8        INX
+$60C1: E0 3A     CPX #$3A
+$60C3: D0 F8     BNE $60BD
+$60C5: EE 53 7C  INC $7C53
+$60C8: 78        SEI
+$60C9: A5 90     LDA $90
+$60CB: 8D 51 7C  STA $7C51
+$60CE: A5 91     LDA $91
+$60D0: 8D 52 7C  STA $7C52
+$60D3: A9 CE     LDA #$CE
+$60D5: 85 90     STA $90
+$60D7: A9 61     LDA #$61
+$60D9: 85 91     STA $91
+$60DB: A9 62     LDA #$62
+$60DD: 8D 4E E8  STA $E84E
+$60E0: 8D 4D E8  STA $E84D
+$60E3: AD 4C E8  LDA $E84C
+$60E6: 09 01     ORA #$01
+$60E8: 8D 4C E8  STA $E84C
+$60EB: A9 82     LDA #$82
+$60ED: 8D 4E E8  STA $E84E
+$60F0: A9 E7     LDA #$E7
+$60F2: 2D 4F E8  AND $E84F
+$60F5: 8D 4F E8  STA $E84F
+$60F8: A9 10     LDA #$10
+$60FA: 0D 43 E8  ORA $E843
+$60FD: 29 F7     AND #$F7
+$60FF: 8D 43 E8  STA $E843
+$6102: AD 4B E8  LDA $E84B
+$6105: 29 DF     AND #$DF
+$6107: 8D 4B E8  STA $E84B
+$610A: A9 00     LDA #$00
+$610C: 85 34     STA $34
+$610E: A9 60     LDA #$60
+$6110: 85 35     STA $35
+$6112: 58        CLI
+$6113: AD 00 C0  LDA $C000
+$6116: C9 4C     CMP #$4C
+$6118: D0 05     BNE $611F
+$611A: A9 40     LDA #$40
+$611C: 8D 3E 7C  STA $7C3E
+$611F: A9 43     LDA #$43
+$6121: 20 82 65  JSR $6582
+$6124: B0 15     BCS $613B
+$6126: AD 62 7C  LDA $7C62
+$6129: D0 10     BNE $613B
+$612B: A0 00     LDY #$00
+$612D: B9 58 6E  LDA $6E58,Y
+$6130: 99 88 7D  STA $7D88,Y
+$6133: C8        INY
+$6134: C0 40     CPY #$40
+$6136: D0 F5     BNE $612D
+$6138: 20 35 65  JSR $6535
+$613B: 20 F0 66  JSR $66F0
+$613E: 60        RTS
+$613F: AD 53 7C  LDA $7C53
+$6142: F0 19     BEQ $615D
+$6144: 78        SEI
+$6145: AD 51 7C  LDA $7C51
+$6148: 85 90     STA $90
+$614A: AD 52 7C  LDA $7C52
+$614D: 85 91     STA $91
+$614F: A9 62     LDA #$62
+$6151: 8D 4E E8  STA $E84E
+$6154: 8D 4D E8  STA $E84D
+$6157: 58        CLI
+$6158: A9 00     LDA #$00
+$615A: 8D 53 7C  STA $7C53
+$615D: 60        RTS
+$615E: AD 5D 7C  LDA $7C5D
+$6161: 8D 5C 7C  STA $7C5C
+$6164: 60        RTS
+$6165: 2C 44 E8  BIT $E844
+$6168: 2C 58 7C  BIT $7C58
+$616B: 50 0C     BVC $6179
+$616D: 18        CLC
+$616E: 20 22 63  JSR $6322
+$6171: A9 00     LDA #$00
+$6173: 8D 58 7C  STA $7C58
+$6176: 4C C3 61  JMP $61C3
+$6179: CE 57 7C  DEC $7C57
+$617C: 30 0E     BMI $618C
+$617E: 4E 56 7C  LSR $7C56
+$6181: 90 03     BCC $6186
+$6183: EE 58 7C  INC $7C58
+$6186: 20 22 63  JSR $6322
+$6189: 4C C3 61  JMP $61C3
+$618C: AD 57 7C  LDA $7C57
+$618F: C9 FF     CMP #$FF
+$6191: D0 1B     BNE $61AE
+$6193: AD 38 7C  LDA $7C38
+$6196: 29 02     AND #$02
+$6198: 38        SEC
+$6199: F0 0D     BEQ $61A8
+$619B: AD 38 7C  LDA $7C38
+$619E: 4D 58 7C  EOR $7C58
+$61A1: 4A        LSR A
+$61A2: 20 22 63  JSR $6322
+$61A5: 4C C3 61  JMP $61C3
+$61A8: CE 57 7C  DEC $7C57
+$61AB: AD 57 7C  LDA $7C57
+$61AE: C9 FC     CMP #$FC
+$61B0: F0 07     BEQ $61B9
+$61B2: 38        SEC
+$61B3: 20 22 63  JSR $6322
+$61B6: 4C C3 61  JMP $61C3
+$61B9: A9 40     LDA #$40
+$61BB: 8D 4E E8  STA $E84E
+$61BE: A9 FF     LDA #$FF
+$61C0: 8D 58 7C  STA $7C58
+$61C3: AD 4D E8  LDA $E84D
+$61C6: 30 06     BMI $61CE
+$61C8: 68        PLA
+$61C9: A8        TAY
+$61CA: 68        PLA
+$61CB: AA        TAX
+$61CC: 68        PLA
+$61CD: 40        RTI
+$61CE: AD 4D E8  LDA $E84D
+$61D1: 2D 4E E8  AND $E84E
+$61D4: 2A        ROL A
+$61D5: 30 8E     BMI $6165
+$61D7: 2A        ROL A
+$61D8: 10 03     BPL $61DD
+$61DA: 4C 86 62  JMP $6286
+$61DD: 29 08     AND #$08
+$61DF: D0 6A     BNE $624B
+$61E1: 2C 13 E8  BIT $E813
+$61E4: 30 03     BMI $61E9
+$61E6: 4C F6 62  JMP $62F6
+$61E9: AD 12 E8  LDA $E812
+$61EC: AD 38 7C  LDA $7C38
+$61EF: 29 10     AND #$10
+$61F1: D0 17     BNE $620A
+$61F3: BA        TSX
+$61F4: A9 66     LDA #$66
+$61F6: 9D 00 01  STA $0100,X
+$61F9: CA        DEX
+$61FA: A9 D8     LDA #$D8
+$61FC: 9D 00 01  STA $0100,X
+$61FF: CA        DEX
+$6200: A9 00     LDA #$00
+$6202: 9D 00 01  STA $0100,X
+$6205: CA        DEX
+$6206: CA        DEX
+$6207: CA        DEX
+$6208: CA        DEX
+$6209: 9A        TXS
+$620A: 58        CLI
+$620B: CE 6A 7C  DEC $7C6A
+$620E: 10 33     BPL $6243
+$6210: AD 43 7C  LDA $7C43
+$6213: 8D 6A 7C  STA $7C6A
+$6216: AD 69 7C  LDA $7C69
+$6219: 49 80     EOR #$80
+$621B: 8D 69 7C  STA $7C69
+$621E: 2C 68 7C  BIT $7C68
+$6221: 10 20     BPL $6243
+$6223: 4D 67 7C  EOR $7C67
+$6226: A6 20     LDX $20
+$6228: 8E 6B 7C  STX $7C6B
+$622B: A6 1F     LDX $1F
+$622D: AC 64 7C  LDY $7C64
+$6230: 84 1F     STY $1F
+$6232: AC 65 7C  LDY $7C65
+$6235: 84 20     STY $20
+$6237: AC 66 7C  LDY $7C66
+$623A: 91 1F     STA ($1F),Y
+$623C: 86 1F     STX $1F
+$623E: AE 6B 7C  LDX $7C6B
+$6241: 86 20     STX $20
+$6243: A5 9E     LDA $9E
+$6245: 8D 7F 7C  STA $7C7F
+$6248: 6C 51 7C  JMP ($7C51)
+$624B: AE 3B 7C  LDX $7C3B
+$624E: E8        INX
+$624F: E8        INX
+$6250: E8        INX
+$6251: E8        INX
+$6252: BD 80 60  LDA $6080,X
+$6255: 8D 48 E8  STA $E848
+$6258: E8        INX
+$6259: BD 80 60  LDA $6080,X
+$625C: 8D 49 E8  STA $E849
+$625F: A9 02     LDA #$02
+$6261: 8D 4E E8  STA $E84E
+$6264: A9 22     LDA #$22
+$6266: 8D 4D E8  STA $E84D
+$6269: A9 A0     LDA #$A0
+$626B: 8D 4E E8  STA $E84E
+$626E: A9 08     LDA #$08
+$6270: 8D 55 7C  STA $7C55
+$6273: A9 00     LDA #$00
+$6275: 8D 54 7C  STA $7C54
+$6278: AD 4D E8  LDA $E84D
+$627B: 10 03     BPL $6280
+$627D: 4C CE 61  JMP $61CE
+$6280: 68        PLA
+$6281: A8        TAY
+$6282: 68        PLA
+$6283: AA        TAX
+$6284: 68        PLA
+$6285: 40        RTI
+$6286: AD 4F E8  LDA $E84F
+$6289: 29 08     AND #$08
+$628B: 18        CLC
+$628C: 69 FF     ADC #$FF
+$628E: 4D 4F E8  EOR $E84F
+$6291: 29 08     AND #$08
+$6293: F0 F1     BEQ $6286
+$6295: CE 55 7C  DEC $7C55
+$6298: 30 1D     BMI $62B7
+$629A: F0 16     BEQ $62B2
+$629C: 6E 54 7C  ROR $7C54
+$629F: AE 3B 7C  LDX $7C3B
+$62A2: BD 80 60  LDA $6080,X
+$62A5: 8D 48 E8  STA $E848
+$62A8: E8        INX
+$62A9: BD 80 60  LDA $6080,X
+$62AC: 8D 49 E8  STA $E849
+$62AF: 4C E5 62  JMP $62E5
+$62B2: 6E 54 7C  ROR $7C54
+$62B5: 30 E8     BMI $629F
+$62B7: A9 20     LDA #$20
+$62B9: 8D 4E E8  STA $E84E
+$62BC: A9 22     LDA #$22
+$62BE: 8D 4D E8  STA $E84D
+$62C1: A9 82     LDA #$82
+$62C3: 8D 4E E8  STA $E84E
+$62C6: AC 5E 7C  LDY $7C5E
+$62C9: C8        INY
+$62CA: CC 5C 7C  CPY $7C5C
+$62CD: D0 0A     BNE $62D9
+$62CF: 88        DEY
+$62D0: 88        DEY
+$62D1: A9 A6     LDA #$A6
+$62D3: 99 87 7C  STA $7C87,Y
+$62D6: 4C E5 62  JMP $62E5
+$62D9: 88        DEY
+$62DA: AD 54 7C  LDA $7C54
+$62DD: 49 FF     EOR #$FF
+$62DF: 99 87 7C  STA $7C87,Y
+$62E2: EE 5E 7C  INC $7C5E
+$62E5: AD 4D E8  LDA $E84D
+$62E8: 30 8E     BMI $6278
+$62EA: 68        PLA
+$62EB: A8        TAY
+$62EC: 68        PLA
+$62ED: AA        TAX
+$62EE: 68        PLA
+$62EF: 40        RTI
+$62F0: 49 2B     EOR #$2B
+$62F2: 17        .BYT 17
+$62F3: C5 9A     CMP $9A
+$62F5: 7F        .BYT 7F
+$62F6: 2C 10 E8  BIT $E810
+$62F9: AD 11 E8  LDA $E811
+$62FC: 29 FE     AND #$FE
+$62FE: 8D 11 E8  STA $E811
+$6301: 2C 20 E8  BIT $E820
+$6304: AD 21 E8  LDA $E821
+$6307: 29 FE     AND #$FE
+$6309: 8D 21 E8  STA $E821
+$630C: 2C 22 E8  BIT $E822
+$630F: AD 23 E8  LDA $E823
+$6312: 29 FE     AND #$FE
+$6314: 8D 23 E8  STA $E823
+$6317: A9 1D     LDA #$1D
+$6319: 8D 4D E8  STA $E84D
+$631C: 8D 4E E8  STA $E84E
+$631F: 4C E6 66  JMP $66E6
+$6322: 48        PHA
+$6323: 2C 3E 7C  BIT $7C3E
+$6326: 30 1A     BMI $6342
+$6328: B0 0D     BCS $6337
+$632A: A9 10     LDA #$10
+$632C: 08        PHP
+$632D: 78        SEI
+$632E: 0D 4F E8  ORA $E84F
+$6331: 8D 4F E8  STA $E84F
+$6334: 28        PLP
+$6335: D0 0B     BNE $6342
+$6337: A9 EF     LDA #$EF
+$6339: 08        PHP
+$633A: 78        SEI
+$633B: 2D 4F E8  AND $E84F
+$633E: 8D 4F E8  STA $E84F
+$6341: 28        PLP
+$6342: 68        PLA
+$6343: 60        RTS
+$6344: A9 43     LDA #$43
+$6346: 20 82 65  JSR $6582
+$6349: B0 53     BCS $639E
+$634B: AC 62 7C  LDY $7C62
+$634E: C0 02     CPY #$02
+$6350: 90 4C     BCC $639E
+$6352: A0 00     LDY #$00
+$6354: B1 1F     LDA ($1F),Y
+$6356: 8D 4F 7C  STA $7C4F
+$6359: C8        INY
+$635A: B1 1F     LDA ($1F),Y
+$635C: 8D 4E 7C  STA $7C4E
+$635F: C8        INY
+$6360: CC 62 7C  CPY $7C62
+$6363: F0 2A     BEQ $638F
+$6365: B1 1F     LDA ($1F),Y
+$6367: 8D 4D 7C  STA $7C4D
+$636A: C8        INY
+$636B: A2 08     LDX #$08
+$636D: 2E 4D 7C  ROL $7C4D
+$6370: 2E 4E 7C  ROL $7C4E
+$6373: 2E 4F 7C  ROL $7C4F
+$6376: 90 12     BCC $638A
+$6378: AD 4E 7C  LDA $7C4E
+$637B: 4D 3C 7C  EOR $7C3C
+$637E: 8D 4E 7C  STA $7C4E
+$6381: AD 4F 7C  LDA $7C4F
+$6384: 4D 3D 7C  EOR $7C3D
+$6387: 8D 4F 7C  STA $7C4F
+$638A: CA        DEX
+$638B: D0 E0     BNE $636D
+$638D: F0 D1     BEQ $6360
+$638F: AC 62 7C  LDY $7C62
+$6392: 88        DEY
+$6393: AD 4E 7C  LDA $7C4E
+$6396: 91 1F     STA ($1F),Y
+$6398: 88        DEY
+$6399: AD 4F 7C  LDA $7C4F
+$639C: 91 1F     STA ($1F),Y
+$639E: 60        RTS
+$639F: 60        RTS
+$63A0: 2C 38 7C  BIT $7C38
+$63A3: 70 FA     BVS $639F
+$63A5: A9 54     LDA #$54
+$63A7: 20 82 65  JSR $6582
+$63AA: B0 F3     BCS $639F
+$63AC: AC 62 7C  LDY $7C62
+$63AF: F0 EE     BEQ $639F
+$63B1: 88        DEY
+$63B2: A2 FE     LDX #$FE
+$63B4: B1 1F     LDA ($1F),Y
+$63B6: 29 7F     AND #$7F
+$63B8: C9 7F     CMP #$7F
+$63BA: F0 67     BEQ $6423
+$63BC: C9 5F     CMP #$5F
+$63BE: D0 04     BNE $63C4
+$63C0: A9 A4     LDA #$A4
+$63C2: D0 58     BNE $641C
+$63C4: C9 20     CMP #$20
+$63C6: 90 14     BCC $63DC
+$63C8: C9 41     CMP #$41
+$63CA: 90 50     BCC $641C
+$63CC: C9 60     CMP #$60
+$63CE: 90 04     BCC $63D4
+$63D0: E9 20     SBC #$20
+$63D2: D0 48     BNE $641C
+$63D4: C9 5B     CMP #$5B
+$63D6: B0 44     BCS $641C
+$63D8: 69 80     ADC #$80
+$63DA: D0 40     BNE $641C
+$63DC: C9 0D     CMP #$0D
+$63DE: D0 17     BNE $63F7
+$63E0: 88        DEY
+$63E1: B1 1F     LDA ($1F),Y
+$63E3: C8        INY
+$63E4: F0 0D     BEQ $63F3
+$63E6: C9 0D     CMP #$0D
+$63E8: F0 39     BEQ $6423
+$63EA: C9 0A     CMP #$0A
+$63EC: D0 05     BNE $63F3
+$63EE: 88        DEY
+$63EF: A9 0D     LDA #$0D
+$63F1: D0 29     BNE $641C
+$63F3: A9 8D     LDA #$8D
+$63F5: D0 25     BNE $641C
+$63F7: C9 0A     CMP #$0A
+$63F9: D0 0F     BNE $640A
+$63FB: 88        DEY
+$63FC: B1 1F     LDA ($1F),Y
+$63FE: C8        INY
+$63FF: F0 05     BEQ $6406
+$6401: C9 0D     CMP #$0D
+$6403: D0 01     BNE $6406
+$6405: 88        DEY
+$6406: A9 0D     LDA #$0D
+$6408: D0 12     BNE $641C
+$640A: C9 08     CMP #$08
+$640C: D0 08     BNE $6416
+$640E: 88        DEY
+$640F: C8        INY
+$6410: F0 11     BEQ $6423
+$6412: 88        DEY
+$6413: 4C 23 64  JMP $6423
+$6416: C9 0C     CMP #$0C
+$6418: D0 09     BNE $6423
+$641A: F0 00     BEQ $641C
+$641C: 9D 88 7D  STA $7D88,X
+$641F: 8A        TXA
+$6420: F0 08     BEQ $642A
+$6422: CA        DEX
+$6423: 98        TYA
+$6424: F0 0E     BEQ $6434
+$6426: 88        DEY
+$6427: 4C B4 63  JMP $63B4
+$642A: 98        TYA
+$642B: F0 08     BEQ $6435
+$642D: A9 FF     LDA #$FF
+$642F: 9D 88 7D  STA $7D88,X
+$6432: D0 01     BNE $6435
+$6434: E8        INX
+$6435: A0 00     LDY #$00
+$6437: E0 FF     CPX #$FF
+$6439: F0 33     BEQ $646E
+$643B: A9 40     LDA #$40
+$643D: 8D 5A 7C  STA $7C5A
+$6440: BD 88 7D  LDA $7D88,X
+$6443: 99 88 7D  STA $7D88,Y
+$6446: C9 A4     CMP #$A4
+$6448: F0 0F     BEQ $6459
+$644A: C9 20     CMP #$20
+$644C: F0 13     BEQ $6461
+$644E: C9 0D     CMP #$0D
+$6450: F0 0F     BEQ $6461
+$6452: A9 80     LDA #$80
+$6454: 8D 5A 7C  STA $7C5A
+$6457: F0 08     BEQ $6461
+$6459: AD 5A 7C  LDA $7C5A
+$645C: 29 BF     AND #$BF
+$645E: 8D 5A 7C  STA $7C5A
+$6461: C8        INY
+$6462: E8        INX
+$6463: E0 FF     CPX #$FF
+$6465: D0 D9     BNE $6440
+$6467: AD 5A 7C  LDA $7C5A
+$646A: 99 88 7D  STA $7D88,Y
+$646D: C8        INY
+$646E: 20 35 65  JSR $6535
+$6471: 60        RTS
+$6472: 2C 38 7C  BIT $7C38
+$6475: 70 40     BVS $64B7
+$6477: A9 53     LDA #$53
+$6479: 20 82 65  JSR $6582
+$647C: B0 39     BCS $64B7
+$647E: AD 62 7C  LDA $7C62
+$6481: F0 34     BEQ $64B7
+$6483: A0 00     LDY #$00
+$6485: B1 1F     LDA ($1F),Y
+$6487: C9 11     CMP #$11
+$6489: D0 04     BNE $648F
+$648B: A9 0A     LDA #$0A
+$648D: D0 1E     BNE $64AD
+$648F: C9 14     CMP #$14
+$6491: D0 04     BNE $6497
+$6493: A9 7F     LDA #$7F
+$6495: D0 16     BNE $64AD
+$6497: C9 9D     CMP #$9D
+$6499: D0 04     BNE $649F
+$649B: A9 08     LDA #$08
+$649D: D0 0E     BNE $64AD
+$649F: C9 5E     CMP #$5E
+$64A1: F0 0A     BEQ $64AD
+$64A3: C9 41     CMP #$41
+$64A5: 90 06     BCC $64AD
+$64A7: C9 5B     CMP #$5B
+$64A9: B0 02     BCS $64AD
+$64AB: 09 20     ORA #$20
+$64AD: 29 7F     AND #$7F
+$64AF: 91 1F     STA ($1F),Y
+$64B1: C8        INY
+$64B2: CC 62 7C  CPY $7C62
+$64B5: D0 CE     BNE $6485
+$64B7: 60        RTS
+$64B8: 60        RTS
+$64B9: A9 52     LDA #$52
+$64BB: 20 82 65  JSR $6582
+$64BE: B0 F8     BCS $64B8
+$64C0: AD 38 7C  LDA $7C38
+$64C3: 29 08     AND #$08
+$64C5: 18        CLC
+$64C6: 69 7F     ADC #$7F
+$64C8: 09 7F     ORA #$7F
+$64CA: 8D 50 7C  STA $7C50
+$64CD: A0 00     LDY #$00
+$64CF: 8C 3A 7C  STY $7C3A
+$64D2: AE 5C 7C  LDX $7C5C
+$64D5: EC 5E 7C  CPX $7C5E
+$64D8: F0 3B     BEQ $6515
+$64DA: BD 87 7C  LDA $7C87,X
+$64DD: 2D 50 7C  AND $7C50
+$64E0: 2C 38 7C  BIT $7C38
+$64E3: 30 0C     BMI $64F1
+$64E5: C9 0D     CMP #$0D
+$64E7: D0 08     BNE $64F1
+$64E9: 99 88 7D  STA $7D88,Y
+$64EC: C8        INY
+$64ED: E8        INX
+$64EE: 4C 15 65  JMP $6515
+$64F1: 99 88 7D  STA $7D88,Y
+$64F4: C8        INY
+$64F5: E8        INX
+$64F6: C0 FF     CPY #$FF
+$64F8: B0 1B     BCS $6515
+$64FA: EC 5E 7C  CPX $7C5E
+$64FD: F0 16     BEQ $6515
+$64FF: AD 38 7C  LDA $7C38
+$6502: 2A        ROL A
+$6503: 2A        ROL A
+$6504: 2A        ROL A
+$6505: BD 87 7C  LDA $7C87,X
+$6508: 2D 50 7C  AND $7C50
+$650B: 90 D3     BCC $64E0
+$650D: CD 39 7C  CMP $7C39
+$6510: D0 CE     BNE $64E0
+$6512: CE 3A 7C  DEC $7C3A
+$6515: 8E 5D 7C  STX $7C5D
+$6518: AD 38 7C  LDA $7C38
+$651B: 2A        ROL A
+$651C: 2A        ROL A
+$651D: 2A        ROL A
+$651E: 90 0E     BCC $652E
+$6520: AE 5C 7C  LDX $7C5C
+$6523: BD 87 7C  LDA $7C87,X
+$6526: 2D 50 7C  AND $7C50
+$6529: CD 39 7C  CMP $7C39
+$652C: F0 03     BEQ $6531
+$652E: 20 5E 61  JSR $615E
+$6531: 20 35 65  JSR $6535
+$6534: 60        RTS
+$6535: 98        TYA
+$6536: AC 63 7C  LDY $7C63
+$6539: 91 2A     STA ($2A),Y
+$653B: AA        TAX
+$653C: F0 02     BEQ $6540
+$653E: A9 88     LDA #$88
+$6540: C8        INY
+$6541: 91 2A     STA ($2A),Y
+$6543: AA        TAX
+$6544: F0 02     BEQ $6548
+$6546: A9 7D     LDA #$7D
+$6548: C8        INY
+$6549: 91 2A     STA ($2A),Y
+$654B: 2C 3E 7C  BIT $7C3E
+$654E: 70 01     BVS $6551
+$6550: 60        RTS
+$6551: AC 62 7C  LDY $7C62
+$6554: F0 FA     BEQ $6550
+$6556: A5 1F     LDA $1F
+$6558: 38        SEC
+$6559: E5 30     SBC $30
+$655B: A5 20     LDA $20
+$655D: E5 31     SBC $31
+$655F: 90 EF     BCC $6550
+$6561: A5 1F     LDA $1F
+$6563: 38        SEC
+$6564: E5 34     SBC $34
+$6566: A5 20     LDA $20
+$6568: E5 35     SBC $35
+$656A: B0 E4     BCS $6550
+$656C: 98        TYA
+$656D: 91 1F     STA ($1F),Y
+$656F: E6 1F     INC $1F
+$6571: D0 02     BNE $6575
+$6573: E6 20     INC $20
+$6575: A9 FF     LDA #$FF
+$6577: 91 1F     STA ($1F),Y
+$6579: A5 1F     LDA $1F
+$657B: D0 02     BNE $657F
+$657D: C6 20     DEC $20
+$657F: C6 1F     DEC $1F
+$6581: 60        RTS
+$6582: A0 00     LDY #$00
+$6584: 8D 5B 7C  STA $7C5B
+$6587: B1 2A     LDA ($2A),Y
+$6589: C9 51     CMP #$51
+$658B: F0 0D     BEQ $659A
+$658D: 98        TYA
+$658E: 18        CLC
+$658F: 69 0E     ADC #$0E
+$6591: B0 2A     BCS $65BD
+$6593: 38        SEC
+$6594: E9 07     SBC #$07
+$6596: A8        TAY
+$6597: 4C 87 65  JMP $6587
+$659A: C8        INY
+$659B: B1 2A     LDA ($2A),Y
+$659D: 4D 5B 7C  EOR $7C5B
+$65A0: 88        DEY
+$65A1: C9 80     CMP #$80
+$65A3: D0 E8     BNE $658D
+$65A5: C8        INY
+$65A6: C8        INY
+$65A7: B1 2A     LDA ($2A),Y
+$65A9: 8D 62 7C  STA $7C62
+$65AC: C8        INY
+$65AD: B1 2A     LDA ($2A),Y
+$65AF: 85 1F     STA $1F
+$65B1: C8        INY
+$65B2: B1 2A     LDA ($2A),Y
+$65B4: 85 20     STA $20
+$65B6: 88        DEY
+$65B7: 88        DEY
+$65B8: 18        CLC
+$65B9: 8C 63 7C  STY $7C63
+$65BC: 60        RTS
+$65BD: 38        SEC
+$65BE: 60        RTS
+$65BF: 78        SEI
+$65C0: AD 4B E8  LDA $E84B
+$65C3: 8D 59 7C  STA $7C59
+$65C6: 09 40     ORA #$40
+$65C8: 29 7F     AND #$7F
+$65CA: 8D 4B E8  STA $E84B
+$65CD: 58        CLI
+$65CE: 60        RTS
+$65CF: 78        SEI
+$65D0: AD 59 7C  LDA $7C59
+$65D3: 4D 4B E8  EOR $E84B
+$65D6: 29 C0     AND #$C0
+$65D8: 4D 4B E8  EOR $E84B
+$65DB: 8D 4B E8  STA $E84B
+$65DE: 58        CLI
+$65DF: 60        RTS
+$65E0: A9 53     LDA #$53
+$65E2: 20 82 65  JSR $6582
+$65E5: B0 18     BCS $65FF
+$65E7: AD 62 7C  LDA $7C62
+$65EA: F0 13     BEQ $65FF
+$65EC: 20 BF 65  JSR $65BF
+$65EF: A0 00     LDY #$00
+$65F1: B1 1F     LDA ($1F),Y
+$65F3: 20 00 66  JSR $6600
+$65F6: C8        INY
+$65F7: CC 62 7C  CPY $7C62
+$65FA: D0 F5     BNE $65F1
+$65FC: 20 CF 65  JSR $65CF
+$65FF: 60        RTS
+$6600: 8D 56 7C  STA $7C56
+$6603: A9 40     LDA #$40
+$6605: 8D 58 7C  STA $7C58
+$6608: AD 38 7C  LDA $7C38
+$660B: 4A        LSR A
+$660C: 4A        LSR A
+$660D: 4A        LSR A
+$660E: A9 00     LDA #$00
+$6610: 69 07     ADC #$07
+$6612: 8D 57 7C  STA $7C57
+$6615: AE 3B 7C  LDX $7C3B
+$6618: E8        INX
+$6619: E8        INX
+$661A: BD 80 60  LDA $6080,X
+$661D: 78        SEI
+$661E: 8D 44 E8  STA $E844
+$6621: E8        INX
+$6622: BD 80 60  LDA $6080,X
+$6625: 8D 45 E8  STA $E845
+$6628: A9 C0     LDA #$C0
+$662A: 8D 4E E8  STA $E84E
+$662D: 58        CLI
+$662E: 2C 58 7C  BIT $7C58
+$6631: 10 FB     BPL $662E
+$6633: 60        RTS
+$6634: 48        PHA
+$6635: A9 10     LDA #$10
+$6637: 78        SEI
+$6638: 4D 4F E8  EOR $E84F
+$663B: 8D 4F E8  STA $E84F
+$663E: 58        CLI
+$663F: 68        PLA
+$6640: 60        RTS
+$6641: A9 34     LDA #$34
+$6643: 8D 21 E8  STA $E821
+$6646: AD 40 E8  LDA $E840
+$6649: 09 02     ORA #$02
+$664B: 8D 40 E8  STA $E840
+$664E: A9 FF     LDA #$FF
+$6650: 8D 45 E8  STA $E845
+$6653: 2C 4D E8  BIT $E84D
+$6656: 70 2B     BVS $6683
+$6658: AD 40 E8  LDA $E840
+$665B: 30 F6     BMI $6653
+$665D: 29 FD     AND #$FD
+$665F: 8D 40 E8  STA $E840
+$6662: 2C 10 E8  BIT $E810
+$6665: 70 06     BVS $666D
+$6667: A5 96     LDA $96
+$6669: 09 40     ORA #$40
+$666B: 85 96     STA $96
+$666D: AE 20 E8  LDX $E820
+$6670: A9 3C     LDA #$3C
+$6672: 8D 21 E8  STA $E821
+$6675: 2C 40 E8  BIT $E840
+$6678: 10 FB     BPL $6675
+$667A: A9 34     LDA #$34
+$667C: 8D 21 E8  STA $E821
+$667F: 8A        TXA
+$6680: 49 FF     EOR #$FF
+$6682: 60        RTS
+$6683: A9 02     LDA #$02
+$6685: 05 96     ORA $96
+$6687: 85 96     STA $96
+$6689: A9 0D     LDA #$0D
+$668B: 60        RTS
+$668C: A9 53     LDA #$53
+$668E: 20 82 65  JSR $6582
+$6691: B0 44     BCS $66D7
+$6693: A9 05     LDA #$05
+$6695: 8D 5A 7C  STA $7C5A
+$6698: 20 CC FF  JSR $FFCC
+$669B: AD 3F 7C  LDA $7C3F
+$669E: 29 7F     AND #$7F
+$66A0: AA        TAX
+$66A1: 20 C6 FF  JSR $FFC6
+$66A4: A5 96     LDA $96
+$66A6: F0 07     BEQ $66AF
+$66A8: CE 5A 7C  DEC $7C5A
+$66AB: D0 EB     BNE $6698
+$66AD: F0 28     BEQ $66D7
+$66AF: A0 00     LDY #$00
+$66B1: 20 41 66  JSR $6641
+$66B4: 99 88 7D  STA $7D88,Y
+$66B7: C8        INY
+$66B8: 2C 3F 7C  BIT $7C3F
+$66BB: 10 0B     BPL $66C8
+$66BD: CD 40 7C  CMP $7C40
+$66C0: D0 06     BNE $66C8
+$66C2: A5 96     LDA $96
+$66C4: 09 04     ORA #$04
+$66C6: 85 96     STA $96
+$66C8: A5 96     LDA $96
+$66CA: D0 05     BNE $66D1
+$66CC: CC 41 7C  CPY $7C41
+$66CF: D0 E0     BNE $66B1
+$66D1: 20 35 65  JSR $6535
+$66D4: 20 CC FF  JSR $FFCC
+$66D7: 60        RTS
+$66D8: A5 9B     LDA $9B
+$66DA: C9 EF     CMP #$EF
+$66DC: D0 04     BNE $66E2
+$66DE: A9 FF     LDA #$FF
+$66E0: 85 9B     STA $9B
+$66E2: 58        CLI
+$66E3: 20 47 67  JSR $6747
+$66E6: 68        PLA
+$66E7: A8        TAY
+$66E8: 68        PLA
+$66E9: AA        TAX
+$66EA: 68        PLA
+$66EB: 40        RTI
+$66EC: EE 10 E8  INC $E810
+$66EF: D0 A9     BNE $669A
+$66F1: 00        BRK
+$66F2: 85 1F     STA $1F
+$66F4: A9 E4     LDA #$E4
+$66F6: 85 20     STA $20
+$66F8: A0 00     LDY #$00
+$66FA: B1 1F     LDA ($1F),Y
+$66FC: D9 EC 66  CMP $66EC,Y
+$66FF: D0 07     BNE $6708
+$6701: C8        INY
+$6702: C0 04     CPY #$04
+$6704: D0 F4     BNE $66FA
+$6706: F0 0D     BEQ $6715
+$6708: E6 1F     INC $1F
+$670A: D0 EC     BNE $66F8
+$670C: E6 20     INC $20
+$670E: A5 20     LDA $20
+$6710: C9 E7     CMP #$E7
+$6712: D0 E4     BNE $66F8
+$6714: 60        RTS
+$6715: A5 1F     LDA $1F
+$6717: 38        SEC
+$6718: E9 32     SBC #$32
+$671A: 85 1F     STA $1F
+$671C: A5 20     LDA $20
+$671E: E9 00     SBC #$00
+$6720: 85 20     STA $20
+$6722: A0 00     LDY #$00
+$6724: B1 1F     LDA ($1F),Y
+$6726: C9 BD     CMP #$BD
+$6728: F0 06     BEQ $6730
+$672A: C8        INY
+$672B: C0 32     CPY #$32
+$672D: D0 F5     BNE $6724
+$672F: 60        RTS
+$6730: C8        INY
+$6731: C8        INY
+$6732: B1 1F     LDA ($1F),Y
+$6734: 09 01     ORA #$01
+$6736: 88        DEY
+$6737: C9 E7     CMP #$E7
+$6739: D0 E9     BNE $6724
+$673B: B1 1F     LDA ($1F),Y
+$673D: 8D 6C 67  STA $676C
+$6740: C8        INY
+$6741: B1 1F     LDA ($1F),Y
+$6743: 8D 6D 67  STA $676D
+$6746: 60        RTS
+$6747: A9 FF     LDA #$FF
+$6749: 8D 82 7C  STA $7C82
+$674C: 8D 83 7C  STA $7C83
+$674F: AD 10 E8  LDA $E810
+$6752: 29 F0     AND #$F0
+$6754: 8D 10 E8  STA $E810
+$6757: A2 50     LDX #$50
+$6759: AD 12 E8  LDA $E812
+$675C: CD 12 E8  CMP $E812
+$675F: D0 F8     BNE $6759
+$6761: C9 FF     CMP #$FF
+$6763: F0 25     BEQ $678A
+$6765: A0 08     LDY #$08
+$6767: 4A        LSR A
+$6768: B0 1A     BCS $6784
+$676A: 48        PHA
+$676B: BD 00 E0  LDA $E000,X
+$676E: F0 13     BEQ $6783
+$6770: C9 10     CMP #$10
+$6772: F0 0F     BEQ $6783
+$6774: C9 12     CMP #$12
+$6776: D0 08     BNE $6780
+$6778: A9 00     LDA #$00
+$677A: 8D 83 7C  STA $7C83
+$677D: 4C 83 67  JMP $6783
+$6780: 8D 82 7C  STA $7C82
+$6783: 68        PLA
+$6784: CA        DEX
+$6785: 88        DEY
+$6786: D0 DF     BNE $6767
+$6788: F0 05     BEQ $678F
+$678A: 8A        TXA
+$678B: 38        SEC
+$678C: E9 08     SBC #$08
+$678E: AA        TAX
+$678F: EE 10 E8  INC $E810
+$6792: 8A        TXA
+$6793: D0 C4     BNE $6759
+$6795: AD 82 7C  LDA $7C82
+$6798: C9 FF     CMP #$FF
+$679A: F0 17     BEQ $67B3
+$679C: 29 7F     AND #$7F
+$679E: C9 40     CMP #$40
+$67A0: B0 0D     BCS $67AF
+$67A2: C9 20     CMP #$20
+$67A4: B0 05     BCS $67AB
+$67A6: AD 82 7C  LDA $7C82
+$67A9: 90 08     BCC $67B3
+$67AB: 09 E0     ORA #$E0
+$67AD: D0 04     BNE $67B3
+$67AF: 29 1F     AND #$1F
+$67B1: 09 60     ORA #$60
+$67B3: 8D 82 7C  STA $7C82
+$67B6: A5 A6     LDA $A6
+$67B8: C9 FF     CMP #$FF
+$67BA: D0 03     BNE $67BF
+$67BC: 8D 80 7C  STA $7C80
+$67BF: A6 9E     LDX $9E
+$67C1: EC 7F 7C  CPX $7C7F
+$67C4: F0 10     BEQ $67D6
+$67C6: CA        DEX
+$67C7: BD 6F 02  LDA $026F,X
+$67CA: 8D 80 7C  STA $7C80
+$67CD: C9 12     CMP #$12
+$67CF: F0 0A     BEQ $67DB
+$67D1: CD 81 7C  CMP $7C81
+$67D4: F0 05     BEQ $67DB
+$67D6: AD 83 7C  LDA $7C83
+$67D9: D0 17     BNE $67F2
+$67DB: AD 7F 7C  LDA $7C7F
+$67DE: 85 9E     STA $9E
+$67E0: AD 82 7C  LDA $7C82
+$67E3: C9 FF     CMP #$FF
+$67E5: F0 0B     BEQ $67F2
+$67E7: CD 84 7C  CMP $7C84
+$67EA: F0 06     BEQ $67F2
+$67EC: AD 82 7C  LDA $7C82
+$67EF: 20 2E 68  JSR $682E
+$67F2: AD 7F 7C  LDA $7C7F
+$67F5: C5 9E     CMP $9E
+$67F7: F0 0E     BEQ $6807
+$67F9: A6 9E     LDX $9E
+$67FB: CA        DEX
+$67FC: BD 6F 02  LDA $026F,X
+$67FF: 8D 86 7C  STA $7C86
+$6802: A9 1E     LDA #$1E
+$6804: 8D 85 7C  STA $7C85
+$6807: CE 85 7C  DEC $7C85
+$680A: D0 15     BNE $6821
+$680C: AD 86 7C  LDA $7C86
+$680F: CD 82 7C  CMP $7C82
+$6812: F0 05     BEQ $6819
+$6814: CD 80 7C  CMP $7C80
+$6817: D0 08     BNE $6821
+$6819: 20 2E 68  JSR $682E
+$681C: A9 07     LDA #$07
+$681E: 8D 85 7C  STA $7C85
+$6821: AD 82 7C  LDA $7C82
+$6824: 8D 84 7C  STA $7C84
+$6827: AD 80 7C  LDA $7C80
+$682A: 8D 81 7C  STA $7C81
+$682D: 60        RTS
+$682E: A6 9E     LDX $9E
+$6830: E0 0A     CPX #$0A
+$6832: F0 05     BEQ $6839
+$6834: 9D 6F 02  STA $026F,X
+$6837: E6 9E     INC $9E
+$6839: 60        RTS
+$683A: 60        RTS
+$683B: 61 62     ADC ($62,X)
+$683D: 5E 64 65  LSR $6564,X
+$6840: 40        RTI
+$6841: 67        .BYT 67
+$6842: 68        PLA
+$6843: 69 6A     ADC #$6A
+$6845: 5C        .BYT 5C
+$6846: 6C 6D 6E  JMP ($6E6D)
+$6849: 6F        .BYT 6F
+$684A: 70 71     BVS $68BD
+$684C: 72        .BYT 72
+$684D: 5B        .BYT 5B
+$684E: 74        .BYT 74
+$684F: 75 76     ADC $76,X
+$6851: 77        .BYT 77
+$6852: 78        SEI
+$6853: 79 7A 7B  ADC $7B7A,Y
+$6856: 7C        .BYT 7C
+$6857: 7D 7E 7F  ADC $7F7E,X
+$685A: 20 21 22  JSR $2221
+$685D: 23        .BYT 23
+$685E: 24 25     BIT $25
+$6860: 26 27     ROL $27
+$6862: 28        PLP
+$6863: 29 2A     AND #$2A
+$6865: 2B        .BYT 2B
+$6866: 2C 2D 2E  BIT $2E2D
+$6869: 2F        .BYT 2F
+$686A: 30 31     BMI $689D
+$686C: 32        .BYT 32
+$686D: 33        .BYT 33
+$686E: 34        .BYT 34
+$686F: 35 36     AND $36,X
+$6871: 37        .BYT 37
+$6872: 38        SEC
+$6873: 39 3A 3B  AND $3B3A,Y
+$6876: 3C        .BYT 3C
+$6877: 3D 3E 3F  AND $3F3E,X
+$687A: 00        BRK
+$687B: 41 42     EOR ($42,X)
+$687D: 43        .BYT 43
+$687E: 44        .BYT 44
+$687F: 45 46     EOR $46
+$6881: 47        .BYT 47
+$6882: 48        PHA
+$6883: 49 4A     EOR #$4A
+$6885: 4B        .BYT 4B
+$6886: 4C 4D 4E  JMP $4E4D
+$6889: 4F        .BYT 4F
+$688A: 50 51     BVC $68DD
+$688C: 52        .BYT 52
+$688D: 53        .BYT 53
+$688E: 54        .BYT 54
+$688F: 55 56     EOR $56,X
+$6891: 57        .BYT 57
+$6892: 58        CLI
+$6893: 59 5A 1B  EOR $1B5A,Y
+$6896: 1C        .BYT 1C
+$6897: 1D 1E 1F  ORA $1F1E,X
+$689A: 66 01     ROR $01
+$689C: 02        .BYT 02
+$689D: 03        .BYT 03
+$689E: 04        .BYT 04
+$689F: 05 06     ORA $06
+$68A1: 07        .BYT 07
+$68A2: 08        PHP
+$68A3: 09 0A     ORA #$0A
+$68A5: 0B        .BYT 0B
+$68A6: 0C        .BYT 0C
+$68A7: 0D 0E 0F  ORA $0F0E
+$68AA: 10 11     BPL $68BD
+$68AC: 12        .BYT 12
+$68AD: 13        .BYT 13
+$68AE: 14        .BYT 14
+$68AF: 15 16     ORA $16,X
+$68B1: 17        .BYT 17
+$68B2: 18        CLC
+$68B3: 19 1A 73  ORA $731A,Y
+$68B6: 5D 6B 63  EOR $636B,X
+$68B9: 5F        .BYT 5F
+$68BA: 50 80     BVC $683C
+$68BC: 18        CLC
+$68BD: 50 02     BVC $68C1
+$68BF: 04        .BYT 04
+$68C0: 60        RTS
+$68C1: 80        .BYT 80
+$68C2: 80        .BYT 80
+$68C3: 80        .BYT 80
+$68C4: 00        BRK
+$68C5: 07        .BYT 07
+$68C6: 01 0D     ORA ($0D,X)
+$68C8: 02        .BYT 02
+$68C9: 0A        ASL A
+$68CA: 03        .BYT 03
+$68CB: 1B        .BYT 1B
+$68CC: 04        .BYT 04
+$68CD: 7E 04 08  ROR $0804,X
+$68D0: 05 10     ORA $10
+$68D2: 06 80     ASL $80
+$68D4: 07        .BYT 07
+$68D5: 81 08     STA ($08,X)
+$68D7: FF        .BYT FF
+$68D8: FF        .BYT FF
+$68D9: 12        .BYT 12
+$68DA: 0B        .BYT 0B
+$68DB: 0F        .BYT 0F
+$68DC: 0C        .BYT 0C
+$68DD: 0C        .BYT 0C
+$68DE: 0D 0B 0E  ORA $0E0B
+$68E1: 13        .BYT 13
+$68E2: 0F        .BYT 0F
+$68E3: 1A        .BYT 1A
+$68E4: 10 11     BPL $68F7
+$68E6: 11 1C     ORA ($1C),Y
+$68E8: 12        .BYT 12
+$68E9: 18        CLC
+$68EA: 13        .BYT 13
+$68EB: 17        .BYT 17
+$68EC: 14        .BYT 14
+$68ED: 1D 15 19  ORA $1915,X
+$68F0: 16 1F     ASL $1F,X
+$68F2: 17        .BYT 17
+$68F3: FF        .BYT FF
+$68F4: FF        .BYT FF
+$68F5: AA        TAX
+$68F6: AA        TAX
+$68F7: AA        TAX
+$68F8: AA        TAX
+$68F9: AA        TAX
+$68FA: AA        TAX
+$68FB: AA        TAX
+$68FC: AA        TAX
+$68FD: AA        TAX
+$68FE: AA        TAX
+$68FF: 64        .BYT 64
+$6900: 69 2E     ADC #$2E
+$6902: 69 3D     ADC #$3D
+$6904: 6B        .BYT 6B
+$6905: 75 6B     ADC $6B,X
+$6907: 0A        ASL A
+$6908: 6D B1 6A  ADC $6AB1
+$690B: 8D 6A E7  STA $E76A
+$690E: 6A        ROR A
+$690F: 03        .BYT 03
+$6910: 6B        .BYT 6B
+$6911: 83        .BYT 83
+$6912: 69 AE     ADC #$AE
+$6914: 6C 19 6B  JMP ($6B19)
+$6917: 2D 6B 03  AND $036B
+$691A: 6B        .BYT 6B
+$691B: E7        .BYT E7
+$691C: 6A        ROR A
+$691D: 91 6B     STA ($6B),Y
+$691F: 35 6C     AND $6C,X
+$6921: 1F        .BYT 1F
+$6922: 6A        ROR A
+$6923: 98        TYA
+$6924: 69 73     ADC #$73
+$6926: 69 7A     ADC #$7A
+$6928: 69 DC     ADC #$DC
+$692A: 69 65     ADC #$65
+$692C: 69 6C     ADC #$6C
+$692E: 69 38     ADC #$38
+$6930: A0 D2     LDY #$D2
+$6932: 78        SEI
+$6933: AD 4C E8  LDA $E84C
+$6936: 09 E0     ORA #$E0
+$6938: 49 20     EOR #$20
+$693A: 8D 4C E8  STA $E84C
+$693D: 58        CLI
+$693E: A2 20     LDX #$20
+$6940: CA        DEX
+$6941: D0 FD     BNE $6940
+$6943: 78        SEI
+$6944: AD 4C E8  LDA $E84C
+$6947: 09 E0     ORA #$E0
+$6949: 8D 4C E8  STA $E84C
+$694C: 58        CLI
+$694D: A2 20     LDX #$20
+$694F: CA        DEX
+$6950: D0 FD     BNE $694F
+$6952: 88        DEY
+$6953: D0 DD     BNE $6932
+$6955: 78        SEI
+$6956: AD 4C E8  LDA $E84C
+$6959: 29 1F     AND #$1F
+$695B: 8D 4C E8  STA $E84C
+$695E: 58        CLI
+$695F: 90 03     BCC $6964
+$6961: 18        CLC
+$6962: 90 CC     BCC $6930
+$6964: 60        RTS
+$6965: 60        RTS
+$6966: A9 80     LDA #$80
+$6968: 8D C2 68  STA $68C2
+$696B: 18        CLC
+$696C: 60        RTS
+$696D: A9 00     LDA #$00
+$696F: 8D C2 68  STA $68C2
+$6972: 18        CLC
+$6973: 60        RTS
+$6974: AD C0 68  LDA $68C0
+$6977: 20 9F 69  JSR $699F
+$697A: 60        RTS
+$697B: A9 A0     LDA #$A0
+$697D: 4D C1 68  EOR $68C1
+$6980: 20 9F 69  JSR $699F
+$6983: 60        RTS
+$6984: AD 66 7C  LDA $7C66
+$6987: 29 F8     AND #$F8
+$6989: 18        CLC
+$698A: 69 08     ADC #$08
+$698C: CD BD 68  CMP $68BD
+$698F: B0 04     BCS $6995
+$6991: 8D 66 7C  STA $7C66
+$6994: 60        RTS
+$6995: 20 73 6B  JSR $6B73
+$6998: 60        RTS
+$6999: 20 1A 6B  JSR $6B1A
+$699C: AD C0 68  LDA $68C0
+$699F: 8D 5A 7C  STA $7C5A
+$69A2: AD BC 68  LDA $68BC
+$69A5: F0 34     BEQ $69DB
+$69A7: 38        SEC
+$69A8: ED 6C 7C  SBC $7C6C
+$69AB: AA        TAX
+$69AC: AD BD 68  LDA $68BD
+$69AF: F0 2A     BEQ $69DB
+$69B1: A5 21     LDA $21
+$69B3: 85 32     STA $32
+$69B5: A5 22     LDA $22
+$69B7: 85 33     STA $33
+$69B9: AC 66 7C  LDY $7C66
+$69BC: 4C C1 69  JMP $69C1
+$69BF: A0 00     LDY #$00
+$69C1: AD 5A 7C  LDA $7C5A
+$69C4: 91 32     STA ($32),Y
+$69C6: C8        INY
+$69C7: CC BD 68  CPY $68BD
+$69CA: D0 F8     BNE $69C4
+$69CC: 18        CLC
+$69CD: AD BD 68  LDA $68BD
+$69D0: 65 32     ADC $32
+$69D2: 85 32     STA $32
+$69D4: 90 02     BCC $69D8
+$69D6: E6 33     INC $33
+$69D8: CA        DEX
+$69D9: D0 E4     BNE $69BF
+$69DB: 18        CLC
+$69DC: 60        RTS
+$69DD: 20 1A 6B  JSR $6B1A
+$69E0: AD C0 68  LDA $68C0
+$69E3: 8D 5A 7C  STA $7C5A
+$69E6: AE BC 68  LDX $68BC
+$69E9: F0 32     BEQ $6A1D
+$69EB: AD BD 68  LDA $68BD
+$69EE: F0 2D     BEQ $6A1D
+$69F0: AD BA 68  LDA $68BA
+$69F3: 85 32     STA $32
+$69F5: AD BB 68  LDA $68BB
+$69F8: 85 33     STA $33
+$69FA: A0 00     LDY #$00
+$69FC: B1 32     LDA ($32),Y
+$69FE: 4D C1 68  EOR $68C1
+$6A01: 30 05     BMI $6A08
+$6A03: AD 5A 7C  LDA $7C5A
+$6A06: 91 32     STA ($32),Y
+$6A08: C8        INY
+$6A09: CC BD 68  CPY $68BD
+$6A0C: D0 EE     BNE $69FC
+$6A0E: 18        CLC
+$6A0F: AD BD 68  LDA $68BD
+$6A12: 65 32     ADC $32
+$6A14: 85 32     STA $32
+$6A16: 90 02     BCC $6A1A
+$6A18: E6 33     INC $33
+$6A1A: CA        DEX
+$6A1B: D0 DD     BNE $69FA
+$6A1D: 18        CLC
+$6A1E: 60        RTS
+$6A1F: 60        RTS
+$6A20: 20 C4 6C  JSR $6CC4
+$6A23: B0 FA     BCS $6A1F
+$6A25: CD BD 68  CMP $68BD
+$6A28: 90 0A     BCC $6A34
+$6A2A: 38        SEC
+$6A2B: E9 60     SBC #$60
+$6A2D: B0 F6     BCS $6A25
+$6A2F: AE BD 68  LDX $68BD
+$6A32: CA        DEX
+$6A33: 8A        TXA
+$6A34: 8D 66 7C  STA $7C66
+$6A37: 20 C4 6C  JSR $6CC4
+$6A3A: B0 E3     BCS $6A1F
+$6A3C: 29 1F     AND #$1F
+$6A3E: CD BC 68  CMP $68BC
+$6A41: 90 05     BCC $6A48
+$6A43: AE BC 68  LDX $68BC
+$6A46: CA        DEX
+$6A47: 8A        TXA
+$6A48: 8D 6C 7C  STA $7C6C
+$6A4B: 20 50 6A  JSR $6A50
+$6A4E: 18        CLC
+$6A4F: 60        RTS
+$6A50: 85 21     STA $21
+$6A52: A9 00     LDA #$00
+$6A54: 85 22     STA $22
+$6A56: A2 04     LDX #$04
+$6A58: AD BD 68  LDA $68BD
+$6A5B: C9 50     CMP #$50
+$6A5D: F0 01     BEQ $6A60
+$6A5F: CA        DEX
+$6A60: 06 21     ASL $21
+$6A62: 26 22     ROL $22
+$6A64: CA        DEX
+$6A65: D0 F9     BNE $6A60
+$6A67: A6 21     LDX $21
+$6A69: A4 22     LDY $22
+$6A6B: 06 21     ASL $21
+$6A6D: 26 22     ROL $22
+$6A6F: 06 21     ASL $21
+$6A71: 26 22     ROL $22
+$6A73: 18        CLC
+$6A74: 8A        TXA
+$6A75: 65 21     ADC $21
+$6A77: 85 21     STA $21
+$6A79: 98        TYA
+$6A7A: 65 22     ADC $22
+$6A7C: 85 22     STA $22
+$6A7E: 18        CLC
+$6A7F: A5 21     LDA $21
+$6A81: 6D BA 68  ADC $68BA
+$6A84: 85 21     STA $21
+$6A86: A5 22     LDA $22
+$6A88: 6D BB 68  ADC $68BB
+$6A8B: 85 22     STA $22
+$6A8D: 60        RTS
+$6A8E: AD BD 68  LDA $68BD
+$6A91: 18        CLC
+$6A92: ED 66 7C  SBC $7C66
+$6A95: 90 07     BCC $6A9E
+$6A97: F0 05     BEQ $6A9E
+$6A99: EE 66 7C  INC $7C66
+$6A9C: 18        CLC
+$6A9D: 60        RTS
+$6A9E: AD BC 68  LDA $68BC
+$6AA1: 18        CLC
+$6AA2: ED 6C 7C  SBC $7C6C
+$6AA5: F0 F5     BEQ $6A9C
+$6AA7: 90 F3     BCC $6A9C
+$6AA9: A9 00     LDA #$00
+$6AAB: 8D 66 7C  STA $7C66
+$6AAE: 20 E8 6A  JSR $6AE8
+$6AB1: 60        RTS
+$6AB2: AD 66 7C  LDA $7C66
+$6AB5: F0 05     BEQ $6ABC
+$6AB7: CE 66 7C  DEC $7C66
+$6ABA: 18        CLC
+$6ABB: 60        RTS
+$6ABC: AD 6C 7C  LDA $7C6C
+$6ABF: F0 F9     BEQ $6ABA
+$6AC1: AE BD 68  LDX $68BD
+$6AC4: F0 F4     BEQ $6ABA
+$6AC6: CA        DEX
+$6AC7: 8E 66 7C  STX $7C66
+$6ACA: 20 04 6B  JSR $6B04
+$6ACD: 60        RTS
+$6ACE: AD BD 68  LDA $68BD
+$6AD1: 18        CLC
+$6AD2: ED 66 7C  SBC $7C66
+$6AD5: 90 05     BCC $6ADC
+$6AD7: F0 03     BEQ $6ADC
+$6AD9: EE 66 7C  INC $7C66
+$6ADC: 18        CLC
+$6ADD: 60        RTS
+$6ADE: AD 66 7C  LDA $7C66
+$6AE1: F0 03     BEQ $6AE6
+$6AE3: CE 66 7C  DEC $7C66
+$6AE6: 18        CLC
+$6AE7: 60        RTS
+$6AE8: AD BC 68  LDA $68BC
+$6AEB: 18        CLC
+$6AEC: ED 6C 7C  SBC $7C6C
+$6AEF: 90 11     BCC $6B02
+$6AF1: F0 0F     BEQ $6B02
+$6AF3: EE 6C 7C  INC $7C6C
+$6AF6: A5 21     LDA $21
+$6AF8: 18        CLC
+$6AF9: 6D BD 68  ADC $68BD
+$6AFC: 85 21     STA $21
+$6AFE: 90 02     BCC $6B02
+$6B00: E6 22     INC $22
+$6B02: 18        CLC
+$6B03: 60        RTS
+$6B04: AD 6C 7C  LDA $7C6C
+$6B07: F0 0F     BEQ $6B18
+$6B09: CE 6C 7C  DEC $7C6C
+$6B0C: A5 21     LDA $21
+$6B0E: 38        SEC
+$6B0F: ED BD 68  SBC $68BD
+$6B12: 85 21     STA $21
+$6B14: B0 02     BCS $6B18
+$6B16: C6 22     DEC $22
+$6B18: 18        CLC
+$6B19: 60        RTS
+$6B1A: AD BA 68  LDA $68BA
+$6B1D: 85 21     STA $21
+$6B1F: AD BB 68  LDA $68BB
+$6B22: 85 22     STA $22
+$6B24: A9 00     LDA #$00
+$6B26: 8D 66 7C  STA $7C66
+$6B29: 8D 6C 7C  STA $7C6C
+$6B2C: 18        CLC
+$6B2D: 60        RTS
+$6B2E: AD C0 68  LDA $68C0
+$6B31: AC 66 7C  LDY $7C66
+$6B34: 91 21     STA ($21),Y
+$6B36: C8        INY
+$6B37: CC BD 68  CPY $68BD
+$6B3A: 90 F8     BCC $6B34
+$6B3C: 18        CLC
+$6B3D: 60        RTS
+$6B3E: A9 00     LDA #$00
+$6B40: 8D 66 7C  STA $7C66
+$6B43: 18        CLC
+$6B44: 60        RTS
+$6B45: AD BD 68  LDA $68BD
+$6B48: 18        CLC
+$6B49: ED 66 7C  SBC $7C66
+$6B4C: 90 07     BCC $6B55
+$6B4E: F0 05     BEQ $6B55
+$6B50: EE 66 7C  INC $7C66
+$6B53: 18        CLC
+$6B54: 60        RTS
+$6B55: AD BC 68  LDA $68BC
+$6B58: 18        CLC
+$6B59: ED 6C 7C  SBC $7C6C
+$6B5C: F0 02     BEQ $6B60
+$6B5E: B0 13     BCS $6B73
+$6B60: 4C 1A 6B  JMP $6B1A
+$6B63: AD BD 68  LDA $68BD
+$6B66: 18        CLC
+$6B67: ED 66 7C  SBC $7C66
+$6B6A: 90 07     BCC $6B73
+$6B6C: F0 05     BEQ $6B73
+$6B6E: EE 66 7C  INC $7C66
+$6B71: 18        CLC
+$6B72: 60        RTS
+$6B73: 20 3E 6B  JSR $6B3E
+$6B76: AD BC 68  LDA $68BC
+$6B79: 18        CLC
+$6B7A: ED 6C 7C  SBC $7C6C
+$6B7D: 90 39     BCC $6BB8
+$6B7F: F0 37     BEQ $6BB8
+$6B81: EE 6C 7C  INC $7C6C
+$6B84: 18        CLC
+$6B85: AD BD 68  LDA $68BD
+$6B88: 65 21     ADC $21
+$6B8A: 85 21     STA $21
+$6B8C: 90 02     BCC $6B90
+$6B8E: E6 22     INC $22
+$6B90: 18        CLC
+$6B91: 60        RTS
+$6B92: 20 3E 6B  JSR $6B3E
+$6B95: A5 21     LDA $21
+$6B97: 8D 64 7C  STA $7C64
+$6B9A: A5 22     LDA $22
+$6B9C: 8D 65 7C  STA $7C65
+$6B9F: A5 21     LDA $21
+$6BA1: 18        CLC
+$6BA2: 6D BD 68  ADC $68BD
+$6BA5: 85 32     STA $32
+$6BA7: A5 22     LDA $22
+$6BA9: 69 00     ADC #$00
+$6BAB: 85 33     STA $33
+$6BAD: AD BC 68  LDA $68BC
+$6BB0: 38        SEC
+$6BB1: ED 6C 7C  SBC $7C6C
+$6BB4: AA        TAX
+$6BB5: 4C D9 6B  JMP $6BD9
+$6BB8: A5 21     LDA $21
+$6BBA: 8D 64 7C  STA $7C64
+$6BBD: A5 22     LDA $22
+$6BBF: 8D 65 7C  STA $7C65
+$6BC2: AD BA 68  LDA $68BA
+$6BC5: 85 21     STA $21
+$6BC7: 18        CLC
+$6BC8: 6D BD 68  ADC $68BD
+$6BCB: 85 32     STA $32
+$6BCD: AD BB 68  LDA $68BB
+$6BD0: 85 22     STA $22
+$6BD2: 69 00     ADC #$00
+$6BD4: 85 33     STA $33
+$6BD6: AE BC 68  LDX $68BC
+$6BD9: F0 36     BEQ $6C11
+$6BDB: AD BD 68  LDA $68BD
+$6BDE: F0 31     BEQ $6C11
+$6BE0: CA        DEX
+$6BE1: F0 21     BEQ $6C04
+$6BE3: A0 00     LDY #$00
+$6BE5: B1 32     LDA ($32),Y
+$6BE7: 91 21     STA ($21),Y
+$6BE9: C8        INY
+$6BEA: CC BD 68  CPY $68BD
+$6BED: D0 F6     BNE $6BE5
+$6BEF: A5 32     LDA $32
+$6BF1: 85 21     STA $21
+$6BF3: 18        CLC
+$6BF4: 6D BD 68  ADC $68BD
+$6BF7: 85 32     STA $32
+$6BF9: A5 33     LDA $33
+$6BFB: 85 22     STA $22
+$6BFD: 69 00     ADC #$00
+$6BFF: 85 33     STA $33
+$6C01: CA        DEX
+$6C02: D0 DF     BNE $6BE3
+$6C04: A0 00     LDY #$00
+$6C06: AD C0 68  LDA $68C0
+$6C09: 91 21     STA ($21),Y
+$6C0B: C8        INY
+$6C0C: CC BD 68  CPY $68BD
+$6C0F: D0 F8     BNE $6C09
+$6C11: AD 64 7C  LDA $7C64
+$6C14: 85 21     STA $21
+$6C16: AD 65 7C  LDA $7C65
+$6C19: 85 22     STA $22
+$6C1B: 18        CLC
+$6C1C: 60        RTS
+$6C1D: AD BC 68  LDA $68BC
+$6C20: AD 6C 7C  LDA $7C6C
+$6C23: F0 1E     BEQ $6C43
+$6C25: CE 6C 7C  DEC $7C6C
+$6C28: 38        SEC
+$6C29: A5 21     LDA $21
+$6C2B: ED BD 68  SBC $68BD
+$6C2E: 85 21     STA $21
+$6C30: B0 02     BCS $6C34
+$6C32: C6 22     DEC $22
+$6C34: 18        CLC
+$6C35: 60        RTS
+$6C36: 20 3E 6B  JSR $6B3E
+$6C39: AD BC 68  LDA $68BC
+$6C3C: 38        SEC
+$6C3D: ED 6C 7C  SBC $7C6C
+$6C40: 4C 46 6C  JMP $6C46
+$6C43: AD BC 68  LDA $68BC
+$6C46: A6 21     LDX $21
+$6C48: 8E 64 7C  STX $7C64
+$6C4B: A6 22     LDX $22
+$6C4D: 8E 65 7C  STX $7C65
+$6C50: AE BC 68  LDX $68BC
+$6C53: F0 4E     BEQ $6CA3
+$6C55: CA        DEX
+$6C56: 48        PHA
+$6C57: 8A        TXA
+$6C58: 20 50 6A  JSR $6A50
+$6C5B: A5 21     LDA $21
+$6C5D: 38        SEC
+$6C5E: ED BD 68  SBC $68BD
+$6C61: 85 32     STA $32
+$6C63: A5 22     LDA $22
+$6C65: E9 00     SBC #$00
+$6C67: 85 33     STA $33
+$6C69: 68        PLA
+$6C6A: F0 37     BEQ $6CA3
+$6C6C: AE BD 68  LDX $68BD
+$6C6F: F0 32     BEQ $6CA3
+$6C71: AA        TAX
+$6C72: CA        DEX
+$6C73: F0 21     BEQ $6C96
+$6C75: A0 00     LDY #$00
+$6C77: B1 32     LDA ($32),Y
+$6C79: 91 21     STA ($21),Y
+$6C7B: C8        INY
+$6C7C: CC BD 68  CPY $68BD
+$6C7F: D0 F6     BNE $6C77
+$6C81: A5 32     LDA $32
+$6C83: 85 21     STA $21
+$6C85: 38        SEC
+$6C86: ED BD 68  SBC $68BD
+$6C89: 85 32     STA $32
+$6C8B: A5 33     LDA $33
+$6C8D: 85 22     STA $22
+$6C8F: E9 00     SBC #$00
+$6C91: 85 33     STA $33
+$6C93: CA        DEX
+$6C94: D0 DF     BNE $6C75
+$6C96: A0 00     LDY #$00
+$6C98: AD C0 68  LDA $68C0
+$6C9B: 91 21     STA ($21),Y
+$6C9D: C8        INY
+$6C9E: CC BD 68  CPY $68BD
+$6CA1: D0 F8     BNE $6C9B
+$6CA3: AD 64 7C  LDA $7C64
+$6CA6: 85 21     STA $21
+$6CA8: AD 65 7C  LDA $7C65
+$6CAB: 85 22     STA $22
+$6CAD: 18        CLC
+$6CAE: 60        RTS
+$6CAF: 29 7F     AND #$7F
+$6CB1: AA        TAX
+$6CB2: AD C2 68  LDA $68C2
+$6CB5: 4D C1 68  EOR $68C1
+$6CB8: 5D 3A 68  EOR $683A,X
+$6CBB: AC 66 7C  LDY $7C66
+$6CBE: 91 21     STA ($21),Y
+$6CC0: 20 63 6B  JSR $6B63
+$6CC3: 60        RTS
+$6CC4: AC 72 7C  LDY $7C72
+$6CC7: F0 05     BEQ $6CCE
+$6CC9: CC 71 7C  CPY $7C71
+$6CCC: D0 0F     BNE $6CDD
+$6CCE: AC 60 7C  LDY $7C60
+$6CD1: CC 62 7C  CPY $7C62
+$6CD4: F0 06     BEQ $6CDC
+$6CD6: B1 1F     LDA ($1F),Y
+$6CD8: EE 60 7C  INC $7C60
+$6CDB: 18        CLC
+$6CDC: 60        RTS
+$6CDD: AC 71 7C  LDY $7C71
+$6CE0: EE 71 7C  INC $7C71
+$6CE3: B9 6D 7C  LDA $7C6D,Y
+$6CE6: 18        CLC
+$6CE7: 60        RTS
+$6CE8: A0 00     LDY #$00
+$6CEA: D9 C5 68  CMP $68C5,Y
+$6CED: F0 09     BEQ $6CF8
+$6CEF: C8        INY
+$6CF0: C8        INY
+$6CF1: CC BE 68  CPY $68BE
+$6CF4: D0 F4     BNE $6CEA
+$6CF6: 18        CLC
+$6CF7: 60        RTS
+$6CF8: AA        TAX
+$6CF9: C8        INY
+$6CFA: B9 C5 68  LDA $68C5,Y
+$6CFD: 0A        ASL A
+$6CFE: A8        TAY
+$6CFF: C8        INY
+$6D00: B9 FF 68  LDA $68FF,Y
+$6D03: 48        PHA
+$6D04: 88        DEY
+$6D05: B9 FF 68  LDA $68FF,Y
+$6D08: 48        PHA
+$6D09: 8A        TXA
+$6D0A: 60        RTS
+$6D0B: 20 C4 6C  JSR $6CC4
+$6D0E: B0 12     BCS $6D22
+$6D10: AC BE 68  LDY $68BE
+$6D13: C8        INY
+$6D14: C8        INY
+$6D15: D9 C5 68  CMP $68C5,Y
+$6D18: F0 09     BEQ $6D23
+$6D1A: C8        INY
+$6D1B: C8        INY
+$6D1C: CC BF 68  CPY $68BF
+$6D1F: D0 F4     BNE $6D15
+$6D21: 18        CLC
+$6D22: 60        RTS
+$6D23: AA        TAX
+$6D24: C8        INY
+$6D25: B9 C5 68  LDA $68C5,Y
+$6D28: 0A        ASL A
+$6D29: A8        TAY
+$6D2A: C8        INY
+$6D2B: B9 FF 68  LDA $68FF,Y
+$6D2E: 48        PHA
+$6D2F: 88        DEY
+$6D30: B9 FF 68  LDA $68FF,Y
+$6D33: 48        PHA
+$6D34: 8A        TXA
+$6D35: 60        RTS
+$6D36: A0 00     LDY #$00
+$6D38: B9 C5 68  LDA $68C5,Y
+$6D3B: C9 FF     CMP #$FF
+$6D3D: F0 05     BEQ $6D44
+$6D3F: C8        INY
+$6D40: C8        INY
+$6D41: D0 F5     BNE $6D38
+$6D43: 60        RTS
+$6D44: 8C BE 68  STY $68BE
+$6D47: F0 07     BEQ $6D50
+$6D49: B9 C5 68  LDA $68C5,Y
+$6D4C: C9 FF     CMP #$FF
+$6D4E: F0 05     BEQ $6D55
+$6D50: C8        INY
+$6D51: C8        INY
+$6D52: D0 F5     BNE $6D49
+$6D54: 60        RTS
+$6D55: 8C BF 68  STY $68BF
+$6D58: 60        RTS
+$6D59: A0 00     LDY #$00
+$6D5B: 8C 68 7C  STY $7C68
+$6D5E: AD 64 7C  LDA $7C64
+$6D61: 85 21     STA $21
+$6D63: AD 65 7C  LDA $7C65
+$6D66: 85 22     STA $22
+$6D68: 0D 64 7C  ORA $7C64
+$6D6B: D0 37     BNE $6DA4
+$6D6D: A9 50     LDA #$50
+$6D6F: 8D BA 68  STA $68BA
+$6D72: A9 80     LDA #$80
+$6D74: 8D BB 68  STA $68BB
+$6D77: A9 50     LDA #$50
+$6D79: 8D BD 68  STA $68BD
+$6D7C: A9 20     LDA #$20
+$6D7E: 8D 50 80  STA $8050
+$6D81: A9 60     LDA #$60
+$6D83: 8D 50 84  STA $8450
+$6D86: CD 50 80  CMP $8050
+$6D89: D0 0D     BNE $6D98
+$6D8B: 4E BD 68  LSR $68BD
+$6D8E: A9 28     LDA #$28
+$6D90: 8D BA 68  STA $68BA
+$6D93: A9 80     LDA #$80
+$6D95: 8D BB 68  STA $68BB
+$6D98: A9 80     LDA #$80
+$6D9A: 8D C2 68  STA $68C2
+$6D9D: 20 36 6D  JSR $6D36
+$6DA0: 20 99 69  JSR $6999
+$6DA3: 60        RTS
+$6DA4: AD 64 7C  LDA $7C64
+$6DA7: 85 21     STA $21
+$6DA9: AD 65 7C  LDA $7C65
+$6DAC: 85 22     STA $22
+$6DAE: AC 66 7C  LDY $7C66
+$6DB1: AD 67 7C  LDA $7C67
+$6DB4: 91 21     STA ($21),Y
+$6DB6: 60        RTS
+$6DB7: A5 21     LDA $21
+$6DB9: 8D 64 7C  STA $7C64
+$6DBC: A5 22     LDA $22
+$6DBE: 8D 65 7C  STA $7C65
+$6DC1: AC 66 7C  LDY $7C66
+$6DC4: B1 21     LDA ($21),Y
+$6DC6: 8D 67 7C  STA $7C67
+$6DC9: A2 80     LDX #$80
+$6DCB: 78        SEI
+$6DCC: 4D 69 7C  EOR $7C69
+$6DCF: 91 21     STA ($21),Y
+$6DD1: 8E 68 7C  STX $7C68
+$6DD4: 58        CLI
+$6DD5: 60        RTS
+$6DD6: A9 00     LDA #$00
+$6DD8: 8D 68 7C  STA $7C68
+$6DDB: 4C A4 6D  JMP $6DA4
+$6DDE: A9 50     LDA #$50
+$6DE0: 20 82 65  JSR $6582
+$6DE3: F0 1F     BEQ $6E04
+$6DE5: A9 02     LDA #$02
+$6DE7: 2C 3E 7C  BIT $7C3E
+$6DEA: D0 02     BNE $6DEE
+$6DEC: 49 80     EOR #$80
+$6DEE: 29 80     AND #$80
+$6DF0: 8D C1 68  STA $68C1
+$6DF3: 20 59 6D  JSR $6D59
+$6DF6: A0 00     LDY #$00
+$6DF8: 8C 71 7C  STY $7C71
+$6DFB: 8C 60 7C  STY $7C60
+$6DFE: 8C 61 7C  STY $7C61
+$6E01: AD 62 7C  LDA $7C62
+$6E04: F0 4E     BEQ $6E54
+$6E06: 20 C4 6C  JSR $6CC4
+$6E09: B0 28     BCS $6E33
+$6E0B: C9 7E     CMP #$7E
+$6E0D: F0 0C     BEQ $6E1B
+$6E0F: C9 7F     CMP #$7F
+$6E11: F0 12     BEQ $6E25
+$6E13: C9 80     CMP #$80
+$6E15: B0 04     BCS $6E1B
+$6E17: C9 20     CMP #$20
+$6E19: B0 07     BCS $6E22
+$6E1B: 20 E8 6C  JSR $6CE8
+$6E1E: 90 05     BCC $6E25
+$6E20: B0 11     BCS $6E33
+$6E22: 20 AF 6C  JSR $6CAF
+$6E25: AC 60 7C  LDY $7C60
+$6E28: 8C 61 7C  STY $7C61
+$6E2B: A9 00     LDA #$00
+$6E2D: 8D 72 7C  STA $7C72
+$6E30: 4C 06 6E  JMP $6E06
+$6E33: AD 60 7C  LDA $7C60
+$6E36: CD 61 7C  CMP $7C61
+$6E39: F0 19     BEQ $6E54
+$6E3B: AE 72 7C  LDX $7C72
+$6E3E: AC 61 7C  LDY $7C61
+$6E41: E0 04     CPX #$04
+$6E43: B0 0F     BCS $6E54
+$6E45: B1 1F     LDA ($1F),Y
+$6E47: 9D 6D 7C  STA $7C6D,X
+$6E4A: C8        INY
+$6E4B: E8        INX
+$6E4C: CC 60 7C  CPY $7C60
+$6E4F: 90 F0     BCC $6E41
+$6E51: 8E 72 7C  STX $7C72
+$6E54: 20 B7 6D  JSR $6DB7
+$6E57: 60        RTS
+$6E58: 30 2E     BMI $6E88
+$6E5A: 37        .BYT 37
+$6E5B: 33        .BYT 33
+$6E5C: 20 54 45  JSR $4554
+$6E5F: 52        .BYT 52
+$6E60: 4D 49 4E  EOR $4E49
+$6E63: 41 4C     EOR ($4C,X)
+$6E65: 20 46 4F  JSR $4F46
+$6E68: 52        .BYT 52
+$6E69: 20 43 50  JSR $5043
+$6E6C: 2F        .BYT 2F
+$6E6D: 4D 20 42  EOR $4220
+$6E70: 59 20 50  EOR $5020,Y
+$6E73: 41 55     EOR ($55,X)
+$6E75: 4C 20 53  JMP $5320
+$6E78: 43        .BYT 43
+$6E79: 48        PHA
+$6E7A: 49 43     EOR #$43
+$6E7C: 4B        .BYT 4B
+$6E7D: 2C 20 28  BIT $2820
+$6E80: 43        .BYT 43
+$6E81: 29 20     AND #$20
+$6E83: 31 39     AND ($39),Y
+$6E85: 38        SEC
+$6E86: 32        .BYT 32
+$6E87: 20 4D 41  JSR $414D
+$6E8A: 44        .BYT 44
+$6E8B: 49 53     EOR #$53
+$6E8D: 4F        .BYT 4F
+$6E8E: 4E 20 43  LSR $4320
+$6E91: 4F        .BYT 4F
+$6E92: 4D 50 55  EOR $5550
+$6E95: 54        .BYT 54
+$6E96: 45 52     EOR $52
+$6E98: A6 AE     LDX $AE
+$6E9A: CA        DEX
+$6E9B: 30 08     BMI $6EA5
+$6E9D: DD 51 02  CMP $0251,X
+$6EA0: F0 05     BEQ $6EA7
+$6EA2: CA        DEX
+$6EA3: 10 F8     BPL $6E9D
+$6EA5: 38        SEC
+$6EA6: 60        RTS
+$6EA7: BD 51 02  LDA $0251,X
+$6EAA: 85 D2     STA $D2
+$6EAC: BD 5B 02  LDA $025B,X
+$6EAF: 85 D4     STA $D4
+$6EB1: BD 65 02  LDA $0265,X
+$6EB4: 85 D3     STA $D3
+$6EB6: 18        CLC
+$6EB7: 60        RTS
+$6EB8: A9 80     LDA #$80
+$6EBA: 8D 77 7C  STA $7C77
+$6EBD: 8D 78 7C  STA $7C78
+$6EC0: 2C F3 FF  BIT $FFF3
+$6EC3: 30 17     BMI $6EDC
+$6EC5: EE 77 7C  INC $7C77
+$6EC8: D0 F6     BNE $6EC0
+$6ECA: EE 78 7C  INC $7C78
+$6ECD: D0 F1     BNE $6EC0
+$6ECF: A9 54     LDA #$54
+$6ED1: 20 82 65  JSR $6582
+$6ED4: B0 05     BCS $6EDB
+$6ED6: A0 00     LDY #$00
+$6ED8: 20 35 65  JSR $6535
+$6EDB: 60        RTS
+$6EDC: AD F2 FF  LDA $FFF2
+$6EDF: C9 80     CMP #$80
+$6EE1: B0 17     BCS $6EFA
+$6EE3: A0 00     LDY #$00
+$6EE5: 99 88 7D  STA $7D88,Y
+$6EE8: C8        INY
+$6EE9: 8C 62 7C  STY $7C62
+$6EEC: A9 88     LDA #$88
+$6EEE: 85 1F     STA $1F
+$6EF0: A9 7D     LDA #$7D
+$6EF2: 85 20     STA $20
+$6EF4: 20 F3 6D  JSR $6DF3
+$6EF7: 4C B8 6E  JMP $6EB8
+$6EFA: C9 82     CMP #$82
+$6EFC: D0 15     BNE $6F13
+$6EFE: A6 9E     LDX $9E
+$6F00: F0 03     BEQ $6F05
+$6F02: 4C 5F 6F  JMP $6F5F
+$6F05: 20 40 70  JSR $7040
+$6F08: A9 00     LDA #$00
+$6F0A: 20 A6 6F  JSR $6FA6
+$6F0D: 20 55 70  JSR $7055
+$6F10: 4C CA 6E  JMP $6ECA
+$6F13: C9 83     CMP #$83
+$6F15: D0 0E     BNE $6F25
+$6F17: AE 3F 7C  LDX $7C3F
+$6F1A: EC 4A 7C  CPX $7C4A
+$6F1D: F0 40     BEQ $6F5F
+$6F1F: 20 DD 70  JSR $70DD
+$6F22: 4C B8 6E  JMP $6EB8
+$6F25: C9 90     CMP #$90
+$6F27: D0 09     BNE $6F32
+$6F29: 20 9D 6F  JSR $6F9D
+$6F2C: 20 91 6F  JSR $6F91
+$6F2F: 4C B8 6E  JMP $6EB8
+$6F32: C9 92     CMP #$92
+$6F34: D0 0F     BNE $6F45
+$6F36: 20 40 70  JSR $7040
+$6F39: 20 72 6F  JSR $6F72
+$6F3C: 20 A6 6F  JSR $6FA6
+$6F3F: 20 55 70  JSR $7055
+$6F42: 4C B8 6E  JMP $6EB8
+$6F45: C9 91     CMP #$91
+$6F47: D0 16     BNE $6F5F
+$6F49: 20 40 70  JSR $7040
+$6F4C: AD 5C 7C  LDA $7C5C
+$6F4F: 4D 5E 7C  EOR $7C5E
+$6F52: F0 02     BEQ $6F56
+$6F54: A9 FF     LDA #$FF
+$6F56: 20 A6 6F  JSR $6FA6
+$6F59: 20 55 70  JSR $7055
+$6F5C: 4C B8 6E  JMP $6EB8
+$6F5F: 48        PHA
+$6F60: A9 54     LDA #$54
+$6F62: 20 82 65  JSR $6582
+$6F65: 68        PLA
+$6F66: B0 09     BCS $6F71
+$6F68: A0 00     LDY #$00
+$6F6A: 99 88 7D  STA $7D88,Y
+$6F6D: C8        INY
+$6F6E: 20 35 65  JSR $6535
+$6F71: 60        RTS
+$6F72: AD 38 7C  LDA $7C38
+$6F75: 29 08     AND #$08
+$6F77: 18        CLC
+$6F78: 69 7F     ADC #$7F
+$6F7A: 09 7F     ORA #$7F
+$6F7C: 8D 50 7C  STA $7C50
+$6F7F: AE 5C 7C  LDX $7C5C
+$6F82: EC 5E 7C  CPX $7C5E
+$6F85: F0 F8     BEQ $6F7F
+$6F87: BD 87 7C  LDA $7C87,X
+$6F8A: EE 5C 7C  INC $7C5C
+$6F8D: 2D 50 7C  AND $7C50
+$6F90: 60        RTS
+$6F91: 48        PHA
+$6F92: 20 BF 65  JSR $65BF
+$6F95: 68        PLA
+$6F96: 20 00 66  JSR $6600
+$6F99: 20 CF 65  JSR $65CF
+$6F9C: 60        RTS
+$6F9D: 2C F3 FF  BIT $FFF3
+$6FA0: 10 FB     BPL $6F9D
+$6FA2: AD F2 FF  LDA $FFF2
+$6FA5: 60        RTS
+$6FA6: 8D F2 FF  STA $FFF2
+$6FA9: 2C F2 FF  BIT $FFF2
+$6FAC: 2C F3 FF  BIT $FFF3
+$6FAF: 10 FB     BPL $6FAC
+$6FB1: 60        RTS
+$6FB2: A9 54     LDA #$54
+$6FB4: 20 82 65  JSR $6582
+$6FB7: B0 0C     BCS $6FC5
+$6FB9: A0 00     LDY #$00
+$6FBB: 20 9D 6F  JSR $6F9D
+$6FBE: 99 88 7D  STA $7D88,Y
+$6FC1: C8        INY
+$6FC2: 20 35 65  JSR $6535
+$6FC5: 60        RTS
+$6FC6: A9 54     LDA #$54
+$6FC8: 20 82 65  JSR $6582
+$6FCB: B0 19     BCS $6FE6
+$6FCD: AD 62 7C  LDA $7C62
+$6FD0: F0 14     BEQ $6FE6
+$6FD2: 8D 5A 7C  STA $7C5A
+$6FD5: A0 00     LDY #$00
+$6FD7: 20 9D 6F  JSR $6F9D
+$6FDA: 99 88 7D  STA $7D88,Y
+$6FDD: C8        INY
+$6FDE: CC 5A 7C  CPY $7C5A
+$6FE1: D0 F4     BNE $6FD7
+$6FE3: 20 35 65  JSR $6535
+$6FE6: 60        RTS
+$6FE7: 20 9D 6F  JSR $6F9D
+$6FEA: 85 1F     STA $1F
+$6FEC: 20 9D 6F  JSR $6F9D
+$6FEF: 85 20     STA $20
+$6FF1: 20 9D 6F  JSR $6F9D
+$6FF4: 09 00     ORA #$00
+$6FF6: F0 13     BEQ $700B
+$6FF8: 8D 5A 7C  STA $7C5A
+$6FFB: A0 00     LDY #$00
+$6FFD: 20 9D 6F  JSR $6F9D
+$7000: 91 1F     STA ($1F),Y
+$7002: C8        INY
+$7003: CC 5A 7C  CPY $7C5A
+$7006: D0 F5     BNE $6FFD
+$7008: 4C E7 6F  JMP $6FE7
+$700B: 20 9D 6F  JSR $6F9D
+$700E: AA        TAX
+$700F: F0 06     BEQ $7017
+$7011: CA        DEX
+$7012: F0 0D     BEQ $7021
+$7014: CA        DEX
+$7015: F0 01     BEQ $7018
+$7017: 60        RTS
+$7018: A5 1F     LDA $1F
+$701A: 85 77     STA $77
+$701C: A5 20     LDA $20
+$701E: 85 78     STA $78
+$7020: 60        RTS
+$7021: 6C 1F 00  JMP ($001F)
+$7024: 60        RTS
+$7025: A9 54     LDA #$54
+$7027: 20 82 65  JSR $6582
+$702A: B0 13     BCS $703F
+$702C: 20 40 70  JSR $7040
+$702F: A0 00     LDY #$00
+$7031: B1 1F     LDA ($1F),Y
+$7033: 20 A6 6F  JSR $6FA6
+$7036: C8        INY
+$7037: CC 62 7C  CPY $7C62
+$703A: D0 F5     BNE $7031
+$703C: 20 55 70  JSR $7055
+$703F: 60        RTS
+$7040: 2C F3 FF  BIT $FFF3
+$7043: 10 FB     BPL $7040
+$7045: A9 2A     LDA #$2A
+$7047: 8D F3 FF  STA $FFF3
+$704A: A9 FF     LDA #$FF
+$704C: 8D F2 FF  STA $FFF2
+$704F: A9 2E     LDA #$2E
+$7051: 8D F3 FF  STA $FFF3
+$7054: 60        RTS
+$7055: A9 2A     LDA #$2A
+$7057: 8D F3 FF  STA $FFF3
+$705A: A9 00     LDA #$00
+$705C: 8D F2 FF  STA $FFF2
+$705F: A9 2E     LDA #$2E
+$7061: 8D F3 FF  STA $FFF3
+$7064: 2C F2 FF  BIT $FFF2
+$7067: 2C F3 FF  BIT $FFF3
+$706A: 10 FB     BPL $7067
+$706C: 2C F2 FF  BIT $FFF2
+$706F: 60        RTS
+$7070: A9 05     LDA #$05
+$7072: 8D 5A 7C  STA $7C5A
+$7075: 20 CC FF  JSR $FFCC
+$7078: AD 3F 7C  LDA $7C3F
+$707B: 29 7F     AND #$7F
+$707D: AA        TAX
+$707E: 20 C6 FF  JSR $FFC6
+$7081: A5 96     LDA $96
+$7083: F0 05     BEQ $708A
+$7085: CE 5A 7C  DEC $7C5A
+$7088: D0 EB     BNE $7075
+$708A: 20 40 70  JSR $7040
+$708D: A0 80     LDY #$80
+$708F: A5 96     LDA $96
+$7091: D0 0D     BNE $70A0
+$7093: 20 41 66  JSR $6641
+$7096: A6 96     LDX $96
+$7098: E0 40     CPX #$40
+$709A: D0 04     BNE $70A0
+$709C: C9 FF     CMP #$FF
+$709E: F0 2B     BEQ $70CB
+$70A0: 8D F2 FF  STA $FFF2
+$70A3: 2C F2 FF  BIT $FFF2
+$70A6: A5 96     LDA $96
+$70A8: D0 03     BNE $70AD
+$70AA: 20 41 66  JSR $6641
+$70AD: 2C F3 FF  BIT $FFF3
+$70B0: 10 FB     BPL $70AD
+$70B2: 88        DEY
+$70B3: D0 EB     BNE $70A0
+$70B5: A5 96     LDA $96
+$70B7: 49 40     EOR #$40
+$70B9: 8D F2 FF  STA $FFF2
+$70BC: 2C F2 FF  BIT $FFF2
+$70BF: 2C F3 FF  BIT $FFF3
+$70C2: 10 FB     BPL $70BF
+$70C4: 20 CC FF  JSR $FFCC
+$70C7: 20 55 70  JSR $7055
+$70CA: 60        RTS
+$70CB: A9 E5     LDA #$E5
+$70CD: 20 A6 6F  JSR $6FA6
+$70D0: 88        DEY
+$70D1: D0 FA     BNE $70CD
+$70D3: A9 00     LDA #$00
+$70D5: F0 E2     BEQ $70B9
+$70D7: A9 FF     LDA #$FF
+$70D9: 8D 73 7C  STA $7C73
+$70DC: 60        RTS
+$70DD: 20 E4 70  JSR $70E4
+$70E0: 20 70 70  JSR $7070
+$70E3: 60        RTS
+$70E4: A9 00     LDA #$00
+$70E6: 85 32     STA $32
+$70E8: 85 33     STA $33
+$70EA: 85 22     STA $22
+$70EC: 20 9D 6F  JSR $6F9D
+$70EF: 85 21     STA $21
+$70F1: AD 4C 7C  LDA $7C4C
+$70F4: D0 05     BNE $70FB
+$70F6: A9 80     LDA #$80
+$70F8: 18        CLC
+$70F9: D0 01     BNE $70FC
+$70FB: 4A        LSR A
+$70FC: 48        PHA
+$70FD: 90 0D     BCC $710C
+$70FF: 18        CLC
+$7100: A5 21     LDA $21
+$7102: 65 32     ADC $32
+$7104: 85 32     STA $32
+$7106: A5 22     LDA $22
+$7108: 65 33     ADC $33
+$710A: 85 33     STA $33
+$710C: 06 21     ASL $21
+$710E: 26 22     ROL $22
+$7110: 68        PLA
+$7111: D0 E8     BNE $70FB
+$7113: 20 9D 6F  JSR $6F9D
+$7116: 18        CLC
+$7117: 65 32     ADC $32
+$7119: 85 32     STA $32
+$711B: 90 02     BCC $711F
+$711D: E6 33     INC $33
+$711F: 38        SEC
+$7120: A9 08     LDA #$08
+$7122: 65 32     ADC $32
+$7124: 85 32     STA $32
+$7126: 90 02     BCC $712A
+$7128: E6 33     INC $33
+$712A: AD 3F 7C  LDA $7C3F
+$712D: CD 73 7C  CMP $7C73
+$7130: D0 16     BNE $7148
+$7132: EE 74 7C  INC $7C74
+$7135: D0 03     BNE $713A
+$7137: EE 75 7C  INC $7C75
+$713A: AD 74 7C  LDA $7C74
+$713D: C5 32     CMP $32
+$713F: D0 07     BNE $7148
+$7141: AD 75 7C  LDA $7C75
+$7144: C5 33     CMP $33
+$7146: F0 3B     BEQ $7183
+$7148: AD 3F 7C  LDA $7C3F
+$714B: 8D 73 7C  STA $7C73
+$714E: 20 98 6E  JSR $6E98
+$7151: A5 D3     LDA $D3
+$7153: 48        PHA
+$7154: 20 CC FF  JSR $FFCC
+$7157: AD 4B 7C  LDA $7C4B
+$715A: AA        TAX
+$715B: 20 C9 FF  JSR $FFC9
+$715E: A9 50     LDA #$50
+$7160: 20 D2 FF  JSR $FFD2
+$7163: 68        PLA
+$7164: 29 0F     AND #$0F
+$7166: 09 60     ORA #$60
+$7168: 20 D2 FF  JSR $FFD2
+$716B: A5 32     LDA $32
+$716D: 8D 74 7C  STA $7C74
+$7170: 20 D2 FF  JSR $FFD2
+$7173: A5 33     LDA $33
+$7175: 8D 75 7C  STA $7C75
+$7178: 20 D2 FF  JSR $FFD2
+$717B: A9 01     LDA #$01
+$717D: 20 D2 FF  JSR $FFD2
+$7180: 20 CC FF  JSR $FFCC
+$7183: 60        RTS
+$7184: 20 D7 70  JSR $70D7
+$7187: A9 54     LDA #$54
+$7189: 20 82 65  JSR $6582
+$718C: B0 0E     BCS $719C
+$718E: A0 00     LDY #$00
+$7190: B1 1F     LDA ($1F),Y
+$7192: 85 32     STA $32
+$7194: C8        INY
+$7195: B1 1F     LDA ($1F),Y
+$7197: 85 33     STA $33
+$7199: 20 48 71  JSR $7148
+$719C: 60        RTS
+$719D: AD 46 7C  LDA $7C46
+$71A0: 38        SEC
+$71A1: ED 44 7C  SBC $7C44
+$71A4: AA        TAX
+$71A5: AD 47 7C  LDA $7C47
+$71A8: ED 45 7C  SBC $7C45
+$71AB: 85 33     STA $33
+$71AD: E8        INX
+$71AE: 86 32     STX $32
+$71B0: D0 02     BNE $71B4
+$71B2: E6 33     INC $33
+$71B4: AD 48 7C  LDA $7C48
+$71B7: 85 21     STA $21
+$71B9: AD 49 7C  LDA $7C49
+$71BC: 85 22     STA $22
+$71BE: AD 44 7C  LDA $7C44
+$71C1: 85 1F     STA $1F
+$71C3: AD 45 7C  LDA $7C45
+$71C6: 85 20     STA $20
+$71C8: A4 32     LDY $32
+$71CA: A5 33     LDA $33
+$71CC: F0 02     BEQ $71D0
+$71CE: A0 00     LDY #$00
+$71D0: 8C 5A 7C  STY $7C5A
+$71D3: A0 00     LDY #$00
+$71D5: B1 1F     LDA ($1F),Y
+$71D7: 91 21     STA ($21),Y
+$71D9: C8        INY
+$71DA: CC 5A 7C  CPY $7C5A
+$71DD: D0 F6     BNE $71D5
+$71DF: A5 33     LDA $33
+$71E1: F0 09     BEQ $71EC
+$71E3: C6 33     DEC $33
+$71E5: E6 22     INC $22
+$71E7: E6 20     INC $20
+$71E9: 4C C8 71  JMP $71C8
+$71EC: 60        RTS
+$71ED: 8D 5A 7C  STA $7C5A
+$71F0: A0 00     LDY #$00
+$71F2: B1 2A     LDA ($2A),Y
+$71F4: C9 51     CMP #$51
+$71F6: F0 0D     BEQ $7205
+$71F8: 98        TYA
+$71F9: 18        CLC
+$71FA: 69 0E     ADC #$0E
+$71FC: B0 13     BCS $7211
+$71FE: 38        SEC
+$71FF: E9 07     SBC #$07
+$7201: A8        TAY
+$7202: 4C F2 71  JMP $71F2
+$7205: C8        INY
+$7206: B1 2A     LDA ($2A),Y
+$7208: 88        DEY
+$7209: CD 5A 7C  CMP $7C5A
+$720C: D0 EA     BNE $71F8
+$720E: C8        INY
+$720F: C8        INY
+$7210: 18        CLC
+$7211: 60        RTS
+$7212: A9 E0     LDA #$E0
+$7214: 85 22     STA $22
+$7216: A0 00     LDY #$00
+$7218: 84 21     STY $21
+$721A: 8C 7D 7C  STY $7C7D
+$721D: 98        TYA
+$721E: 99 32 00  STA $0032,Y
+$7221: C8        INY
+$7222: C0 02     CPY #$02
+$7224: D0 F8     BNE $721E
+$7226: A0 00     LDY #$00
+$7228: 99 79 7C  STA $7C79,Y
+$722B: C8        INY
+$722C: C0 04     CPY #$04
+$722E: D0 F8     BNE $7228
+$7230: A0 00     LDY #$00
+$7232: 8C 5A 7C  STY $7C5A
+$7235: 38        SEC
+$7236: B1 21     LDA ($21),Y
+$7238: F1 1F     SBC ($1F),Y
+$723A: 90 06     BCC $7242
+$723C: C9 05     CMP #$05
+$723E: B0 09     BCS $7249
+$7240: 90 04     BCC $7246
+$7242: C9 FB     CMP #$FB
+$7244: 90 03     BCC $7249
+$7246: EE 5A 7C  INC $7C5A
+$7249: C8        INY
+$724A: CC 62 7C  CPY $7C62
+$724D: D0 E6     BNE $7235
+$724F: AC 7D 7C  LDY $7C7D
+$7252: B9 32 00  LDA $0032,Y
+$7255: CD 5A 7C  CMP $7C5A
+$7258: B0 2B     BCS $7285
+$725A: AD 5A 7C  LDA $7C5A
+$725D: 99 32 00  STA $0032,Y
+$7260: 98        TYA
+$7261: 0A        ASL A
+$7262: A8        TAY
+$7263: A5 21     LDA $21
+$7265: 99 79 7C  STA $7C79,Y
+$7268: C8        INY
+$7269: A5 22     LDA $22
+$726B: 99 79 7C  STA $7C79,Y
+$726E: A0 FF     LDY #$FF
+$7270: 8C 7D 7C  STY $7C7D
+$7273: A5 32     LDA $32
+$7275: D9 32 00  CMP $0032,Y
+$7278: F0 06     BEQ $7280
+$727A: 8C 7D 7C  STY $7C7D
+$727D: B9 32 00  LDA $0032,Y
+$7280: C8        INY
+$7281: C0 02     CPY #$02
+$7283: D0 F0     BNE $7275
+$7285: E6 21     INC $21
+$7287: D0 A7     BNE $7230
+$7289: E6 22     INC $22
+$728B: A5 22     LDA $22
+$728D: C9 E8     CMP #$E8
+$728F: D0 9F     BNE $7230
+$7291: 60        RTS
+$7292: A9 43     LDA #$43
+$7294: 20 82 65  JSR $6582
+$7297: B0 35     BCS $72CE
+$7299: 20 12 72  JSR $7212
+$729C: AD 79 7C  LDA $7C79
+$729F: 85 21     STA $21
+$72A1: CD 7B 7C  CMP $7C7B
+$72A4: AD 7A 7C  LDA $7C7A
+$72A7: 85 22     STA $22
+$72A9: ED 7C 7C  SBC $7C7C
+$72AC: 90 0A     BCC $72B8
+$72AE: AD 7B 7C  LDA $7C7B
+$72B1: 85 21     STA $21
+$72B3: AD 7C 7C  LDA $7C7C
+$72B6: 85 22     STA $22
+$72B8: A9 43     LDA #$43
+$72BA: 20 82 65  JSR $6582
+$72BD: B0 0F     BCS $72CE
+$72BF: A0 00     LDY #$00
+$72C1: B1 21     LDA ($21),Y
+$72C3: 99 88 7D  STA $7D88,Y
+$72C6: C8        INY
+$72C7: C0 24     CPY #$24
+$72C9: D0 F6     BNE $72C1
+$72CB: 20 35 65  JSR $6535
+$72CE: 60        RTS
+$72CF: C5 68     CMP $68
+$72D1: 3A        .BYT 3A
+$72D2: 30 00     BMI $72D4
+$72D4: 00        BRK
