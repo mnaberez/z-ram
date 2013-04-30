@@ -1,5 +1,7 @@
 *=$6000
 
+;Jump table
+
 $6000: 4C AA 60  JMP $60AA
 $6003: 4C B9 64  JMP $64B9
 $6006: 4C E0 65  JMP $65E0
@@ -37,6 +39,9 @@ $604F: CF        .BYT CF
 $6050: 72        .BYT 72
 $6051: 4C 36 6D  JMP $6D36
 $6054: 4C 84 71  JMP $7184
+
+;Filler bytes
+
 $6057: AA        TAX
 $6058: AA        TAX
 $6059: AA        TAX
@@ -58,6 +63,7 @@ $6068: AA        TAX
 $6069: AA        TAX
 $606A: AA        TAX
 $606B: AA        TAX
+
 $606C: 00        BRK
 $606D: 00        BRK
 $606E: 00        BRK
@@ -102,6 +108,8 @@ $60A5: 00        BRK
 $60A6: D0 00     BNE $60A8
 $60A8: B3        .BYT B3
 $60A9: 00        BRK
+
+
 $60AA: AD 53 7C  LDA $7C53
 $60AD: A2 00     LDX #$00
 $60AF: BD 6C 60  LDA $606C,X
@@ -167,6 +175,8 @@ $6136: D0 F5     BNE $612D
 $6138: 20 35 65  JSR $6535
 $613B: 20 F0 66  JSR $66F0
 $613E: 60        RTS
+
+
 $613F: AD 53 7C  LDA $7C53
 $6142: F0 19     BEQ $615D
 $6144: 78        SEI
@@ -181,6 +191,8 @@ $6157: 58        CLI
 $6158: A9 00     LDA #$00
 $615A: 8D 53 7C  STA $7C53
 $615D: 60        RTS
+
+
 $615E: AD 5D 7C  LDA $7C5D
 $6161: 8D 5C 7C  STA $7C5C
 $6164: 60        RTS
@@ -402,6 +414,8 @@ $633E: 8D 4F E8  STA $E84F
 $6341: 28        PLP
 $6342: 68        PLA
 $6343: 60        RTS
+
+
 $6344: A9 43     LDA #$43
 $6346: 20 82 65  JSR $6582
 $6349: B0 53     BCS $639E
@@ -443,6 +457,8 @@ $6399: AD 4F 7C  LDA $7C4F
 $639C: 91 1F     STA ($1F),Y
 $639E: 60        RTS
 $639F: 60        RTS
+
+
 $63A0: 2C 38 7C  BIT $7C38
 $63A3: 70 FA     BVS $639F
 $63A5: A9 54     LDA #$54
@@ -550,6 +566,8 @@ $646A: 99 88 7D  STA $7D88,Y
 $646D: C8        INY
 $646E: 20 35 65  JSR $6535
 $6471: 60        RTS
+
+
 $6472: 2C 38 7C  BIT $7C38
 $6475: 70 40     BVS $64B7
 $6477: A9 53     LDA #$53
@@ -585,6 +603,8 @@ $64B2: CC 62 7C  CPY $7C62
 $64B5: D0 CE     BNE $6485
 $64B7: 60        RTS
 $64B8: 60        RTS
+
+
 $64B9: A9 52     LDA #$52
 $64BB: 20 82 65  JSR $6582
 $64BE: B0 F8     BCS $64B8
@@ -734,6 +754,8 @@ $65D8: 4D 4B E8  EOR $E84B
 $65DB: 8D 4B E8  STA $E84B
 $65DE: 58        CLI
 $65DF: 60        RTS
+
+
 $65E0: A9 53     LDA #$53
 $65E2: 20 82 65  JSR $6582
 $65E5: B0 18     BCS $65FF
@@ -773,6 +795,8 @@ $662D: 58        CLI
 $662E: 2C 58 7C  BIT $7C58
 $6631: 10 FB     BPL $662E
 $6633: 60        RTS
+
+
 $6634: 48        PHA
 $6635: A9 10     LDA #$10
 $6637: 78        SEI
@@ -814,6 +838,8 @@ $6685: 05 96     ORA $96
 $6687: 85 96     STA $96
 $6689: A9 0D     LDA #$0D
 $668B: 60        RTS
+
+
 $668C: A9 53     LDA #$53
 $668E: 20 82 65  JSR $6582
 $6691: B0 44     BCS $66D7
@@ -1690,6 +1716,8 @@ $6D30: B9 FF 68  LDA $68FF,Y
 $6D33: 48        PHA
 $6D34: 8A        TXA
 $6D35: 60        RTS
+
+
 $6D36: A0 00     LDY #$00
 $6D38: B9 C5 68  LDA $68C5,Y
 $6D3B: C9 FF     CMP #$FF
@@ -1761,9 +1789,13 @@ $6DCF: 91 21     STA ($21),Y
 $6DD1: 8E 68 7C  STX $7C68
 $6DD4: 58        CLI
 $6DD5: 60        RTS
+
+
 $6DD6: A9 00     LDA #$00
 $6DD8: 8D 68 7C  STA $7C68
 $6DDB: 4C A4 6D  JMP $6DA4
+
+
 $6DDE: A9 50     LDA #$50
 $6DE0: 20 82 65  JSR $6582
 $6DE3: F0 1F     BEQ $6E04
@@ -1866,6 +1898,8 @@ $6EB1: BD 65 02  LDA $0265,X
 $6EB4: 85 D3     STA $D3
 $6EB6: 18        CLC
 $6EB7: 60        RTS
+
+
 $6EB8: A9 80     LDA #$80
 $6EBA: 8D 77 7C  STA $7C77
 $6EBD: 8D 78 7C  STA $7C78
@@ -1971,6 +2005,8 @@ $6FA9: 2C F2 FF  BIT $FFF2
 $6FAC: 2C F3 FF  BIT $FFF3
 $6FAF: 10 FB     BPL $6FAC
 $6FB1: 60        RTS
+
+
 $6FB2: A9 54     LDA #$54
 $6FB4: 20 82 65  JSR $6582
 $6FB7: B0 0C     BCS $6FC5
@@ -1980,6 +2016,8 @@ $6FBE: 99 88 7D  STA $7D88,Y
 $6FC1: C8        INY
 $6FC2: 20 35 65  JSR $6535
 $6FC5: 60        RTS
+
+
 $6FC6: A9 54     LDA #$54
 $6FC8: 20 82 65  JSR $6582
 $6FCB: B0 19     BCS $6FE6
@@ -1994,6 +2032,8 @@ $6FDE: CC 5A 7C  CPY $7C5A
 $6FE1: D0 F4     BNE $6FD7
 $6FE3: 20 35 65  JSR $6535
 $6FE6: 60        RTS
+
+
 $6FE7: 20 9D 6F  JSR $6F9D
 $6FEA: 85 1F     STA $1F
 $6FEC: 20 9D 6F  JSR $6F9D
@@ -2024,6 +2064,8 @@ $701E: 85 78     STA $78
 $7020: 60        RTS
 $7021: 6C 1F 00  JMP ($001F)
 $7024: 60        RTS
+
+
 $7025: A9 54     LDA #$54
 $7027: 20 82 65  JSR $6582
 $702A: B0 13     BCS $703F
@@ -2056,6 +2098,8 @@ $7067: 2C F3 FF  BIT $FFF3
 $706A: 10 FB     BPL $7067
 $706C: 2C F2 FF  BIT $FFF2
 $706F: 60        RTS
+
+
 $7070: A9 05     LDA #$05
 $7072: 8D 5A 7C  STA $7C5A
 $7075: 20 CC FF  JSR $FFCC
@@ -2101,12 +2145,18 @@ $70D0: 88        DEY
 $70D1: D0 FA     BNE $70CD
 $70D3: A9 00     LDA #$00
 $70D5: F0 E2     BEQ $70B9
+
+
 $70D7: A9 FF     LDA #$FF
 $70D9: 8D 73 7C  STA $7C73
 $70DC: 60        RTS
+
+
 $70DD: 20 E4 70  JSR $70E4
 $70E0: 20 70 70  JSR $7070
 $70E3: 60        RTS
+
+
 $70E4: A9 00     LDA #$00
 $70E6: 85 32     STA $32
 $70E8: 85 33     STA $33
@@ -2181,6 +2231,8 @@ $717B: A9 01     LDA #$01
 $717D: 20 D2 FF  JSR $FFD2
 $7180: 20 CC FF  JSR $FFCC
 $7183: 60        RTS
+
+
 $7184: 20 D7 70  JSR $70D7
 $7187: A9 54     LDA #$54
 $7189: 20 82 65  JSR $6582
@@ -2193,6 +2245,8 @@ $7195: B1 1F     LDA ($1F),Y
 $7197: 85 33     STA $33
 $7199: 20 48 71  JSR $7148
 $719C: 60        RTS
+
+
 $719D: AD 46 7C  LDA $7C46
 $71A0: 38        SEC
 $71A1: ED 44 7C  SBC $7C44
@@ -2313,6 +2367,8 @@ $728B: A5 22     LDA $22
 $728D: C9 E8     CMP #$E8
 $728F: D0 9F     BNE $7230
 $7291: 60        RTS
+
+
 $7292: A9 43     LDA #$43
 $7294: 20 82 65  JSR $6582
 $7297: B0 35     BCS $72CE
@@ -2339,6 +2395,8 @@ $72C7: C0 24     CPY #$24
 $72C9: D0 F6     BNE $72C1
 $72CB: 20 35 65  JSR $6535
 $72CE: 60        RTS
+
+
 $72CF: C5 68     CMP $68
 $72D1: 3A        .BYT 3A
 $72D2: 30 00     BMI $72D4
