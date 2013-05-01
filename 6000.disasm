@@ -59,29 +59,10 @@ $6050: 72        .BYT 72
 $6051: 4C 36 6D  JMP L_6D36
 $6054: 4C 84 71  JMP L_7184
 
-;Filler bytes
-
-$6057: AA        TAX
-$6058: AA        TAX
-$6059: AA        TAX
-$605A: AA        TAX
-$605B: AA        TAX
-$605C: AA        TAX
-$605D: AA        TAX
-$605E: AA        TAX
-$605F: AA        TAX
-$6060: AA        TAX
-$6061: AA        TAX
-$6062: AA        TAX
-$6063: AA        TAX
-$6064: AA        TAX
-$6065: AA        TAX
-$6066: AA        TAX
-$6067: AA        TAX
-$6068: AA        TAX
-$6069: AA        TAX
-$606A: AA        TAX
-$606B: AA        TAX
+FILLER:
+$6057:           .BYT AA,AA,AA,AA,AA,AA,AA,AA
+$605F:           .BYT AA,AA,AA,AA,AA,AA,AA,AA
+$6067:           .BYT AA,AA,AA,AA,AA
 
 $606C: 00        BRK
 $606D: 00        BRK
