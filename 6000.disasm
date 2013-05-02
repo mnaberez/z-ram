@@ -1,6 +1,7 @@
 PIA1_ROW    = $E810   ;6520 PIA #1 Keyboard Row Select
-PIA1_EOI    = $E811   ;6520 PIA #1 Control
+PIA1_EOI    = $E811   ;6520 PIA #1 Control Register A
 PIA1_COL    = $E812   ;6520 PIA #1 Keyboard Columns Read
+PIA1_CRB    = $E813   ;6520 PIA #1 Control Register B
 PIA2_IEEE   = $E820   ;6520 PIA #2 IEEE Input
 PIA2_NDAC   = $E821   ;6520 PIA #2 IEEE NDAC control
 PIA2_IOUT   = $E822   ;6520 PIA #2 IEEE Output
@@ -101,9 +102,9 @@ $60C9: A5 90     LDA $90
 $60CB: 8D 51 7C  STA $7C51
 $60CE: A5 91     LDA $91
 $60D0: 8D 52 7C  STA $7C52
-$60D3: A9 CE     LDA #$CE
+$60D3: A9 CE     LDA #<L_61CE
 $60D5: 85 90     STA $90
-$60D7: A9 61     LDA #$61
+$60D7: A9 61     LDA #>L_61CE
 $60D9: 85 91     STA $91
 $60DB: A9 62     LDA #$62
 $60DD: 8D 4E E8  STA VIA_IER
@@ -253,7 +254,7 @@ $61DA: 4C 86 62  JMP L_6286
 L_61DD:
 $61DD: 29 08     AND #$08
 $61DF: D0 6A     BNE L_624B
-$61E1: 2C 13 E8  BIT $E813
+$61E1: 2C 13 E8  BIT PIA1_CRB
 $61E4: 30 03     BMI L_61E9
 $61E6: 4C F6 62  JMP L_62F6
 
@@ -263,10 +264,10 @@ $61EC: AD 38 7C  LDA $7C38
 $61EF: 29 10     AND #$10
 $61F1: D0 17     BNE L_620A
 $61F3: BA        TSX
-$61F4: A9 66     LDA #$66
+$61F4: A9 66     LDA #>L_66D8
 $61F6: 9D 00 01  STA $0100,X
 $61F9: CA        DEX
-$61FA: A9 D8     LDA #$D8
+$61FA: A9 D8     LDA #<L_66D8
 $61FC: 9D 00 01  STA $0100,X
 $61FF: CA        DEX
 $6200: A9 00     LDA #$00
@@ -1045,6 +1046,8 @@ $66D4: 20 CC FF  JSR $FFCC
 
 L_66D7:
 $66D7: 60        RTS
+
+L_66D8:
 $66D8: A5 9B     LDA $9B
 $66DA: C9 EF     CMP #$EF
 $66DC: D0 04     BNE L_66E2
