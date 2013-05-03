@@ -32,6 +32,9 @@ CHKOUT      = $FFC9   ;KERNAL Open channel for output
 CLRCHN      = $FFCC   ;KERNAL Clear all open channels and restore defaults
 CHROUT      = $FFD2   ;KERNAL Send a char to the current output device
 
+;7D88-7DC7  Version and copyright string
+
+
 *=$6000
 
 ;Jump table
@@ -155,14 +158,15 @@ $6121: 20 82 65  JSR L_6582
 $6124: B0 15     BCS L_613B
 $6126: AD 62 7C  LDA $7C62
 $6129: D0 10     BNE L_613B
-$612B: A0 00     LDY #$00
 
+$612B: A0 00     LDY #$00
 L_612D:
-$612D: B9 58 6E  LDA L_6E58,Y
-$6130: 99 88 7D  STA $7D88,Y
-$6133: C8        INY
-$6134: C0 40     CPY #$40
-$6136: D0 F5     BNE L_612D
+$612D: B9 58 6E  LDA VERSION_INFO,Y     ;Get byte from version string
+$6130: 99 88 7D  STA $7D88,Y            ;Store it
+$6133: C8        INY                    ;Next byte
+$6134: C0 40     CPY #$40               ;Finished all 64 chars?
+$6136: D0 F5     BNE L_612D             ;  No: loop for next char
+
 $6138: 20 35 65  JSR L_6535
 
 L_613B:
@@ -2279,7 +2283,7 @@ L_6E54:
 $6E54: 20 B7 6D  JSR L_6DB7
 $6E57: 60        RTS
 
-L_6E58:
+VERSION_INFO:
 $6E58:           .TEXT "0.73 TERMINAL FOR CP/M BY PAUL SCHICK, (C) 1982 MADISON COMPUTER"
 
 L_6E98:
