@@ -32,8 +32,9 @@ CHKOUT      = $FFC9   ;KERNAL Open channel for output
 CLRCHN      = $FFCC   ;KERNAL Clear all open channels and restore defaults
 CHROUT      = $FFD2   ;KERNAL Send a char to the current output device
 
-BUFFER_1    = $7D88   ;64 byte buffer.  Initially contains version and copyright
-                      ;  string, also used by other routines as a buffer
+BUFFER_2    = $7C38   ;20 byte buffer.  Initially loaded with contents of TABLE_1.
+BUFFER_3    = $7C4D   ;58 byte buffer.  Initially loaded with zeros.
+BUFFER_1    = $7D88   ;64 byte buffer.  Initially loaded with version and copyright.
 
 *=$6000
 
@@ -100,19 +101,20 @@ $60AA: AD 53 7C  LDA $7C53
 $60AD: A2 00     LDX #$00
 
 L_60AF:
-$60AF: BD 6C 60  LDA TABLE_1,X
-$60B2: 9D 38 7C  STA $7C38,X
-$60B5: E8        INX
-$60B6: E0 14     CPX #$14
-$60B8: D0 F5     BNE L_60AF
+$60AF: BD 6C 60  LDA TABLE_1,X      ;Get byte from TABLE_1
+$60B2: 9D 38 7C  STA BUFFER_2,X     ;Store it in buffer 2
+$60B5: E8        INX                ;Next byte
+$60B6: E0 14     CPX #$14           ;Finished copying all 20 bytes?
+$60B8: D0 F5     BNE L_60AF         ;  No: loop for next byte
+
 $60BA: A9 00     LDA #$00
 $60BC: AA        TAX
-
 L_60BD:
 $60BD: 9D 4D 7C  STA $7C4D,X
 $60C0: E8        INX
 $60C1: E0 3A     CPX #$3A
 $60C3: D0 F8     BNE L_60BD
+
 $60C5: EE 53 7C  INC $7C53
 $60C8: 78        SEI
 $60C9: A5 90     LDA CINV
@@ -223,11 +225,11 @@ L_618C:
 $618C: AD 57 7C  LDA $7C57
 $618F: C9 FF     CMP #$FF
 $6191: D0 1B     BNE L_61AE
-$6193: AD 38 7C  LDA $7C38
+$6193: AD 38 7C  LDA BUFFER_2
 $6196: 29 02     AND #$02
 $6198: 38        SEC
 $6199: F0 0D     BEQ L_61A8
-$619B: AD 38 7C  LDA $7C38
+$619B: AD 38 7C  LDA BUFFER_2
 $619E: 4D 58 7C  EOR $7C58
 $61A1: 4A        LSR A
 $61A2: 20 22 63  JSR L_6322
@@ -278,7 +280,7 @@ $61E6: 4C F6 62  JMP L_62F6
 
 L_61E9:
 $61E9: AD 12 E8  LDA PIA1_COL
-$61EC: AD 38 7C  LDA $7C38
+$61EC: AD 38 7C  LDA BUFFER_2
 $61EF: 29 10     AND #$10
 $61F1: D0 17     BNE L_620A
 $61F3: BA        TSX
@@ -528,7 +530,7 @@ $639F: 60        RTS
 
 
 E_63A0:
-$63A0: 2C 38 7C  BIT $7C38
+$63A0: 2C 38 7C  BIT BUFFER_2
 $63A3: 70 FA     BVS L_639F
 $63A5: A9 54     LDA #$54
 $63A7: 20 82 65  JSR L_6582
@@ -675,7 +677,7 @@ $6471: 60        RTS
 
 
 E_6472:
-$6472: 2C 38 7C  BIT $7C38
+$6472: 2C 38 7C  BIT BUFFER_2
 $6475: 70 40     BVS L_64B7
 $6477: A9 53     LDA #$53
 $6479: 20 82 65  JSR L_6582
@@ -731,7 +733,7 @@ E_64B9:
 $64B9: A9 52     LDA #$52
 $64BB: 20 82 65  JSR L_6582
 $64BE: B0 F8     BCS L_64B8
-$64C0: AD 38 7C  LDA $7C38
+$64C0: AD 38 7C  LDA BUFFER_2
 $64C3: 29 08     AND #$08
 $64C5: 18        CLC
 $64C6: 69 7F     ADC #$7F
@@ -746,7 +748,7 @@ $64DA: BD 87 7C  LDA $7C87,X
 $64DD: 2D 50 7C  AND $7C50
 
 L_64E0:
-$64E0: 2C 38 7C  BIT $7C38
+$64E0: 2C 38 7C  BIT BUFFER_2
 $64E3: 30 0C     BMI L_64F1
 $64E5: C9 0D     CMP #$0D
 $64E7: D0 08     BNE L_64F1
@@ -763,7 +765,7 @@ $64F6: C0 FF     CPY #$FF
 $64F8: B0 1B     BCS L_6515
 $64FA: EC 5E 7C  CPX $7C5E
 $64FD: F0 16     BEQ L_6515
-$64FF: AD 38 7C  LDA $7C38
+$64FF: AD 38 7C  LDA BUFFER_2
 $6502: 2A        ROL A
 $6503: 2A        ROL A
 $6504: 2A        ROL A
@@ -776,7 +778,7 @@ $6512: CE 3A 7C  DEC $7C3A
 
 L_6515:
 $6515: 8E 5D 7C  STX $7C5D
-$6518: AD 38 7C  LDA $7C38
+$6518: AD 38 7C  LDA BUFFER_2
 $651B: 2A        ROL A
 $651C: 2A        ROL A
 $651D: 2A        ROL A
@@ -940,7 +942,7 @@ L_6600:
 $6600: 8D 56 7C  STA $7C56
 $6603: A9 40     LDA #$40
 $6605: 8D 58 7C  STA $7C58
-$6608: AD 38 7C  LDA $7C38
+$6608: AD 38 7C  LDA BUFFER_2
 $660B: 4A        LSR A
 $660C: 4A        LSR A
 $660D: 4A        LSR A
@@ -2419,7 +2421,7 @@ L_6F71:
 $6F71: 60        RTS
 
 L_6F72:
-$6F72: AD 38 7C  LDA $7C38
+$6F72: AD 38 7C  LDA BUFFER_2
 $6F75: 29 08     AND #$08
 $6F77: 18        CLC
 $6F78: 69 7F     ADC #$7F
