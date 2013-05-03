@@ -32,8 +32,8 @@ CHKOUT      = $FFC9   ;KERNAL Open channel for output
 CLRCHN      = $FFCC   ;KERNAL Clear all open channels and restore defaults
 CHROUT      = $FFD2   ;KERNAL Send a char to the current output device
 
-;7D88-7DC7  Version and copyright string
-
+BUFFER_1    = $7D88   ;64 byte buffer.  Initially contains version and copyright
+                      ;  string, also used by other routines as a buffer
 
 *=$6000
 
@@ -162,7 +162,7 @@ $6129: D0 10     BNE L_613B
 $612B: A0 00     LDY #$00
 L_612D:
 $612D: B9 58 6E  LDA VERSION_INFO,Y     ;Get byte from version string
-$6130: 99 88 7D  STA $7D88,Y            ;Store it
+$6130: 99 88 7D  STA BUFFER_1,Y         ;Store it
 $6133: C8        INY                    ;Next byte
 $6134: C0 40     CPY #$40               ;Finished all 64 chars?
 $6136: D0 F5     BNE L_612D             ;  No: loop for next char
@@ -613,7 +613,7 @@ $6418: D0 09     BNE L_6423
 $641A: F0 00     BEQ L_641C
 
 L_641C:
-$641C: 9D 88 7D  STA $7D88,X
+$641C: 9D 88 7D  STA BUFFER_1,X
 $641F: 8A        TXA
 $6420: F0 08     BEQ L_642A
 $6422: CA        DEX
@@ -628,7 +628,7 @@ L_642A:
 $642A: 98        TYA
 $642B: F0 08     BEQ L_6435
 $642D: A9 FF     LDA #$FF
-$642F: 9D 88 7D  STA $7D88,X
+$642F: 9D 88 7D  STA BUFFER_1,X
 $6432: D0 01     BNE L_6435
 
 L_6434:
@@ -642,8 +642,8 @@ $643B: A9 40     LDA #$40
 $643D: 8D 5A 7C  STA $7C5A
 
 L_6440:
-$6440: BD 88 7D  LDA $7D88,X
-$6443: 99 88 7D  STA $7D88,Y
+$6440: BD 88 7D  LDA BUFFER_1,X
+$6443: 99 88 7D  STA BUFFER_1,Y
 $6446: C9 A4     CMP #$A4
 $6448: F0 0F     BEQ L_6459
 $644A: C9 20     CMP #$20
@@ -665,7 +665,7 @@ $6462: E8        INX
 $6463: E0 FF     CPX #$FF
 $6465: D0 D9     BNE L_6440
 $6467: AD 5A 7C  LDA $7C5A
-$646A: 99 88 7D  STA $7D88,Y
+$646A: 99 88 7D  STA BUFFER_1,Y
 $646D: C8        INY
 
 L_646E:
@@ -750,13 +750,13 @@ $64E0: 2C 38 7C  BIT $7C38
 $64E3: 30 0C     BMI L_64F1
 $64E5: C9 0D     CMP #$0D
 $64E7: D0 08     BNE L_64F1
-$64E9: 99 88 7D  STA $7D88,Y
+$64E9: 99 88 7D  STA BUFFER_1,Y
 $64EC: C8        INY
 $64ED: E8        INX
 $64EE: 4C 15 65  JMP L_6515
 
 L_64F1:
-$64F1: 99 88 7D  STA $7D88,Y
+$64F1: 99 88 7D  STA BUFFER_1,Y
 $64F4: C8        INY
 $64F5: E8        INX
 $64F6: C0 FF     CPY #$FF
@@ -1042,7 +1042,7 @@ $66AF: A0 00     LDY #$00
 
 L_66B1:
 $66B1: 20 41 66  JSR L_6641
-$66B4: 99 88 7D  STA $7D88,Y
+$66B4: 99 88 7D  STA BUFFER_1,Y
 $66B7: C8        INY
 $66B8: 2C 3F 7C  BIT $7C3F
 $66BB: 10 0B     BPL L_66C8
@@ -2341,7 +2341,7 @@ $6EDC: AD F2 FF  LDA $FFF2
 $6EDF: C9 80     CMP #$80
 $6EE1: B0 17     BCS L_6EFA
 $6EE3: A0 00     LDY #$00
-$6EE5: 99 88 7D  STA $7D88,Y
+$6EE5: 99 88 7D  STA BUFFER_1,Y
 $6EE8: C8        INY
 $6EE9: 8C 62 7C  STY $7C62
 $6EEC: A9 88     LDA #$88
@@ -2411,7 +2411,7 @@ $6F62: 20 82 65  JSR L_6582
 $6F65: 68        PLA
 $6F66: B0 09     BCS L_6F71
 $6F68: A0 00     LDY #$00
-$6F6A: 99 88 7D  STA $7D88,Y
+$6F6A: 99 88 7D  STA BUFFER_1,Y
 $6F6D: C8        INY
 $6F6E: 20 35 65  JSR L_6535
 
@@ -2466,7 +2466,7 @@ $6FB4: 20 82 65  JSR L_6582
 $6FB7: B0 0C     BCS L_6FC5
 $6FB9: A0 00     LDY #$00
 $6FBB: 20 9D 6F  JSR L_6F9D
-$6FBE: 99 88 7D  STA $7D88,Y
+$6FBE: 99 88 7D  STA BUFFER_1,Y
 $6FC1: C8        INY
 $6FC2: 20 35 65  JSR L_6535
 
@@ -2486,7 +2486,7 @@ $6FD5: A0 00     LDY #$00
 
 L_6FD7:
 $6FD7: 20 9D 6F  JSR L_6F9D
-$6FDA: 99 88 7D  STA $7D88,Y
+$6FDA: 99 88 7D  STA BUFFER_1,Y
 $6FDD: C8        INY
 $6FDE: CC 5A 7C  CPY $7C5A
 $6FE1: D0 F4     BNE L_6FD7
@@ -2967,7 +2967,7 @@ $72BF: A0 00     LDY #$00
 
 L_72C1:
 $72C1: B1 21     LDA ($21),Y
-$72C3: 99 88 7D  STA $7D88,Y
+$72C3: 99 88 7D  STA BUFFER_1,Y
 $72C6: C8        INY
 $72C7: C0 24     CPY #$24
 $72C9: D0 F6     BNE L_72C1
